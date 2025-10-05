@@ -67,13 +67,6 @@ Na actualidade existen algunhas plataformas de venda de peixe por internet, como
 
 ### 2.5- Proposta de valor
 
-> _EXPLICACIÓN_: **Apartado fundamental.**
->
-> - En que se diferencia fronte os competidores.
-> - Que melloras terá fronte os competidores.
-> - Que valor aporta ao mercado.
-> - ¿Porqué mercarán/contratarán este producto/servizo/idea fronte o resto?
-
 A principal proposta de valor deste proxecto é ofrecer unha plataforma web sinxela, transparente e accesible que moderniza o proceso de venda de marisco nas lonxas galegas.
 
 A diferenza doutros servizos existentes, esta aplicación non funciona como unha tenda en liña convencional, senón que permite realizar subastas públicas en tempo real, conectando directamente ás lonxas cos compradores profesionais.
@@ -96,9 +89,22 @@ Os clientes elixirán este servizo porque simplifica o proceso de compra e venda
 
 > _EXPLICACIÓN_: Neste apartado deberedes indicar a forma xurídica: autónomo, soc. Cooperativa, SL,.. Explicando (nun par de frases) por que escolledes esta forma
 
+Escolleríamos a forma xurídica de empresario autónomo. Esta opción resulta a máis axeitada porque permite iniciar a actividade con poucos trámites, baixo investimento e maior flexibilidade de xestión, algo fundamental na fase de desenvolvemento e validación da idea.
+
+Ademais, o réxime de autónomos facilita un control directo sobre a actividade, os ingresos e os custos, adaptándose ás necesidades dun proxecto tecnolóxico en fase inicial.
+
+Cando o negocio medre e se establezan colaboracións con lonxas ou investidores, poderíase valorar o paso a unha sociedade limitada (SL), o que permitiría unha mellor estrutura fiscal e separación de responsabilidades.
+
 ### 2.7- Investimentos
 
-> _EXPLICACIÓN_: Neste apartado idicaremos o investimentos, aínda que sexa, só unha enumeración de todo o que necesitan (locais, infraestruturas, equipos, suministros, mobiliario...) cuantificando cada elemento.
+| Concepto                | Descrición                                                         | Custo estimado (€) |
+|-------------------------|-------------------------------------------------------------------|------------------|
+| Dominio e hosting web   | Rexistro do dominio e contratación dun servizo de hospedaxe económico por un ano | 100 €            |
+| Desenvolvemento web     | Creación do sitio con HTML, CSS, JavaScript e PHP; deseño básico e probas de funcionamento | 700 €            |
+| Equipamento informático | Ordenador persoal e periféricos para deseño e mantemento da web   | 600 €            |
+| Publicidade e promoción | Campañas en redes sociais, materiais gráficos e promoción local   | 300 €            |
+| Gastos legais e administrativos | Rexistro de actividade, alta de autónomo, taxas e xestión básica | 250 €            |
+| **Total estimado inicial** | —                                                               | **1.950 €**      |
 
 #### 2.7.1- Custos
 
