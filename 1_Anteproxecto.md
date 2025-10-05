@@ -217,22 +217,13 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 
 ## 4- Planificación
 
-```mermaid
-gantt
-    title Cronograma proxecto subasta de marisco
-    dateFormat  YYYY-MM-DD
-    excludes    weekends
-
-    section Fases
-    Anteproxecto           :a1, 2025-10-06, 10d
-    Análise                :a2, after a1, 10d
-    Análise - estudo de mercado :a2a, after a2, 2d, crit
-    Deseño                 :a3, after a2a, 10d
-    Deseño - prototipos e UX :a3a, after a3, 3d, crit
-    Codificación e probas  :a4, after a3a, 14d
-    Codificación - frontend :a4a, after a4, 7d
-    Codificación - backend  :a4b, after a4a, 7d
-    2ª Entrega             :a5, after a4b, 14d
-    Implantación           :a6, after a5, 5d
-    Entrega final          :a7, after a6, 5d
-    Presentación           :a8, after a7, 1d
+| Fase                    | Data inicio | Data fin   | Duración | Tarefas principais                                  |
+|--------------------------|------------|-----------|----------|----------------------------------------------------|
+| Anteproxecto             | 06/10/25   | 15/10/25  | 10 días  | Definir idea, redactar explicación inicial        |
+| Análise                  | 16/10/25   | 26/10/25  | 10 días  | Definicir funcionalidades, normativas vixentes  |
+| Deseño                   | 27/10/25   | 06/11/25  | 10 días  | Deseño de prototipos, creación do diseño |
+| Codificación e probas    | 07/11/25   | 20/11/25  | 14 días  | Desenvolvemento frontend e backend, probas        |
+| 2ª Entrega               | 21/11/25   | 04/12/25  | 14 días  | Entrega de versión intermedia, correccións        |
+| Implantación             | 05/12/25   | 09/12/25  | 5 días   | Configuración do hosting, base de datos, dominio  |
+| Entrega final            | 10/12/25   | 14/12/25  | 5 días   | Revisar todo, documentación e axustes finais     |
+| Presentación             | 15/12/25   | 15/12/25  | 1 día    | Presentación oficial do proxecto                  |
