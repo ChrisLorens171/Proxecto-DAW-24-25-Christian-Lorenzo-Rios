@@ -136,5 +136,3 @@
 > - Codificación e probas (debe ser a fase máis longa).
 >
 > Debe facerse un calendario ou un diagrama de Gantt indicando, para cada fase, a data de inicio, a súa duración e breve descrición das tarefas a realizar.
-
-[**<-Anterior**](../../README.md)
