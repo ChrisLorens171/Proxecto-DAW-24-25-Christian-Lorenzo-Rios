@@ -217,24 +217,16 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 
 ## 4- Planificación
 
-> _EXPLICACIÓN_: Inclúe un calendario co tempo estimado a adicar a cada fase do proxecto.
->
-> O proxecto estará formado polas seguintes fases:
->
-> - Estudo preliminar
-> - Análise
-> - Deseño
-> - Codificación e probas (debe ser a fase máis longa).
->
-> Debe facerse un calendario ou un diagrama de Gantt indicando, para cada fase, a data de inicio, a súa duración e breve descrición das tarefas a realizar.
-
-| Fase          | Sem1 | Sem2 | Sem3 | Sem4 | Sem5 | Sem6 | Sem7 | Sem8 | Sem9 | Sem10 |
-|---------------|------|------|------|------|------|------|------|------|------|-------|
-| Anteproxecto  | ████ |      |      |      |      |      |      |      |      |       |
-| Análise       |      | ████ |      |      |      |      |      |      |      |       |
-| Deseño        |      |      | ████ |      |      |      |      |      |      |       |
-| Codificación  |      |      |      | ████ | ████ |      |      |      |      |       |
-| Implantación  |      |      |      |      |      | ███  |      |      |      |       |
-| Entrega       |      |      |      |      |      |      | ███  |      |      |       |
-| Presentación  |      |      |      |      |      |      |      | █    |      |       |
-
+```mermaid
+gantt
+    title Planificación do proxecto
+    dateFormat  YYYY-MM-DD
+    section Fases
+    Anteproxecto     :a1, 2025-10-06, 10d
+    Análise          :a2, after a1, 11d
+    Deseño           :a3, after a2, 11d
+    Codificación     :a4, after a3, 14d
+    2ª Entrega       :a5, after a4, 14d
+    Implantación     :a6, after a5, 7d
+    Entrega final    :a7, after a6, 5d
+    Presentación     :a8, after a7, 1d
