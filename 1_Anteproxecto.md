@@ -19,9 +19,6 @@
   - [3- Requirimentos técnicos](#3--requirimentos-técnicos)
   - [4- Planificación](#4--planificación)
 
-> Podes acompañar á redacción deste ficheiro con imaxes, pero non abuses deles.
-> Explica da mellor forma posible de en que consiste o proxecto é que ferramentas e linguaxes de programación empregarás.
-
 ## 1- Descrición do proxecto
 
 O proxecto consiste na creación dunha plataforma web que conecte lonxas e compradores de marisco, permitindo realizar subastas públicas en liña de produtos do mar. O obxectivo principal é modernizar e dixitalizar o proceso de venda, facilitando o acceso a un mercado máis amplo e transparente, tanto para as lonxas como para os compradores profesionais (restaurantes, distribuidores, etc.).
