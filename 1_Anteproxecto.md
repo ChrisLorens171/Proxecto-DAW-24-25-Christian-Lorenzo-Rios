@@ -224,26 +224,15 @@ gantt
     excludes    weekends
 
     section Fases
-    Anteproxecto        :a1, 2025-10-06, 10d
-    note right of a1 :Definir idea, obxectivos e documentación inicial
-
-    Análise             :after a1, 11d
-    note right of a2 :Estudo de mercado, requisitos e funcionalidades
-
-    Deseño              :after a2, 11d
-    note right of a3 :Arquitectura, wireframes e prototipos web
-
-    Codificación e probas:after a3, 14d
-    note right of a4 :Desenvolvemento web, WebSockets, probas unitarias
-
-    2ª Entrega          :after a4, 14d
-    note right of a5 :Corrección de erros e revisión xeral
-
-    Implantación        :after a5, 5d
-    note right of a6 :Configuración servidor, dominio e base de datos
-
-    Entrega final       :after a6, 5d
-    note right of a7 :Entrega completa do proxecto
-
-    Presentación        :after a7, 1d
-    note right of a8 :Preparación e realización da presentación final
+    Anteproxecto           :a1, 2025-10-06, 10d
+    Análise                :a2, after a1, 10d
+    Análise - estudo de mercado :a2a, after a2, 2d, crit
+    Deseño                 :a3, after a2a, 10d
+    Deseño - prototipos e UX :a3a, after a3, 3d, crit
+    Codificación e probas  :a4, after a3a, 14d
+    Codificación - frontend :a4a, after a4, 7d
+    Codificación - backend  :a4b, after a4a, 7d
+    2ª Entrega             :a5, after a4b, 14d
+    Implantación           :a6, after a5, 5d
+    Entrega final          :a7, after a6, 5d
+    Presentación           :a8, after a7, 1d
