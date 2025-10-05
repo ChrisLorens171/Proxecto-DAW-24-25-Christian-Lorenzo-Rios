@@ -62,11 +62,11 @@ Actualmente existen algunhas plataformas de venda de peixe en liña, pero moi po
 
 Necesidades que cobre:
 
--Dixitalización e transparencia na venda de marisco.
+- Dixitalización e transparencia na venda de marisco.
 
--Acceso directo entre produtor e comprador.
+- Acceso directo entre produtor e comprador.
 
--Redución de intermediarios e custos.
+- Redución de intermediarios e custos.
 
 
 
