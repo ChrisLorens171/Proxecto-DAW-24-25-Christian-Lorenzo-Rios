@@ -115,21 +115,21 @@ Os custos do proxecto divídense en fixos e variables:
 
 1. Custos fixos:
 
-  - Dominio e hosting web anual (100 €)
+    - Dominio e hosting web anual (100 €)
 
-  - Cota de autónomo (270 €/mes aproximadamente)
+    - Cota de autónomo (270 €/mes aproximadamente)
 
-  - Electricidade e internet (20 €/mes)
+    - Electricidade e internet (20 €/mes)
 
-  - Mantemento web e copias de seguridade (10 €/mes)
+    - Mantemento web e copias de seguridade (10 €/mes)
 
 2. Custos variables:
 
-  - Publicidade e promoción segundo campañas (300 € anuais aprox.)
+    - Publicidade e promoción segundo campañas (300 € anuais aprox.)
 
-  - Desprazamentos e reunións con lonxas (100 € anuais)
+    - Desprazamentos e reunións con lonxas (100 € anuais)
 
-  - Comisiones por servizos de pago en liña (1–3% por transacción)
+    - Comisiones por servizos de pago en liña (1–3% por transacción)
 
 Os custos incluirían os impostos correspondentes (IVE) e a cotización á Seguridade Social no caso do réxime de autónomos.
 
