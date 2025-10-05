@@ -87,8 +87,6 @@ Os clientes elixirán este servizo porque simplifica o proceso de compra e venda
 
 ### 2.6- Forma xurídica
 
-> _EXPLICACIÓN_: Neste apartado deberedes indicar a forma xurídica: autónomo, soc. Cooperativa, SL,.. Explicando (nun par de frases) por que escolledes esta forma
-
 Escolleríamos a forma xurídica de empresario autónomo. Esta opción resulta a máis axeitada porque permite iniciar a actividade con poucos trámites, baixo investimento e maior flexibilidade de xestión, algo fundamental na fase de desenvolvemento e validación da idea.
 
 Ademais, o réxime de autónomos facilita un control directo sobre a actividade, os ingresos e os custos, adaptándose ás necesidades dun proxecto tecnolóxico en fase inicial.
@@ -103,8 +101,8 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 | Desenvolvemento web     | Creación do sitio con HTML, CSS, JavaScript e PHP; deseño básico e probas de funcionamento | 700 €            |
 | Equipamento informático | Ordenador persoal e periféricos para deseño e mantemento da web   | 600 €            |
 | Publicidade e promoción | Campañas en redes sociais, materiais gráficos e promoción local   | 300 €            |
-| Gastos legais e administrativos | Rexistro de actividade, alta de autónomo, taxas e xestión básica | 250 €            |
-| **Total estimado inicial** | —                                                               | **1.950 €**      |
+| Gastos legais e administrativos | Rexistro de actividade, alta de autónomo, taxas e xestión básica | 300 €            |
+| **Total estimado inicial** | —                                                               | **2.000 €**      |
 
 #### 2.7.1- Custos
 
@@ -112,6 +110,28 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 >
 > - Diferenzando custos fixos de variables.
 > - Computando impostos e custos sociais.
+
+Os custos do proxecto divídense en fixos e variables:
+
+1. Custos fixos:
+
+  - Dominio e hosting web anual (100 €)
+
+  - Cota de autónomo (270 €/mes aproximadamente)
+
+  - Electricidade e internet (20 €/mes)
+
+  - Mantemento web e copias de seguridade (10 €/mes)
+
+2. Custos variables:
+
+  - Publicidade e promoción segundo campañas (300 € anuais aprox.)
+
+  - Desprazamentos e reunións con lonxas (100 € anuais)
+
+  - Comisiones por servizos de pago en liña (1–3% por transacción)
+
+Os custos incluirían os impostos correspondentes (IVE) e a cotización á Seguridade Social no caso do réxime de autónomos.
 
 #### 2.7.2- Ingresos
 
