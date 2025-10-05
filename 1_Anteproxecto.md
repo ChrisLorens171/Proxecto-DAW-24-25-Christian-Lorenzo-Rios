@@ -42,19 +42,19 @@ No caso do valor engadido este radicaría na transparencia dos prezos, a rapidez
 Como produto aumentado, poderíase engadir máis adiante un servizo de loxística ou de trazabilidade do marisco.
 
 ### 2.2- Xustificación da idea
+
 A idea deste proxecto nace da observación da realidade actual das lonxas galegas, que, a pesar de representar un dos sectores económicos máis importantes da comunidade, seguen a empregar sistemas de venda presenciais e pouco dixitalizados. Galicia concentra arredor do 40% da produción pesqueira de España, con máis de 60 lonxas activas e un volume anual de vendas superior aos 400 millóns de euros. Porén, a falta de ferramentas tecnolóxicas que conecten lonxas e compradores profesionais limita a súa capacidade de expansión e modernización.
 
 O proxecto pretende resolver esta carencia mediante unha plataforma web que permita realizar subastas públicas en liña, facilitando a compra e venda directa de marisco fresco entre lonxas e compradores profesionais (restaurantes, distribuidores, pescaderías, etc.). Con iso, búscase mellorar a transparencia nos prezos, reducir intermediarios e ampliar o alcance comercial das lonxas máis alá do ámbito local.
 
-Na actualidade existen algunhas plataformas de venda de peixe por internet, como PescadeRías ou LonjaOnline, pero estas non ofrecen un sistema de subastas en tempo real nin están orientadas ao modelo B2B (empresa a empresa). Polo tanto, o proxecto cobre un segmento de mercado insuficientemente atendido, cunha posible oportunidade de crecemento, tendo en conta que o comercio electrónico alimentario en España prevee un crecemento anual dun 19%.
-
-A proposta encaixa ademais coas políticas europeas e autonómicas de modernización do sector, como o Plan de Dixitalización da Pesca 2021–2027, que fomenta o uso das TIC para mellorar a trazabilidade e competitividade das empresas pesqueiras. Isto supón unha xustificación adicional pola posibilidade de acceder a axudas e subvencións públicas.
+Ademais a proposta encaixa coas políticas europeas e autonómicas de modernización do sector, como o Plan de Dixitalización da Pesca 2021–2027, que fomenta o uso das TIC para mellorar a trazabilidade e competitividade das empresas pesqueiras. Isto supón unha razón adicional pola posibilidade de acceder a axudas e subvencións públicas.
 
 **Análisis DAFO**
 
 ![Análisis DAFO](https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/0a7793999b72eb2a74df4e80b362e924a21fed12/img/DAFO.jpg)
 
 ### 2.3- Segmento de clientes
+
 Lonxas e produtores locais, que buscan vender mellor e máis rápido.
 
 Compradores profesionais (restaurantes, distribuidores, pescaderías, exportadores), interesados en adquirir marisco fresco de orixe certificada.
@@ -63,7 +63,7 @@ En fases posteriores poderíase abrir a particulares, pero inicialmente céntras
 
 ### 2.4- Competencia
 
-> _EXPLICACIÓN_: Neste apartado deberase indicar que outras empresas operan no mercado. Que cota de mercado teñen e como están posicionadas. Existencia de productos/servizos substitutivos. Como están posicionados.
+Na actualidade existen algunhas plataformas de venda de peixe por internet, como PescadeRías ou LonjaOnline, pero estas non ofrecen un sistema de subastas en tempo real nin están orientadas ao modelo B2B (empresa a empresa). Polo tanto, o proxecto cobre un segmento de mercado insuficientemente atendido, cunha posible oportunidade de crecemento.
 
 ### 2.5- Proposta de valor
 
@@ -73,6 +73,24 @@ En fases posteriores poderíase abrir a particulares, pero inicialmente céntras
 > - Que melloras terá fronte os competidores.
 > - Que valor aporta ao mercado.
 > - ¿Porqué mercarán/contratarán este producto/servizo/idea fronte o resto?
+
+A principal proposta de valor deste proxecto é ofrecer unha plataforma web sinxela, transparente e accesible que moderniza o proceso de venda de marisco nas lonxas galegas.
+
+A diferenza doutros servizos existentes, esta aplicación non funciona como unha tenda en liña convencional, senón que permite realizar subastas públicas en tempo real, conectando directamente ás lonxas cos compradores profesionais.
+
+Entre as súas melloras fronte á competencia destacan:
+
+- Un sistema de poxas dinámico que reflicte os prezos reais do mercado.
+
+- Unha interface sinxela, adaptable a usuarios sen coñecementos técnicos.
+
+- A posibilidade de integrar servizos complementarios (loxística, trazabilidade, facturación).
+
+- Un custo de implementación inferior ao doutros sistemas profesionais.
+
+O valor que achega ao mercado sería: por unha banda, dixitaliza un sector tradicional, e por outra, abre novos canais de venda que permiten ás lonxas chegar a compradores doutras rexións ou países.
+
+Os clientes elixirán este servizo porque simplifica o proceso de compra e venda, aumenta a visibilidade dos produtos galegos e ofrece seguridade, rapidez e aforro de tempo, converténdose así nunha ferramenta útil e diferenciada fronte ás opcións actuais.
 
 ### 2.6- Forma xurídica
 
