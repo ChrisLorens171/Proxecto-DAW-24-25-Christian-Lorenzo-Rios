@@ -19,27 +19,27 @@
   - [3- Requirimentos técnicos](#3--requirimentos-técnicos)
   - [4- Planificación](#4--planificación)
 
-> _EXPLICACIÓN_: Este documento será a páxina de explicación de en que consiste o teu proxecto. Coida a súa redacción con todo ou teu mimo. Elimina posteriormente todas as lineas "EXPLICACIÓN" cando creas finalizada a súa redacción.
 > Podes acompañar á redacción deste ficheiro con imaxes, pero non abuses deles.
 > Explica da mellor forma posible de en que consiste o proxecto é que ferramentas e linguaxes de programación empregarás.
 
 ## 1- Descrición do proxecto
 
-> _EXPLICACIÓN_: Realiza unha breve descrición do anteproxecto.Resalta o fundamental *coas túas propias palabras\*\*. Utiliza unha linguaxe correcta, *pero natural\*\*, que o entenda todo o mundo, mesmo e en especial, as persoas que non teñan un coñecemento técnico avanzado. Pode ser un estracto ou resumo de apartados que xa contemples noutros ficheiros.
->
-> Neste apartado trátase de describir a análise realizada e a toma de decisións adoptada sobre aspectos básicos ou iniciais do proxecto como:
->
-> - ¿En que consiste o noso proxecto? ¿Cal é o propósito principal da aplicación a desenvolver? ¿Cales son os obxectivos?
-> - ¿O desenvolvemento da aplicación abre unha oportunidade de negocio? ¿É posible comercializala? Como?
-> - ¿Que tecnoloxías son as máis axeitadas para a realización do proxecto?
+O proxecto consiste na creación dunha plataforma web que conecte lonxas e compradores de marisco, permitindo realizar subastas públicas en liña de produtos do mar. O obxectivo principal é modernizar e dixitalizar o proceso de venda, facilitando o acceso a un mercado máis amplo e transparente, tanto para as lonxas como para os compradores profesionais (restaurantes, distribuidores, etc.).
+
+A aplicación busca facer máis áxil e eficiente a comercialización do marisco fresco, reducindo intermediarios e tempos de xestión. Ademais, abre unha oportunidade de negocio, xa que podería comercializarse mediante comisións por venda ou plans de subscrición para lonxas e usuarios profesionais.
+
+Para o desenvolvemento inicial empregarase HTML, CSS e JavaScript para a parte visual e PHP con MySQL para a xestión de datos. Isto permitirá crear unha versión funcional e facilmente hospedable en servizos web económicos, deixando aberta a posibilidade de ampliar o proxecto no futuro con tecnoloxías máis avanzadas.
 
 ## 2- Empresa
-
-> _EXPLICACIÓN_: Neste apartado desenvolveredes todo o referente os módulos de Empresa e iniciativa emprendedora e de FOL.
-
 ### 2.1- Idea de negocio
 
-> _EXPLICACIÓN_: Define o producto central, o valor engadido e a utilidade. Se se ogrecen productos aumentados, indicalo tamén.
+O proxecto céntrase na creación dunha plataforma web que conecte lonxas e compradores profesionais de marisco, permitindo realizar subastas en liña de produtos frescos.
+
+O produto central é unha web sinxela e funcional que facilita a compra e venda directa entre lonxas e clientes.
+
+No caso do valor engadido este radicaría na transparencia dos prezos, a rapidez das operacións e o acceso a un mercado máis amplo.
+
+Como produto aumentado, poderíase engadir máis adiante un servizo de loxística ou de trazabilidade do marisco.
 
 ### 2.2- Xustificación da idea
 
@@ -55,14 +55,27 @@
 > Para sustentar as xustificación deberás proporcionar datos. Fontes máis utilizadas: INE, IGE, Informes sectoriais de
 > Industria, Statista... Deberás facer unha DAFO.
 
-### 2.3- Segmento de clientes
+A idea nace da observación de que moitas lonxas galegas seguen a traballar con sistemas tradicionais, pouco dixitalizados, e que os compradores doutros puntos de España e Europa teñen dificultades para acceder a produtos frescos directamente desde a orixe.
+O proxecto pretende modernizar o sector pesqueiro galego, mellorando a súa competitividade e visibilidade.
 
-> _EXPLICACIÓN_: Neste apartado debes indicar a quen irá dirixido o negocio, os potenciales clientes, respostando as seguinte pregunta: ¿A quen está dirixido?
->
-> Debes:
->
-> - Indicar o segmento ou segmentos cos rasgos principais e cuantificar o mercado.
-> - E se é o caso, diferenciar entre usuario e cliente.
+Actualmente existen algunhas plataformas de venda de peixe en liña, pero moi poucas permiten subastas en tempo real e menos aínda enfocadas ás lonxas locais. Polo tanto, trátase dun nicho de mercado pouco atendido, cunha demanda potencial en crecemento.
+
+Necesidades que cobre:
+
+-Dixitalización e transparencia na venda de marisco.
+
+-Acceso directo entre produtor e comprador.
+
+-Redución de intermediarios e custos.
+
+
+
+### 2.3- Segmento de clientes
+Lonxas e produtores locais, que buscan vender mellor e máis rápido.
+
+Compradores profesionais (restaurantes, distribuidores, pescaderías, exportadores), interesados en adquirir marisco fresco de orixe certificada.
+
+En fases posteriores poderíase abrir a particulares, pero inicialmente céntrase no mercado profesional.
 
 ### 2.4- Competencia
 
