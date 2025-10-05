@@ -68,7 +68,7 @@ Necesidades que cobre:
 
 - Redución de intermediarios e custos.
 
-
+![Análisis DAFO](https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/0a7793999b72eb2a74df4e80b362e924a21fed12/img/DAFO.jpg)
 
 ### 2.3- Segmento de clientes
 Lonxas e produtores locais, que buscan vender mellor e máis rápido.
