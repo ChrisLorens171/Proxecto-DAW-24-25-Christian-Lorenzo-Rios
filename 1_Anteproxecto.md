@@ -183,11 +183,37 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 
 ## 3- Requirimentos técnicos
 
-> _EXPLICACIÓN_: Descrición dos medios materiais e das tecnoloxías necesarias que se usarán para desenvolver o proxecto incluíndo as linguaxes de programación frontend e backend, técnicas, librerías, bases de datos, servizos usados, servidores, API’s, etc.
->
-> - **Infraestructura:** dominio web, servidor web dedicado, servidor de base de datos, almacenamento, memoria, ...
-> - **Backend:** tecnoloxías usadas.
-> - **Frontend:** tecnoloxías usadas
+- Infraestrutura
+
+     - Dominio web: exemplo.com
+
+     - Servidor web: VPS pequeno ou plan dedicado que soporte WebSockets
+
+     - Almacenamento: 10 GB para arquivos web, imaxes, bases de datos e backups
+
+     - Seguridade: certificado SSL (HTTPS) para conexións seguras e protección de datos
+
+- Backend
+
+     - Tecnoloxías: PHP con librería que soporte WebSockets (Ratchet o Swole), no caso de querer unha maior escalabilidade usar Node.js
+
+     - WebSockets: xestionan a transmisión en tempo real de ofertas e actualizacións das subastas
+
+     - Base de datos: MySQL ou SQLite para almacenar usuarios, produtos e historial de subastas
+
+     - API’s: REST opcional para funcionalidades adicionais (usuarios, lonxas, histórico)
+
+
+- Frontend
+
+     - HTML5 & CSS3: deseño da interface de usuario e cliente responsive
+
+     - JavaScript: conexión co servidor mediante WebSocket e lóxica da subasta en tempo real
+
+     - WebSocket API: para recibir actualizacións instantáneas de prezos e estados das subastas
+
+     - Librerías opcionais: Bootstrap ou Tailwind CSS para mellorar a presentación
+
 
 ## 4- Planificación
 
@@ -201,3 +227,14 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 > - Codificación e probas (debe ser a fase máis longa).
 >
 > Debe facerse un calendario ou un diagrama de Gantt indicando, para cada fase, a data de inicio, a súa duración e breve descrición das tarefas a realizar.
+
+Fase                 06/10   16/10   27/10   07/11   21/11   05/12   10/12   15/12
+-----------------------------------------------------------------------------------
+Anteproxecto          ██████████
+Análise                          ███████████
+Deseño                                   ███████████
+Codificación                                     ██████████████
+2ª Entrega                                               ██████████████
+Implantación                                                            █████
+Entrega final                                                                 █████
+Presentación                                                                       █
