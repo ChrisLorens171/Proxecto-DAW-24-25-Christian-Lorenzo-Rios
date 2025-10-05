@@ -113,7 +113,7 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 
 Os custos do proxecto divídense en fixos e variables:
 
-1. Custos fixos:
+- Custos fixos:
 
     - Dominio e hosting web anual (100 €)
 
@@ -123,7 +123,7 @@ Os custos do proxecto divídense en fixos e variables:
 
     - Mantemento web e copias de seguridade (10 €/mes)
 
-2. Custos variables:
+- Custos variables:
 
     - Publicidade e promoción segundo campañas (300 € anuais aprox.)
 
@@ -135,7 +135,20 @@ Os custos incluirían os impostos correspondentes (IVE) e a cotización á Segur
 
 #### 2.7.2- Ingresos
 
-> _EXPLICACIÓN_: Neste apartado indicarase unha previsión de ventas e unha política de prezos. Isto implicar apuntar unha previsión de ventas e unha política de prezos.
+**Estimación de ingresos anuales (2% comisión, % volumen gestionado)**
+
+| Escenario       | Facturación anual por lonja (€) | % gestionado por la plataforma | Comisión (%) | Ingresos anuales estimados (€) |
+|-----------------|--------------------------------|-------------------------------|-------------|-------------------------------|
+| Conservador     | 374.850                        | 10%                           | 2%          | 2.249                          |
+| Moderado        | 500.000                        | 15%                           | 2%          | 4.500                          |
+| Optimista       | 1.000.000                      | 20%                           | 2%          | 12.000                         |
+
+| Escenario       | Ingresos estimados (€) | Gráfico |
+|-----------------|----------------------|---------|
+| Conservador     | 2.249                | ▓       |
+| Moderado        | 4.500                | ▓▓      |
+| Optimista       | 12.000               | ▓▓▓▓▓   |
+
 
 ### 2.8- Viabilidade
 
