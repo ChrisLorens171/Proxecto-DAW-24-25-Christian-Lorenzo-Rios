@@ -219,14 +219,31 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 
 ```mermaid
 gantt
-    title Planificación do proxecto
+    title Cronograma do proxecto de subasta de marisco
     dateFormat  YYYY-MM-DD
+    excludes    weekends
+
     section Fases
-    Anteproxecto     :a1, 2025-10-06, 10d
-    Análise          :a2, after a1, 11d
-    Deseño           :a3, after a2, 11d
-    Codificación     :a4, after a3, 14d
-    2ª Entrega       :a5, after a4, 14d
-    Implantación     :a6, after a5, 7d
-    Entrega final    :a7, after a6, 5d
-    Presentación     :a8, after a7, 1d
+    Anteproxecto        :a1, 2025-10-06, 10d
+    note right of a1 :Recoller documentación, definir idea e obxectivos
+
+    Análise             :after a1, 11d
+    note right of a2 :Estudo de mercado, requisitos técnicos e legais, definición de funcionalidades
+
+    Deseño              :after a2, 11d
+    note right of a3 :Deseño da arquitectura, wireframes e prototipos da web
+
+    Codificación e probas:after a3, 14d
+    note right of a4 :Desenvolvemento da web, implementación de subasta con WebSockets, probas unitarias e integración
+
+    2ª Entrega          :after a4, 14d
+    note right of a5 :Corrección de erros, revisión xeral e preparación de documentación
+
+    Implantación        :after a5, 5d
+    note right of a6 :Subida ao servidor, configuración de dominios, base de datos e infraestrutura
+
+    Entrega final       :after a6, 5d
+    note right of a7 :Entrega completa do proxecto ao profesor ou avaliador
+
+    Presentación        :after a7, 1d
+    note right of a8 :Preparación e realización da presentación final
