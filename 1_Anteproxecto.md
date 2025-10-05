@@ -130,11 +130,15 @@ Os custos incluirían os impostos correspondentes (IVE) e a cotización á Segur
 
 #### 2.7.2- Ingresos
 
-- Previsión de ventas nos 3 primeros anos según: 
-        - Cantidad de lonxas
-        - Volumen de marisco por lonxa gestionado
-        - Posible facturación total gestionada
-        - Ingresos anuales esperados
+- Previsión de ventas nos 3 primeros anos según:
+  
+    - Cantidad de lonxas
+
+    - Volumen de marisco por lonxa gestionado
+
+    - Posible facturación total gestionada
+
+    - Ingresos anuales esperados
 
 | Año | Número de lonxas | % volumen gestionado | Facturación gestionada (€) | Comisión 2% (€) | Ingresos estimados (€) |
 |-----|-----------------|--------------------|---------------------------|----------------|-----------------------|
