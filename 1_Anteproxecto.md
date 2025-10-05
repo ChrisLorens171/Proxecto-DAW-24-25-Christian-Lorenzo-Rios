@@ -97,13 +97,13 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 | Dominio e hosting web   | Rexistro do dominio e contratación dun servizo de hospedaxe económico por un ano | 100 €            |
 | Desenvolvemento web     | Creación do sitio con HTML, CSS, JavaScript e PHP; deseño básico e probas de funcionamento | 700 €            |
 | Equipamento informático | Ordenador persoal e periféricos para deseño e mantemento da web   | 600 €            |
-| Publicidade e promoción | Campañas en redes sociais, materiais gráficos e promoción local   | 300 €            |
-| Gastos legais e administrativos | Rexistro de actividade, alta de autónomo, taxas e xestión básica | 300 €            |
-| **Total estimado inicial** | —                                                               | **2.000 €**      |
+| Publicidade e promoción | Campañas en redes sociais, materiais gráficos e promoción local   | 500 €            |
+| Gastos legais e administrativos | Rexistro de actividade, alta de autónomo, tasas e xestión básica | 300 €            |
+| **Total estimado inicial** | —                                                               | **2.200 €**      |
 
 #### 2.7.1- Custos
 
-Os custos do proxecto divídense en fixos e variables:
+Os custos do proxecto divídense da seguinte forma:
 
 - Custos fixos:
 
@@ -111,19 +111,18 @@ Os custos do proxecto divídense en fixos e variables:
 
     - Cota de autónomo (270 €/mes aproximadamente)
 
-    - Electricidade e internet (20 €/mes)
+    - Electricidade e internet (100 €/mes)
 
-    - Mantemento web e copias de seguridade (10 €/mes)
+    - Mantemento web e copias de seguridade (50 €/mes)
 
 - Custos variables:
 
-    - Publicidade e promoción segundo campañas (300 € anuais aprox.)
+    - Publicidade e promoción segundo campañas (500 € anuais aprox.)
 
-    - Desprazamentos e reunións con lonxas (100 € anuais)
+    - Desprazamentos e reunións con lonxas (200 € anuais)
 
     - Comisiones por servizos de pago en liña (1–3% por transacción)
 
-Os custos incluirían os impostos correspondentes (IVE) e a cotización á Seguridade Social no caso do réxime de autónomos.
 
 #### 2.7.2- Ingresos
 
