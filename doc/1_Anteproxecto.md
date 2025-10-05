@@ -21,6 +21,8 @@
 
 ## 1- Descrición do proxecto
 
+> **pon un nombre al proyecto y por tanto a la plataforma web**
+
 O proxecto consiste na creación dunha plataforma web que conecte lonxas e compradores de marisco, permitindo realizar subastas públicas en liña de produtos do mar. O obxectivo principal é modernizar e dixitalizar o proceso de venda, facilitando o acceso a un mercado máis amplo e transparente, tanto para as lonxas como para os compradores profesionais (restaurantes, distribuidores, etc.).
 
 A aplicación busca facer máis áxil e eficiente a comercialización do marisco fresco, reducindo intermediarios e tempos de xestión. Ademais, abre unha oportunidade de negocio, xa que podería comercializarse mediante comisións por venda ou plans de subscrición para lonxas e usuarios profesionais.
@@ -28,6 +30,7 @@ A aplicación busca facer máis áxil e eficiente a comercialización do marisco
 Para o desenvolvemento inicial empregarase HTML, CSS e JavaScript para a parte visual e PHP con MySQL para a xestión de datos. Isto permitirá crear unha versión funcional e facilmente hospedable en servizos web económicos, deixando aberta a posibilidade de ampliar o proxecto no futuro con tecnoloxías máis avanzadas.
 
 ## 2- Empresa
+
 ### 2.1- Idea de negocio
 
 O proxecto céntrase na creación dunha plataforma web que conecte lonxas e compradores profesionais de marisco, permitindo realizar subastas en liña de produtos frescos.
@@ -106,35 +109,23 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 Os custos do proxecto divídense da seguinte forma:
 
 - Custos fixos:
-
-    - Dominio e hosting web anual (100 €)
-
-    - Cota de autónomo (270 €/mes aproximadamente)
-
-    - Electricidade e internet (100 €/mes)
-
-    - Mantemento web e copias de seguridade (50 €/mes)
+  - Dominio e hosting web anual (100 €)
+  - Cota de autónomo (270 €/mes aproximadamente)
+  - Electricidade e internet (100 €/mes)
+  - Mantemento web e copias de seguridade (50 €/mes)
 
 - Custos variables:
-
-    - Publicidade e promoción segundo campañas (500 € anuais aprox.)
-
-    - Desprazamentos e reunións con lonxas (200 € anuais)
-
-    - Comisiones por servizos de pago en liña (1–3% por transacción)
-
+  - Publicidade e promoción segundo campañas (500 € anuais aprox.)
+  - Desprazamentos e reunións con lonxas (200 € anuais)
+  - Comisiones por servizos de pago en liña (1–3% por transacción)
 
 #### 2.7.2- Ingresos
 
 - Previsión de ventas nos 3 primeros anos según:
-  
-    - Cantidad de lonxas
-
-    - Volumen de marisco por lonxa gestionado
-
-    - Posible facturación total gestionada
-
-    - Ingresos anuales esperados
+  - Cantidad de lonxas
+  - Volumen de marisco por lonxa gestionado
+  - Posible facturación total gestionada
+  - Ingresos anuales esperados
 
 | Año | Número de lonxas | % volumen gestionado | Facturación gestionada (€) | Comisión 2% (€) | Ingresos estimados (€) |
 |-----|-----------------|--------------------|---------------------------|----------------|-----------------------|
@@ -183,38 +174,28 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 ## 3- Requirimentos técnicos
 
 - Infraestrutura
-
-     - Dominio web: exemplo.com
-
-     - Servidor web: VPS pequeno ou plan dedicado que soporte WebSockets
-
-     - Almacenamento: 10 GB para arquivos web, imaxes, bases de datos e backups
-
-     - Seguridade: certificado SSL (HTTPS) para conexións seguras e protección de datos
+  - Dominio web: ¿¿exemplo.com??? **Donde contratarías el dominio y que nombre pondrías**
+  - Servidor web: VPS pequeno ou plan dedicado que soporte WebSockets. **Indicar cuál emplearás y que características tiene**
+  - Almacenamento: 10 GB para arquivos web, imaxes, bases de datos e backups **esto dependerá del hosting contratado**
+  - Seguridade: certificado SSL (HTTPS) para conexións seguras e protección de datos **donde conseguimos el certificado**
 
 - Backend
-
-     - Tecnoloxías: PHP con librería que soporte WebSockets (Ratchet o Swole), no caso de querer unha maior escalabilidade usar Node.js
-
-     - WebSockets: xestionan a transmisión en tempo real de ofertas e actualizacións das subastas
-
-     - Base de datos: MySQL ou SQLite para almacenar usuarios, produtos e historial de subastas
-
-     - API’s: REST opcional para funcionalidades adicionais (usuarios, lonxas, histórico)
-
+  - Tecnoloxías: PHP con librería que soporte WebSockets (Ratchet o Swole), no caso de querer unha maior escalabilidade usar Node.js
+  - WebSockets: xestionan a transmisión en tempo real de ofertas e actualizacións das subastas
+  - Base de datos: MySQL ou SQLite para almacenar usuarios, produtos e historial de subastas
+  - API’s: REST opcional para funcionalidades adicionais (usuarios, lonxas, histórico).
+  
+> Pregunta: ¿vas a utilizar el modelo vista controlador? si es así, fuera lo de API rest, no ponemos nada que no entreguemos. Eso son ampliaciones.
 
 - Frontend
-
-     - HTML5 & CSS3: deseño da interface de usuario e cliente responsive
-
-     - JavaScript: conexión co servidor mediante WebSocket e lóxica da subasta en tempo real
-
-     - WebSocket API: para recibir actualizacións instantáneas de prezos e estados das subastas
-
-     - Librerías opcionais: Bootstrap ou Tailwind CSS para mellorar a presentación
-
-
+  - HTML5 & CSS3: deseño da interface de usuario e cliente responsive
+  - JavaScript: conexión co servidor mediante WebSocket e lóxica da subasta en tempo real
+  - WebSocket API: para recibir actualizacións instantáneas de prezos e estados das subastas
+  - Librerías opcionais: Bootstrap ou Tailwind CSS para mellorar a presentación
+  
 ## 4- Planificación
+
+> Esto no es lo pedido. Se pide que realices la planificación del proyecto entero indicando como lo planificarías tu y empleando diagramas Gantt
 
 | Fase                    | Data inicio | Data fin   | Duración | Tarefas principais                                  |
 |--------------------------|------------|-----------|----------|----------------------------------------------------|
