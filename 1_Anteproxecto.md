@@ -172,13 +172,16 @@ A viabilidade do proxecto dependerá da cantidad de volumen e lonxas que logremo
 
 #### 2.8.3- Conclusión
 
-- É viable?
+- **É viable?**
+- 
 Si, o proxecto é viable tanto técnica como economicamente. A súa implementación é sinxela e non require grandes recursos materiais, e os ingresos estimados superan os custos desde o primeiro ano.
 
-- Os beneficios do proxecto son superiores aos custos?
+- **Os beneficios do proxecto son superiores aos custos?**
+- 
 Si. Mesmo no escenario máis conservador, o proxecto xera beneficios desde o primeiro ano, e estes aumentan significativamente ao captar máis lonxas e xestionar maior volume de marisco.
 
-- As perdas poden cubrirse vía financiamento?
+- **As perdas poden cubrirse vía financiamento?**
+- 
 As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequenas subvencións para emprendedores ou financiamento público local. Isto reduce o risco económico e permite centrarse no crecemento do negocio.
 
 ## 3- Requirimentos técnicos
