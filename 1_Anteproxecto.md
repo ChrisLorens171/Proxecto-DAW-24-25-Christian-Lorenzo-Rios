@@ -106,11 +106,6 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 
 #### 2.7.1- Custos
 
-> > _EXPLICACIÓN_: Neste apartado idicaremos o invertimento
->
-> - Diferenzando custos fixos de variables.
-> - Computando impostos e custos sociais.
-
 Os custos do proxecto divídense en fixos e variables:
 
 - Custos fixos:
@@ -135,40 +130,52 @@ Os custos incluirían os impostos correspondentes (IVE) e a cotización á Segur
 
 #### 2.7.2- Ingresos
 
-**Estimación de ingresos anuales (2% comisión, % volumen gestionado)**
+- Previsión de ventas nos 3 primeros anos: 
+      - Cantidad de lonxas
+      - Volumen de marisco por lonxa gestionado
+      - Posible facturación total gestionada
+      - Ingresos anuales esperados
 
-| Escenario       | Facturación anual por lonja (€) | % gestionado por la plataforma | Comisión (%) | Ingresos anuales estimados (€) |
-|-----------------|--------------------------------|-------------------------------|-------------|-------------------------------|
-| Conservador     | 374.850                        | 10%                           | 2%          | 2.249                          |
-| Moderado        | 500.000                        | 15%                           | 2%          | 4.500                          |
-| Optimista       | 1.000.000                      | 20%                           | 2%          | 12.000                         |
-
-| Escenario       | Ingresos estimados (€) | Gráfico |
-|-----------------|----------------------|---------|
-| Conservador     | 2.249                | ▓       |
-| Moderado        | 4.500                | ▓▓      |
-| Optimista       | 12.000               | ▓▓▓▓▓   |
-
+| Año | Número de lonxas | % volumen gestionado | Facturación gestionada (€) | Comisión 2% (€) | Ingresos estimados (€) |
+|-----|-----------------|--------------------|---------------------------|----------------|-----------------------|
+| 1   | 3               | 15%                | 180.000 – 225.000         | 2%             | 3.600 – 4.500         |
+| 2   | 5               | 20%                | 400.000 – 500.000         | 2%             | 8.000 – 10.000        |
+| 3   | 8               | 25%                | 800.000 – 1.000.000       | 2%             | 16.000 – 20.000       |
 
 ### 2.8- Viabilidade
 
 #### 2.8.1- Viabilidade técnica
 
-> _EXPLICACIÓN_: Neste subapartado deberás defender tendo en conta os datos xa aportados, a viabilidade da realización do proyecto.
-> Evidentemente, para poder xustificar a viabilidade económica do proyecto deberás ter en conta os ingresos. **Ainda que está na parte de empresa, este apartado é interesante dende o punto de vista técnico**
->
-> - Será posible dispoñer dos recursos humanos e medios de produción necesarios (materias primas, maquinaria, instalacións, etc.)?
-> - Existe algún impedimento técnico que dificulte o proceso produtivo?
+- **Recursos humanos:** un desenvolvedor web (pode ser o propio emprendedor) e soporte administrativo básico.
+
+- **Medios técnicos:** só se precisa hosting económico, dominio e ferramentas de desenvolvemento web.
+
+- **Materias primas / maquinaria:** posible uso de camaras en directo para o marisco e futura incorporación de loxística.
+
+- **Impedimentos técnicos:** o principal reto é garantir seguridade e estabilidade na web.
+
+O proxecto é técnicamente viable para un equipo pequeno, coa barreira de entrada mais importante sendo o cambio nos método tradicionais establecidos e a posible mentalidad conservadora.
 
 #### 2.8.2 - Viabilidade económica
 
-> _EXPLICACIÓN_: Neste subapartado deberás defender con datos a viabilidade da realización do proyecto, para elo debes indicar os custos e investimentos:
+A viabilidade do proxecto dependerá da cantidad de volumen e lonxas que logremos atraer, as previsión serían as seguintes.
+
+| Ano | Custos estimados (€)           | Ingresos estimados (€) | Beneficio/Perda (€) |
+|-----|-------------------------------|----------------------|-------------------|
+| 1   | 1.500 (desenvolvemento + hosting + marketing) | 3.600 – 4.500         | 2.100 – 3.000     |
+| 2   | 2.500 (marketing + soporte + mantemento web) | 8.000 – 10.000        | 5.500 – 7.500     |
+| 3   | 3.000 (marketing + soporte + mantemento web) | 16.000 – 20.000       | 13.000 – 17.000   |
 
 #### 2.8.3- Conclusión
 
-> - É viable?
-> - Os beneficios do proxecto son superiores aos costes?
-> - As perdas poden cubrirse vía financiamento (por parte da administración pública, con subvencións, etc)?
+- É viable?
+Si, o proxecto é viable tanto técnica como economicamente. A súa implementación é sinxela e non require grandes recursos materiais, e os ingresos estimados superan os custos desde o primeiro ano.
+
+- Os beneficios do proxecto son superiores aos custos?
+Si. Mesmo no escenario máis conservador, o proxecto xera beneficios desde o primeiro ano, e estes aumentan significativamente ao captar máis lonxas e xestionar maior volume de marisco.
+
+- As perdas poden cubrirse vía financiamento?
+As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequenas subvencións para emprendedores ou financiamento público local. Isto reduce o risco económico e permite centrarse no crecemento do negocio.
 
 ## 3- Requirimentos técnicos
 
