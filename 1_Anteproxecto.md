@@ -42,31 +42,13 @@ No caso do valor engadido este radicaría na transparencia dos prezos, a rapidez
 Como produto aumentado, poderíase engadir máis adiante un servizo de loxística ou de trazabilidade do marisco.
 
 ### 2.2- Xustificación da idea
+A idea deste proxecto nace da observación da realidade actual das lonxas galegas, que, a pesar de representar un dos sectores económicos máis importantes da comunidade, seguen a empregar sistemas de venda presenciais e pouco dixitalizados. Galicia concentra arredor do 40% da produción pesqueira de España, con máis de 60 lonxas activas e un volume anual de vendas superior aos 400 millóns de euros. Porén, a falta de ferramentas tecnolóxicas que conecten lonxas e compradores profesionais limita a súa capacidade de expansión e modernización.
 
-> _EXPLICACIÓN_: Neste apartado incluirase a información necesaria para xustificar a realización do proxecto. Debe indicarse como xurdiu a idea do proxecto, que obxectivo se persegue coa súa posta en marcha e/ou que problema vai resolver.
->
-> En este apartado indicade a nivel de idea de negocio:
->
-> - ¿Cal é a necesidade ou necesidades que se pretenden cubrir ou satisfacer?
-> - ¿Existen na actualidade aplicacións ou productos que tenten dar resposta a esa(s) necesidade(s)? ¿En que medida o conseguen?
-> - ¿Trátase de un segmento de mercado desabastecido ou insuficientemente atendido?
-> - ¿Un produto ineficiente? Un mercado novo?
->
-> Para sustentar as xustificación deberás proporcionar datos. Fontes máis utilizadas: INE, IGE, Informes sectoriais de
-> Industria, Statista... Deberás facer unha DAFO.
+O proxecto pretende resolver esta carencia mediante unha plataforma web que permita realizar subastas públicas en liña, facilitando a compra e venda directa de marisco fresco entre lonxas e compradores profesionais (restaurantes, distribuidores, pescaderías, etc.). Con iso, búscase mellorar a transparencia nos prezos, reducir intermediarios e ampliar o alcance comercial das lonxas máis alá do ámbito local.
 
-A idea nace da observación de que moitas lonxas galegas seguen a traballar con sistemas tradicionais, pouco dixitalizados, e que os compradores doutros puntos de España e Europa teñen dificultades para acceder a produtos frescos directamente desde a orixe.
-O proxecto pretende modernizar o sector pesqueiro galego, mellorando a súa competitividade e visibilidade.
+Na actualidade existen algunhas plataformas de venda de peixe por internet, como PescadeRías ou LonjaOnline, pero estas non ofrecen un sistema de subastas en tempo real nin están orientadas ao modelo B2B (empresa a empresa). Polo tanto, o proxecto cobre un segmento de mercado insuficientemente atendido, cunha posible oportunidade de crecemento, tendo en conta que o comercio electrónico alimentario en España prevee un crecemento anual dun 19%.
 
-Actualmente existen algunhas plataformas de venda de peixe en liña, pero moi poucas permiten subastas en tempo real e menos aínda enfocadas ás lonxas locais. Polo tanto, trátase dun nicho de mercado pouco atendido, cunha demanda potencial en crecemento.
-
-**Necesidades que cobre:**
-
-- Dixitalización e transparencia na venda de marisco.
-
-- Acceso directo entre produtor e comprador.
-
-- Redución de intermediarios e custos.
+A proposta encaixa ademais coas políticas europeas e autonómicas de modernización do sector, como o Plan de Dixitalización da Pesca 2021–2027, que fomenta o uso das TIC para mellorar a trazabilidade e competitividade das empresas pesqueiras. Isto supón unha xustificación adicional pola posibilidade de acceder a axudas e subvencións públicas.
 
 **Análisis DAFO**
 
