@@ -60,7 +60,7 @@ O proxecto pretende modernizar o sector pesqueiro galego, mellorando a súa comp
 
 Actualmente existen algunhas plataformas de venda de peixe en liña, pero moi poucas permiten subastas en tempo real e menos aínda enfocadas ás lonxas locais. Polo tanto, trátase dun nicho de mercado pouco atendido, cunha demanda potencial en crecemento.
 
-Necesidades que cobre:
+**Necesidades que cobre:**
 
 - Dixitalización e transparencia na venda de marisco.
 
@@ -68,7 +68,7 @@ Necesidades que cobre:
 
 - Redución de intermediarios e custos.
 
-Análisis DAFO
+**Análisis DAFO**
 
 ![Análisis DAFO](https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/0a7793999b72eb2a74df4e80b362e924a21fed12/img/DAFO.jpg)
 
