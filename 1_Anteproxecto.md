@@ -44,7 +44,7 @@ A idea deste proxecto nace da observación da realidade actual das lonxas galega
 
 O proxecto pretende resolver esta carencia mediante unha plataforma web que permita realizar subastas públicas en liña, facilitando a compra e venda directa de marisco fresco entre lonxas e compradores profesionais (restaurantes, distribuidores, pescaderías, etc.). Con iso, búscase mellorar a transparencia nos prezos, reducir intermediarios e ampliar o alcance comercial das lonxas máis alá do ámbito local.
 
-Ademais a proposta encaixa coas políticas europeas e autonómicas de modernización do sector, como o Plan de Dixitalización da Pesca 2021–2027, que fomenta o uso das TIC para mellorar a trazabilidade e competitividade das empresas pesqueiras. Isto supón unha razón adicional pola posibilidade de acceder a axudas e subvencións públicas.
+Ademais a proposta encaixa coas políticas europeas e autonómicas de modernización do sector, como o Plan de Dixitalización da Pesca 2021–2027, que fomenta o uso das TIC para mellorar a trazabilidade e competitividade das empresas pesqueiras. Isto supón unha razón adicional para a posibilidade de acceder a axudas e subvencións públicas.
 
 **Análisis DAFO**
 
