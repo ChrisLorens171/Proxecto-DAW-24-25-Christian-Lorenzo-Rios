@@ -171,12 +171,16 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 
 ## 3- Requirimentos técnicos
 
-- Infraestrutura
-  - Dominio web: ¿¿exemplo.com??? **Donde contratarías el dominio y que nombre pondrías**
-  - Servidor web: VPS pequeno ou plan dedicado que soporte WebSockets. **Indicar cuál emplearás y que características tiene**
-  - Almacenamento: 10 GB para arquivos web, imaxes, bases de datos e backups **esto dependerá del hosting contratado**
-  - Seguridade: certificado SSL (HTTPS) para conexións seguras e protección de datos **donde conseguimos el certificado**
+  🔧 Infraestrutura
 
+  | Elemento | Descrición |
+  |-----------|-------------|
+  | **Dominio web** | `mariscamar.com` (ou `mariscamar.es` se o dominio non está dispoñible). Contratado en [DonDominio](https://www.dondominio.com) ou [OVH](https://www.ovh.es) cun custo aproximado de **8–12        €/ano**. |
+  | **Servidor web** | VPS básico con soporte para Node.js e WebSockets en plataformas como **Render**, **Railway** ou **Hetzner Cloud**. <br>**Especificacións:** 1 vCore, 1 GB RAM, 10 GB SSD, Ubuntu 24.04 LTS. |
+  | **Almacenamento** | 10 GB para arquivos web, imaxes e base de datos. Inclúe **copias de seguridade semanais automáticas**. |
+  | **Seguridade** | Conexión cifrada mediante **SSL (Let’s Encrypt)** e protección básica contra inxección SQL e accesos non autorizados. |
+
+---
 - Backend
   - Tecnoloxías: PHP con librería que soporte WebSockets (Ratchet o Swole), no caso de querer unha maior escalabilidade usar Node.js
   - WebSockets: xestionan a transmisión en tempo real de ofertas e actualizacións das subastas
