@@ -260,40 +260,38 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 - **12/12/2025 – 15/12/2025:** Preparación da presentación final  
   Crear demo, documentación e material para a entrega e defensa do proxecto.
 
-
 ```mermaid
 gantt
-    title Planificación completa do proxecto Mariscamar
-    dateFormat  DD-MM-YYYY
+    dateFormat  DD/MM/YYYY
     axisFormat  %d/%m
 
     section Estudo preliminar
-    Investigación de mercado e competencia :done, a1, 29-09-2025, 4d
-    Definición da idea e obxectivos        :done, a2, after a1, 3d
-    Elección de tecnoloxías e recursos     :done, a3, after a2, 3d
+    Investigación de mercado e competencia :done, a1, 29/09/2025, 4d
+    Definición da idea e obxectivos        :done, a2, 03/10/2025, 3d
+    Elección de tecnoloxías e recursos     :done, a3, 06/10/2025, 2d
 
     section Análise
-    Identificación de usuarios e roles     :active, a4, 06-10-2025, 3d
-    Revisión de normativas e contorno operativo :a5, after a4, 4d
-    Definición de requisitos funcionais    :a6, after a5, 4d
-    Modelado inicial de base de datos      :a7, after a6, 3d
+    Identificación de usuarios e roles     :active, a4, 07/10/2025, 2d
+    Revisión de normativas e contorno operativo :a5, 09/10/2025, 4d
+    Definición de requisitos funcionais    :a6, 13/10/2025, 4d
+    Modelado inicial de base de datos      :a7, 17/10/2025, 2d
 
     section Deseño
-    Deseño de interface e UX               :a8, 16-10-2025, 5d
-    Estrutura do backend (rutas, módulos)  :a9, after a8, 4d
-    Plan de integración de WebSockets      :a10, after a9, 3d
-    Plan de seguridade e backups           :a11, after a10, 2d
+    Deseño de interface e UX               :a8, 18/10/2025, 3d
+    Estrutura do backend (rutas, módulos)  :a9, 21/10/2025, 4d
+    Plan de integración de WebSockets      :a10, 25/10/2025, 4d
 
     section Codificación e probas
-    Desenvolvemento backend (Node+Express) :a12, 27-10-2025, 7d
-    Implementación de WebSockets (Socket.io):a13, after a12, 5d
-    Desenvolvemento frontend (HTML, CSS, JS):a14, after a13, 7d
-    Conexión frontend-backend e APIs       :a15, after a14, 3d
-    Probas unitarias e de integración      :a16, after a15, 5d
-    Correccións e optimización             :a17, after a16, 4d
+    Desenvolvemento backend (Node+Express) :a11, 29/10/2025, 5d
+    Implementación de WebSockets (Socket.io):a12, 03/11/2025, 5d
+    Desenvolvemento frontend (HTML, CSS, JS):a13, 08/11/2025, 7d
+    Conexión frontend-backend e APIs       :a14, 15/11/2025, 3d
+    Probas unitarias e de integración      :a15, 19/11/2025, 4d
+    Correccións e optimización             :a16, 24/11/2025, 6d
 
     section Implantación
-    Configuración VPS e dominio            :a18, 07-12-2025, 2d
-    Migración de datos e backups           :a19, after a18, 2d
-    Despregamento final e probas           :a20, after a19, 3d
-    Preparación da presentación final      :a21, after a20, 3d
+    Configuración VPS e dominio            :a17, 02/12/2025, 3d
+    Migración de datos e backups           :a18, 05/12/2025, 4d
+    Despregamento final e probas           :a19, 09/12/2025, 4d
+    Preparación da presentación final      :a20, 12/12/2025, 4d
+
