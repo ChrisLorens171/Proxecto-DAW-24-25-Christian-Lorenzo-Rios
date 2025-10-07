@@ -182,30 +182,118 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
 
 ---
 - Backend
-  - Tecnoloxías: PHP con librería que soporte WebSockets (Ratchet o Swole), no caso de querer unha maior escalabilidade usar Node.js
-  - WebSockets: xestionan a transmisión en tempo real de ofertas e actualizacións das subastas
-  - Base de datos: MySQL ou SQLite para almacenar usuarios, produtos e historial de subastas
-  - API’s: REST opcional para funcionalidades adicionais (usuarios, lonxas, histórico).
-  
-> Pregunta: ¿vas a utilizar el modelo vista controlador? si es así, fuera lo de API rest, no ponemos nada que no entreguemos. Eso son ampliaciones.
+  - **Tecnoloxías:** `Node.js` + `Express`
+  - **Comunicación en tempo real:** `Socket.io`
+  - **Base de datos:** `MySQL` (ou `MariaDB`)
+  - **Arquitectura:** modular sinxela con separación de rutas, controladores e modelos.
 
 - Frontend
-  - HTML5 & CSS3: deseño da interface de usuario e cliente responsive
-  - JavaScript: conexión co servidor mediante WebSocket e lóxica da subasta en tempo real
-  - WebSocket API: para recibir actualizacións instantáneas de prezos e estados das subastas
-  - Librerías opcionais: Bootstrap ou Tailwind CSS para mellorar a presentación
+  - HTML5 & CSS3: deseño da interface de usuario e cliente responsive.
+  - JavaScript: conexión co servidor mediante WebSocket e lóxica da subasta en tempo real.
+  - WebSocket API: para recibir actualizacións instantáneas de prezos e estados das subastas.
+  - Librerías opcionais: Bootstrap ou Tailwind CSS para mellorar a presentación.
   
 ## 4- Planificación
 
-> Esto no es lo pedido. Se pide que realices la planificación del proyecto entero indicando como lo planificarías tu y empleando diagramas Gantt
+### Estudo preliminar
+- **29/09/2025 – 02/10/2025:** Investigación de mercado e competencia  
+  Investigar competidores, identificar oportunidades e analizar demanda de marisco en Galicia.
 
-| Fase                    | Data inicio | Data fin   | Duración | Tarefas principais                                  |
-|--------------------------|------------|-----------|----------|----------------------------------------------------|
-| Anteproxecto             | 06/10/25   | 15/10/25  | 10 días  | Definir idea, redactar explicación inicial        |
-| Análise                  | 16/10/25   | 26/10/25  | 10 días  | Definicir funcionalidades, normativas vixentes  |
-| Deseño                   | 27/10/25   | 06/11/25  | 10 días  | Deseño de prototipos, creación do diseño |
-| Codificación e probas    | 07/11/25   | 20/11/25  | 14 días  | Desenvolvemento frontend e backend, probas        |
-| 2ª Entrega               | 21/11/25   | 04/12/25  | 14 días  | Entrega de versión intermedia, correccións        |
-| Implantación             | 05/12/25   | 09/12/25  | 5 días   | Configuración do hosting, base de datos, dominio  |
-| Entrega final            | 10/12/25   | 14/12/25  | 5 días   | Revisar todo, documentación e axustes finais     |
-| Presentación             | 15/12/25   | 15/12/25  | 1 día    | Presentación oficial do proxecto                  |
+- **03/10/2025 – 05/10/2025:** Definición da idea e obxectivos  
+  Establecer misión, visión e obxectivos do proxecto.
+
+- **06/10/2025 – 07/10/2025:** Elección de tecnoloxías e recursos  
+  Decidir linguaxes, frameworks, ferramentas, tipo de servidor e recursos necesarios.
+
+### Análise
+- **07/10/2025 – 08/10/2025:** Identificación de usuarios e roles  
+  Definir os tipos de usuarios (lonxas, compradores, administradores) e os seus permisos.
+
+- **09/10/2025 – 12/10/2025:** Revisión de normativas e contorno operativo  
+  Analizar lexislación aplicable a subastas de marisco, seguridade e protección de datos.
+
+- **13/10/2025 – 16/10/2025:** Definición de requisitos funcionais  
+  Listar funcionalidades do sistema, priorizalas e establecer criterios de éxito.
+
+- **17/10/2025 – 18/10/2025:** Modelado inicial de base de datos  
+  Crear esquemas básicos para usuarios, produtos e historial de subastas.
+
+### Deseño
+- **18/10/2025 – 20/10/2025:** Deseño de interface e UX  
+  Crear wireframes, prototipos e definir fluxo de usuario para frontend responsive.
+
+- **21/10/2025 – 24/10/2025:** Estrutura do backend (rutas, módulos)  
+  Planificar rutas de servidor, módulos e organización do código.
+
+- **25/10/2025 – 28/10/2025:** Plan de integración de WebSockets  
+  Definir como se xestionarán as subastas en tempo real.
+
+### Codificación e probas
+- **29/10/2025 – 02/11/2025:** Desenvolvemento backend (Node+Express)  
+  Programación do servidor e das funcionalidades principais.
+
+- **03/11/2025 – 07/11/2025:** Implementación de WebSockets (Socket.io)  
+  Crear conexións en tempo real para subastas.
+
+- **08/11/2025 – 14/11/2025:** Desenvolvemento frontend (HTML, CSS, JS)  
+  Construír interface do usuario e conectala co backend.
+
+- **15/11/2025 – 17/11/2025:** Conexión frontend-backend e APIs  
+  Probar comunicacións, endpoints e funcionalidade de subastas.
+
+- **19/11/2025 – 22/11/2025:** Probas unitarias e de integración  
+  Verificar que todas as partes do sistema funcionan correctamente.
+
+- **24/11/2025 – 29/11/2025:** Correccións e optimización  
+  Solucionar erros detectados, mellorar rendemento e UX.
+
+### Implantación
+- **02/12/2025 – 04/12/2025:** Configuración VPS e dominio  
+  Configurar servidor, instalar software necesario e asociar dominio web.
+
+- **05/12/2025 – 8/12/2025:** Migración de datos e backups  
+  Subir datos reais, facer copias de seguridade e probas finais.
+
+- **9/12/2025 – 12/12/2025:** Despregamento final e probas  
+  Verificación completa do funcionamento do sistema en produción.
+
+- **12/12/2025 – 15/12/2025:** Preparación da presentación final  
+  Crear demo, documentación e material para a entrega e defensa do proxecto.
+
+
+```mermaid
+gantt
+    title Planificación completa do proxecto Mariscamar
+    dateFormat  DD-MM-YYYY
+    axisFormat  %d/%m
+
+    section Estudo preliminar
+    Investigación de mercado e competencia :done, a1, 29-09-2025, 4d
+    Definición da idea e obxectivos        :done, a2, after a1, 3d
+    Elección de tecnoloxías e recursos     :done, a3, after a2, 3d
+
+    section Análise
+    Identificación de usuarios e roles     :active, a4, 06-10-2025, 3d
+    Revisión de normativas e contorno operativo :a5, after a4, 4d
+    Definición de requisitos funcionais    :a6, after a5, 4d
+    Modelado inicial de base de datos      :a7, after a6, 3d
+
+    section Deseño
+    Deseño de interface e UX               :a8, 16-10-2025, 5d
+    Estrutura do backend (rutas, módulos)  :a9, after a8, 4d
+    Plan de integración de WebSockets      :a10, after a9, 3d
+    Plan de seguridade e backups           :a11, after a10, 2d
+
+    section Codificación e probas
+    Desenvolvemento backend (Node+Express) :a12, 27-10-2025, 7d
+    Implementación de WebSockets (Socket.io):a13, after a12, 5d
+    Desenvolvemento frontend (HTML, CSS, JS):a14, after a13, 7d
+    Conexión frontend-backend e APIs       :a15, after a14, 3d
+    Probas unitarias e de integración      :a16, after a15, 5d
+    Correccións e optimización             :a17, after a16, 4d
+
+    section Implantación
+    Configuración VPS e dominio            :a18, 07-12-2025, 2d
+    Migración de datos e backups           :a19, after a18, 2d
+    Despregamento final e probas           :a20, after a19, 3d
+    Preparación da presentación final      :a21, after a20, 3d
