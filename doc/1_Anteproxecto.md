@@ -185,7 +185,7 @@ As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequ
   - **Tecnoloxías:** `Node.js` + `Express`
   - **Comunicación en tempo real:** `Socket.io`
   - **Base de datos:** `MySQL` (ou `MariaDB`)
-  - **Arquitectura:** modular sinxela con separación de rutas, controladores e modelos.
+  - **Arquitectura:** MVC (Modelo Vista Controlador)
 
 - Frontend
   - HTML5 & CSS3: deseño da interface de usuario e cliente responsive.
