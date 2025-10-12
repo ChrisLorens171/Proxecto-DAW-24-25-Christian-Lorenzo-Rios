@@ -177,23 +177,23 @@ As subvención que poderíamos usar con Mariscamar serían as seguintes:
 
   1 - Programa IG300C – Axudas á transformación dixital das pemes
 
-    - Obxecto: Apoiar a implantación de solucións dixitais que melloren procesos empresariais, como plataformas de subastas en liña, xestión de inventarios ou interconexión entre empresas.
+  - Obxecto: Apoiar a implantación de solucións dixitais que melloren procesos empresariais, como plataformas de subastas en liña, xestión de inventarios ou interconexión entre empresas.
 
-    - Dirixido a: Pequenas e medianas empresas (pemes) galegas.
+  - Dirixido a: Pequenas e medianas empresas (pemes) galegas.
 
-    - Subvención: Até o 35% da inversión, cofinanciado polo programa Galicia Feder 2021-2027.
+  - Subvención: Até o 35% da inversión, cofinanciado polo programa Galicia Feder 2021-2027.
 
-    - Fonte: Sede Electrónica da Xunta de Galicia
+  - Fonte: Sede Electrónica da Xunta de Galicia
 
   2 - Programa CO300C – Impulso á innovación e sostibilidade do comercio local e artesanal
 
-    - Obxecto: Fomentar a dixitalización, innovación e modernización no comercio local e artesanal, incluíndo plataformas de venda en liña e melloras na xestión comercial.
+  - Obxecto: Fomentar a dixitalización, innovación e modernización no comercio local e artesanal, incluíndo plataformas de venda en liña e melloras na xestión comercial.
 
-    - Dirixido a: Empresas físicas ou xurídicas, comunidades de bens ou outras unidades económicas legalmente constituídas.
+  - Dirixido a: Empresas físicas ou xurídicas, comunidades de bens ou outras unidades económicas legalmente constituídas.
 
-    - Subvención: Até o 80% da inversión, en réxime de concorrencia non competitiva.
+  - Subvención: Até o 80% da inversión, en réxime de concorrencia non competitiva.
 
-    - Fonte: Sede Electrónica da Xunta de Galicia
+  - Fonte: Sede Electrónica da Xunta de Galicia
 
 ## 3- Requirimentos técnicos
 
