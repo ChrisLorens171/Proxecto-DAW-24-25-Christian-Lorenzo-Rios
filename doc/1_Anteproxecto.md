@@ -64,9 +64,9 @@ En fases posteriores poderíase abrir a particulares, pero inicialmente céntras
 
 ### 2.4- Competencia
 
-No mercado galego de venda de peixe por internet operan plataformas como PescadeRías ou LonjaOnline, que permiten a compra directa de produtos do mar, principalmente para consumidores finais. Estas plataformas non ofrecen subastas en tempo real nin están enfocadas no modelo B2B, polo que non cubren as necesidades de lonxas pequenas e medianas que buscan ampliar a súa clientela profesional.
+No mercado galego de venda de peixe por internet operan plataformas como PescadeRías, LonjaOnline, SubastadePescado.es, Lonjanet, Yorso e as plataformas dixitais do CSIC deseñadas para lonxas. Estas plataformas permiten a compra directa de produtos do mar, pero non ofrecen subastas en tempo real, nin están enfocadas no modelo B2B.
 
-Actualmente non existen substitutos que combinen subastas dixitais en tempo real, acceso a múltiples lonxas pequenas, servizos adicionais como trazabilidade e loxística, e accións de fidelización. Por iso, Mariscamar ocupa un segmento de mercado insuficientemente atendido, con oportunidade de crecemento e de captación gradual de lonxas e compradores profesionais, diferenciándose da competencia existente.
+Mariscamar aporta innovación ao combinar subastas dixitais en tempo real, servizos aumentados como trazabilidade e loxística opcional, e accións de fidelización que incentivan o uso continuado. Ademais, permite que os compradores seleccionen preferentemente produtos de lonxas concretas, aumentando a visibilidade das lonxas pequenas. Por todo isto, Mariscamar ocupa un segmento de mercado insuficientemente atendido, con oportunidade de crecemento e diferenciación fronte á competencia existente.
 
 ### 2.5- Proposta de valor
 
