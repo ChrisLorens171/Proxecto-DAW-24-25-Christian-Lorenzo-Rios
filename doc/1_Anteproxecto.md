@@ -186,7 +186,6 @@ As subvención que poderíamos usar con Mariscamar serían as seguintes:
 
   - Subvención: Até o 35% da inversión, cofinanciado polo programa Galicia Feder 2021-2027.
 
-  - Fonte: Sede Electrónica da Xunta de Galicia
 
   2 - Programa CO300C – Impulso á innovación e sostibilidade do comercio local e artesanal
 
@@ -196,7 +195,6 @@ As subvención que poderíamos usar con Mariscamar serían as seguintes:
 
   - Subvención: Até o 80% da inversión, en réxime de concorrencia non competitiva.
 
-  - Fonte: Sede Electrónica da Xunta de Galicia
 
 ## 3- Requirimentos técnicos
 
