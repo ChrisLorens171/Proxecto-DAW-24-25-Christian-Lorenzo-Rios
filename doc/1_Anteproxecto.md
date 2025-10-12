@@ -35,9 +35,12 @@ O proxecto céntrase na creación dunha plataforma web que conecte lonxas e comp
 
 O produto central é unha web sinxela e funcional que facilita a compra e venda directa entre lonxas e clientes.
 
-No caso do valor engadido este radicaría na transparencia dos prezos, a rapidez das operacións e o acceso a un mercado máis amplo.
+No caso do valor engadido usaríamos recompensas por uso continuo da plataforma, como por exemplo as seguintes:
 
-Como produto aumentado, poderíase engadir máis adiante un servizo de loxística ou de trazabilidade do marisco que añadirá un custo extra a transacción.
+  - Por cada 5 operacións pagadas, a lonxa recibe 1 listado destacado ou desconto parcial na sexta operación.
+  - Alternativamente, se o volume anual supera X €, reducirase a comisión do ano seguinte a 2,5%.
+
+Como produto aumentado, engaaríamos un servizo de loxística ou de trazabilidade do marisco que añadirá un custo extra a transacción.
 
 ### 2.2- Xustificación da idea
 
@@ -65,7 +68,7 @@ Na actualidade existen algunhas plataformas de venda de peixe por internet, como
 
 ### 2.5- Proposta de valor
 
-A principal proposta de valor deste proxecto é ofrecer unha plataforma web sinxela, transparente e accesible que moderniza o proceso de venda de marisco nas lonxas galegas.
+A principal proposta de valor deste proxecto é ofrecer unha plataforma web sinxela e accesible que moderniza o proceso de venda de marisco nas lonxas galegas.
 
 A diferenza doutros servizos existentes, esta aplicación non funciona como unha tenda en liña convencional, senón que permite realizar subastas públicas en tempo real, conectando directamente ás lonxas cos compradores profesionais.
 
@@ -104,18 +107,17 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 
 #### 2.7.1- Custos
 
-Os custos do proxecto divídense da seguinte forma:
-
-- Custos fixos:
-  - Dominio e hosting web anual (100 €)
-  - Cota de autónomo (270 €/mes aproximadamente)
-  - Electricidade e internet (100 €/mes)
-  - Mantemento web e copias de seguridade (50 €/mes)
-
-- Custos variables:
-  - Publicidade e promoción segundo campañas (500 € anuais aprox.)
-  - Desprazamentos e reunións con lonxas (200 € anuais)
-  - Comisiones por servizos de pago en liña (1–3% por transacción)
+| Tipo de custo                         | Descrición                                   | Custo anual (€) | Tipo     |
+| ------------------------------------- | -------------------------------------------- | --------------- | -------- |
+| Dominio e hosting web                 | Servizos de aloxamento e dominio anual       | 100             | Fixo     |
+| Cota de autónomo                      | Seguridade social e cotizacións obrigatorias | 3.240           | Fixo     |
+| Electricidade e internet              | Gastos básicos de conexión e subministración | 1.200           | Fixo     |
+| Mantemento web e copias de seguridade | Soporte técnico, actualizacións e backups    | 600             | Fixo     |
+| **Salario do empresario**             | Remuneración mensual estimada                | **14.400**      | Fixo     |
+| **Custos sociais**                    | 30% aproximado do salario do empresario      | **4.320**       | Fixo     |
+| Publicidade e promoción               | Campañas en liña e presencia en redes        | 500             | Variable |
+| Desprazamentos e reunións             | Visitas a lonxas e contactos comerciais      | 200             | Variable |
+| Comisións de pago                     | Servizos por transaccións de bancos          | 300 *(media)*   | Variable |
 
 #### 2.7.2- Ingresos
 
@@ -125,11 +127,13 @@ Os custos do proxecto divídense da seguinte forma:
   - Posible facturación total gestionada
   - Ingresos anuales esperados
 
-| Año | Número de lonxas | % volumen gestionado | Facturación gestionada (€) | Comisión 2% (€) | Ingresos estimados (€) |
-|-----|-----------------|--------------------|---------------------------|----------------|-----------------------|
-| 1   | 3               | 15%                | 180.000 – 225.000         | 2%             | 3.600 – 4.500         |
-| 2   | 5               | 20%                | 400.000 – 500.000         | 2%             | 8.000 – 10.000        |
-| 3   | 8               | 25%                | 800.000 – 1.000.000       | 2%             | 16.000 – 20.000       |
+### Proxección de ingresos realista para Mariscamar (2-4-6 lonxas)
+
+| Ano | Lonxas captadas | Volumen medio xestionado por lonxa (€) | Comisión 3% (€) | Produto aumentado (€) | Ingresos totais (€) |
+|-----|-----------------|---------------------------------------|----------------|--------------------|------------------|
+| 1   | 2               | 300.000                                | 18.000         | 1.000              | 19.000           |
+| 2   | 4               | 350.000                                | 42.000         | 2.000              | 44.000           |
+| 3   | 6               | 400.000                                | 72.000         | 3.000              | 75.000           |
 
 ### 2.8- Viabilidade
 
@@ -149,11 +153,11 @@ O proxecto é técnicamente viable para un equipo pequeno, coa barreira de entra
 
 A viabilidade do proxecto dependerá da cantidad de volumen e lonxas que logremos atraer, as previsión serían as seguintes.
 
-| Ano | Custos estimados (€)           | Ingresos estimados (€) | Beneficio/Perda (€) |
-|-----|-------------------------------|----------------------|-------------------|
-| 1   | 1.500 (desenvolvemento + hosting + marketing) | 3.600 – 4.500         | 2.100 – 3.000     |
-| 2   | 2.500 (marketing + soporte + mantemento web) | 8.000 – 10.000        | 5.500 – 7.500     |
-| 3   | 3.000 (marketing + soporte + mantemento web) | 16.000 – 20.000       | 13.000 – 17.000   |
+| Ano | Ingresos totais (€) | Custos fixos (€) | Custos variables (€) | Beneficio neto (€) |
+|-----|-------------------|----------------|-------------------|-----------------|
+| 1   | 19.000            | 18.000 + 19.070* | 500               | -18.570         |
+| 2   | 44.000            | 18.000 + 19.070* | 700               | 6.230           |
+| 3   | 75.000            | 18.000 + 19.070* | 900               | 37.030          |
 
 #### 2.8.3- Conclusión
 
@@ -167,7 +171,29 @@ Si. Mesmo no escenario máis conservador, o proxecto xera beneficios desde o pri
 
 - **As perdas poden cubrirse vía financiamento?**
   
-As perdas iniciais, se existisen, serían mínimas e poderían cubrirse con pequenas subvencións para emprendedores ou financiamento público local. Isto reduce o risco económico e permite centrarse no crecemento do negocio.
+As perdas iniciais poderían cubrirse con pequenas subvencións para emprendedores ou financiamento público local. Isto reduce o risco económico e permite centrarse no crecemento do negocio.
+
+As subvención que poderíamos usar con Mariscamar serían as seguintes:
+
+  1 - Programa IG300C – Axudas á transformación dixital das pemes
+
+    - Obxecto: Apoiar a implantación de solucións dixitais que melloren procesos empresariais, como plataformas de subastas en liña, xestión de inventarios ou interconexión entre empresas.
+
+    - Dirixido a: Pequenas e medianas empresas (pemes) galegas.
+
+    - Subvención: Até o 35% da inversión, cofinanciado polo programa Galicia Feder 2021-2027.
+
+    - Fonte: Sede Electrónica da Xunta de Galicia
+
+  2 - Programa CO300C – Impulso á innovación e sostibilidade do comercio local e artesanal
+
+    - Obxecto: Fomentar a dixitalización, innovación e modernización no comercio local e artesanal, incluíndo plataformas de venda en liña e melloras na xestión comercial.
+
+    - Dirixido a: Empresas físicas ou xurídicas, comunidades de bens ou outras unidades económicas legalmente constituídas.
+
+    - Subvención: Até o 80% da inversión, en réxime de concorrencia non competitiva.
+
+    - Fonte: Sede Electrónica da Xunta de Galicia
 
 ## 3- Requirimentos técnicos
 
