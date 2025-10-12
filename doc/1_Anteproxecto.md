@@ -107,17 +107,18 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 
 #### 2.7.1- Custos
 
-| Tipo de custo                         | Descrición                                   | Custo anual (€) | Tipo     |
-| ------------------------------------- | -------------------------------------------- | --------------- | -------- |
-| Dominio e hosting web                 | Servizos de aloxamento e dominio anual       | 100             | Fixo     |
-| Cota de autónomo                      | Seguridade social e cotizacións obrigatorias | 3.240           | Fixo     |
-| Electricidade e internet              | Gastos básicos de conexión e subministración | 1.200           | Fixo     |
-| Mantemento web e copias de seguridade | Soporte técnico, actualizacións e backups    | 600             | Fixo     |
-| **Salario do empresario**             | Remuneración mensual estimada                | **14.400**      | Fixo     |
-| **Custos sociais**                    | 30% aproximado do salario do empresario      | **4.320**       | Fixo     |
-| Publicidade e promoción               | Campañas en liña e presencia en redes        | 500             | Variable |
-| Desprazamentos e reunións             | Visitas a lonxas e contactos comerciais      | 200             | Variable |
-| Comisións de pago                     | Servizos por transaccións de bancos          | 300 *(media)*   | Variable |
+| Tipo de custo           | Descrición                                  | Custo anual (€) | Tipo     |
+|-------------------------|--------------------------------------------|----------------|----------|
+| Dominio e hosting web   | Servizos de aloxamento e dominio anual     | 100            | Fixo     |
+| Cota de autónomo        | Seguridade social e cotizacións obrigatorias | 3.240          | Fixo     |
+| Electricidade e internet| Gastos básicos de conexión e subministración | 1.200          | Fixo     |
+| Mantemento web e copias de seguridade | Soporte técnico, actualizacións e backups | 600 | Fixo |
+| Salario do empresario   | Remuneración mensual estimada              | 14.400         | Fixo     |
+| Custos sociais          | 30% aproximado do salario do empresario    | 4.320          | Fixo     |
+| Publicidade e promoción | Campañas en liña e presenza en redes       | 500            | Variable |
+| Desprazamentos e reunións | Visitas a lonxas e contactos comerciais | 200            | Variable |
+| Comisións de pago       | Servizos por transaccións de bancos        | 300            | Variable |
+| **Total anual**         |                                            | **24.860**     |          |
 
 #### 2.7.2- Ingresos
 
@@ -206,7 +207,6 @@ As subvención que poderíamos usar con Mariscamar serían as seguintes:
   | **Almacenamento** | 10 GB para arquivos web, imaxes e base de datos. Inclúe **copias de seguridade semanais automáticas**. |
   | **Seguridade** | Conexión cifrada mediante **SSL (Let’s Encrypt)** e protección básica contra inxección SQL e accesos non autorizados. |
 
----
 - Backend
   - **Tecnoloxías:** `Node.js` + `Express`
   - **Comunicación en tempo real:** `Socket.io`
