@@ -37,7 +37,7 @@ O produto central é unha web sinxela e funcional que facilita a compra e venda 
 
 No caso do valor engadido este radicaría na transparencia dos prezos, a rapidez das operacións e o acceso a un mercado máis amplo.
 
-Como produto aumentado, poderíase engadir máis adiante un servizo de loxística ou de trazabilidade do marisco.
+Como produto aumentado, poderíase engadir máis adiante un servizo de loxística ou de trazabilidade do marisco que añadirá un custo extra a transacción.
 
 ### 2.2- Xustificación da idea
 
