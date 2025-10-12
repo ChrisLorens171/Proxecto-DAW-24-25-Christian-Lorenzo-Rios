@@ -21,7 +21,7 @@
 
 ## 1- Descrición do proxecto
 
-O proxecto, que chamaremos **Mariscamar**, consiste na creación dunha plataforma web que conecte lonxas e compradores de marisco, permitindo realizar subastas públicas en liña de produtos do mar. O obxectivo principal é modernizar e dixitalizar o proceso de venda, facilitando o acceso a un mercado máis amplo e transparente, tanto para as lonxas como para os compradores profesionais (restaurantes, distribuidores, etc.).
+O proxecto, que chamaremos **Mariscamar**, consiste na creación dunha plataforma web que conecte lonxas e compradores de marisco, permitindo realizar subastas públicas en liña de produtos do mar. O obxectivo principal é modernizar e dixitalizar o proceso de venda, facilitando o acceso a un mercado máis amplo, tanto para as lonxas como para os compradores profesionais (restaurantes, distribuidores, etc.).
 
 A aplicación busca facer máis áxil e eficiente a comercialización do marisco fresco, reducindo intermediarios e tempos de xestión. Ademais, abre unha oportunidade de negocio, xa que podería comercializarse mediante comisións por venda ou plans de subscrición para lonxas e usuarios profesionais.
 
