@@ -64,7 +64,9 @@ En fases posteriores poderíase abrir a particulares, pero inicialmente céntras
 
 ### 2.4- Competencia
 
-Na actualidade existen algunhas plataformas de venda de peixe por internet, como PescadeRías ou LonjaOnline, pero estas non ofrecen un sistema de subastas en tempo real nin están orientadas ao modelo B2B (empresa a empresa). Polo tanto, o proxecto cobre un segmento de mercado insuficientemente atendido, cunha posible oportunidade de crecemento.
+No mercado galego de venda de peixe por internet operan plataformas como PescadeRías ou LonjaOnline, que permiten a compra directa de produtos do mar, principalmente para consumidores finais. Estas plataformas non ofrecen subastas en tempo real nin están enfocadas no modelo B2B, polo que non cubren as necesidades de lonxas pequenas e medianas que buscan ampliar a súa clientela profesional.
+
+Actualmente non existen substitutos que combinen subastas dixitais en tempo real, acceso a múltiples lonxas pequenas, servizos adicionais como trazabilidade e loxística, e accións de fidelización. Por iso, Mariscamar ocupa un segmento de mercado insuficientemente atendido, con oportunidade de crecemento e de captación gradual de lonxas e compradores profesionais, diferenciándose da competencia existente.
 
 ### 2.5- Proposta de valor
 
@@ -107,7 +109,7 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
 
 #### 2.7.1- Custos
 
-| Tipo de custo           | Descrición                                  | Custo anual (€) | Tipo     |
+| Custo           | Descrición                                  | Custo anual (€) | Tipo     |
 |-------------------------|--------------------------------------------|----------------|----------|
 | Dominio e hosting web   | Servizos de aloxamento e dominio anual     | 100            | Fixo     |
 | Cota de autónomo        | Seguridade social e cotizacións obrigatorias | 3.240          | Fixo     |
@@ -128,7 +130,7 @@ Cando o negocio medre e se establezan colaboracións con lonxas ou investidores,
   - Posible facturación total gestionada
   - Ingresos anuales esperados
 
-### Proxección de ingresos realista para Mariscamar (2-4-6 lonxas)
+### Proxección de ingresos para Mariscamar
 
 | Ano | Lonxas captadas | Volumen medio xestionado por lonxa (€) | Comisión 3% (€) | Produto aumentado (€) | Ingresos totais (€) |
 |-----|-----------------|---------------------------------------|----------------|--------------------|------------------|
@@ -154,11 +156,11 @@ O proxecto é técnicamente viable para un equipo pequeno, coa barreira de entra
 
 A viabilidade do proxecto dependerá da cantidad de volumen e lonxas que logremos atraer, as previsión serían as seguintes.
 
-| Ano | Ingresos totais (€) | Custos fixos (€) | Custos variables (€) | Beneficio neto (€) |
-|-----|-------------------|----------------|-------------------|-----------------|
-| 1   | 19.000            | 18.000 + 19.070* | 500               | -18.570         |
-| 2   | 44.000            | 18.000 + 19.070* | 700               | 6.230           |
-| 3   | 75.000            | 18.000 + 19.070* | 900               | 37.030          |
+| Ano | Ingresos totais (€) | Custos anuais (€) | Beneficio neto (€) |
+|-----|-------------------|-----------------|-----------------|
+| 1   | 19.000            | 24.860          | -5.860          |
+| 2   | 44.000            | 24.860          | 19.140          |
+| 3   | 75.000            | 24.860          | 50.140          |
 
 #### 2.8.3- Conclusión
 
