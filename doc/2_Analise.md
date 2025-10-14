@@ -13,6 +13,11 @@
 ## 1- Descrición Xeral
 
 >*EXPLICACION*: Descrición Xeral do proxecto
+Mariscamar é unha plataforma web orientada a lonxas e compradores profesionais do sector marisqueiro que permite realizar subastas en tempo real de produtos do mar, garantindo rapidez e trazabilidade no proceso de venda.
+
+O obxectivo principal é modernizar o sistema tradicional de poxas das lonxas, ofrecendo unha ferramenta dixital que mellore a comunicación entre vendedores e compradores, reduza intermediarios e facilite o acceso a un mercado máis amplo e competitivo.
+
+A plataforma funcionará baixo un modelo B2B (Business to Business), no que as lonxas rexistradas poden publicar os seus lotes de marisco e os compradores autorizados participan nas subastas en tempo real a través dun sistema baseado en WebSockets, que asegura actualizacións instantáneas de prezos e estado das poxas.
 
 ## 2- Funcionalidades
 
@@ -38,10 +43,73 @@ Exemplo:
 > - Usuario xenérico, que terá acceso a ...
 > - Usuario técnico, que poderá...
 
+Na plataforma **Mariscamar** existirán diferentes tipos de usuarios, cada un con permisos e funcionalidades específicas segundo o seu papel dentro do sistema. O obxectivo é garantir unha xestión eficiente, segura e adaptada ás necesidades de cada perfil.
+
+### 1. Usuario anónimo
+- Pode acceder á páxina principal e ver información xeral sobre as lonxas e o funcionamento da plataforma.
+- Non pode participar en subastas nin visualizar datos detallados de produtos.
+- Pode rexistrarse para crear unha conta de comprador ou lonxa.
+
+### 2. Comprador rexistrado
+- Pode visualizar as subastas activas en tempo real.
+- Participa nas poxas e realiza ofertas sobre lotes dispoñibles.
+- Accede ao historial das súas compras e descargas de facturas.
+
+### 3. Lonxa vendedora
+- Pode crear e xestionar subastas (rexistro de lotes, prezos iniciais, imaxes e descricións).
+- Accede a estatísticas de vendas e informes de actividade.
+- Pode solicitar servizos adicionais (loxística, transporte, promoción).
+
+### 4. Administrador do sistema
+- Xestiona todos os usuarios (activación, bloqueo, permisos).
+- Supervisa as subastas e resolve incidencias técnicas ou comerciais.
+- Controla os rexistros de actividade e garante o cumprimento das normas.
+- Administra a configuración global da plataforma (comisións, tarifas, backups, etc.).
+- Ten acceso completo á base de datos e ás ferramentas de mantemento.
+
+---
+
+### Estados de conta e control de acceso
+
+Ademais dos tipos de usuario anteriores, existirán dous estados de conta:
+
+- **Usuario verificado:** conta confirmada mediante correo electrónico e validación fiscal.  
+- **Usuario bloqueado:** acceso suspendido temporal ou permanentemente por incumprimento das normas ou actividade sospeitosa.  
+
+Estes estados poden aplicarse a calquera usuario rexistrado (comprador ou lonxa).
+
+---
+
 ## 4- Contorno operacional
 
 > *EXPLICACION* Neste apartado deben describirse os recursos necesarios, dende o punto de vista do usuario, para poder operar coa aplicación web. Habitualmente consiste nun navegador web actualizado e unha conexión a internet.
 Se é necesario algún hardware ou software adicional, deberá indicarse.
+
+O funcionamento de **Mariscamar** está deseñado para ser sinxelo, accesible e compatible cos medios dispoñibles tanto nas lonxas como nos compradores profesionais.
+
+### Requisitos do usuario final
+- **Navegador web actualizado**:  
+  - Compatible con Google Chrome, Mozilla Firefox, Microsoft Edge ou Safari (con soporte para JavaScript e WebSockets).
+  
+- **Conexión a Internet estable**:
+  - Requírese unha velocidade mínima de **10 Mbps** para garantir unha comunicación fluída durante as poxas en tempo real.
+  
+- **Dispositivo compatible:**  
+  - Ordenador de sobremesa ou portátil (recomendado para xestión de lotes).  
+  - Tablet ou smartphone.
+
+### Requisitos adicionais para lonxas
+- **Hardware recomendado:**
+  - Procesador Intel i3 ou superior.  
+  - 8 GB de memoria RAM.  
+  - Cámara opcional para capturar imaxes dos lotes.  
+  - Acceso a impresora para xerar informes e comprobantes.
+  
+- **Software necesario:**
+  - Sistema operativo Windows, macOS ou Linux actualizado.  
+  - Navegador compatible (non se require software adicional).  
+  - Acceso á plataforma mediante protocolo **HTTPS**.
+
 
 ## 5- Normativa
 
