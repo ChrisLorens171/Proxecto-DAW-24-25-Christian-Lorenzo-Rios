@@ -16,7 +16,8 @@
 
 ## Taboleiro do proyecto
 
-> *EXPLICACIÓN:* neste punto indica se o proyecto está en fase de desenrolo ou finalizado.
+O proxecto **Mariscamar** atópase actualmente en **fase de desenvolvemento**. 
+As tarefas de estudo preliminar e análise están finalizadas, e a codificación do backend e frontend, así como a integración de WebSockets para as subastas en tempo real, están en curso.  
 
 ## Descrición
 
