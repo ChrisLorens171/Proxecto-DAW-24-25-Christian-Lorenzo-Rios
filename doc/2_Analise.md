@@ -8,11 +8,7 @@
   - [5- Normativa](#5--normativa)
   - [6- Melloras futuras](#6--melloras-futuras)
 
-> *EXPLICACION*: Este documento describe os requirimentos para "nome do proxecto" especificando que funcionalidade ofrecerá e de que xeito.
-
 ## 1- Descrición Xeral
-
->*EXPLICACION*: Descrición Xeral do proxecto
 
 Mariscamar é unha plataforma web orientada a lonxas e compradores profesionais do sector marisqueiro que permite realizar subastas en tempo real de produtos do mar, garantindo rapidez e trazabilidade no proceso de venda.
 
@@ -22,18 +18,20 @@ A plataforma funcionará baixo un modelo B2B (Business to Business), no que as l
 
 ## 2- Funcionalidades
 
->*EXPLICACION* Describir que servizos ou operacións se van poder realizar por medio do noso proxecto, indicando que actores interveñen en cada caso.
->
-> Enumeradas, de maneira que na fase de deseño poidamos definir o diagrama ou configuración correspondente a cada funcionalidade.
-> Cada función ten uns datos de entrada e uns datos de saída. Entre os datos de entrada e de saída, realízase un proceso, que debe ser explicado.
+| **Acción / Funcionalidade**     | **Descrición**                                                         | **Actor principal**         | **Datos de entrada**                                        | **Proceso interno**                                                 | **Datos de saída**                                           |
+| ------------------------------- | ---------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
+| **Rexistro de usuario**         | Permite crear unha conta de lonxa ou comprador.                        | Usuario anónimo             | Nome, correo, contrasinal, tipo de conta, CIF/NIF           | Validación de datos e creación do perfil na base de datos           | Confirmación por correo electrónico e acceso á conta         |
+| **Inicio de sesión**            | Acceso ao panel persoal da conta rexistrada.                           | Usuario rexistrado          | Correo e contrasinal                                        | Autenticación e comprobación de permisos                            | Acceso ao panel correspondente                               |
+| **Creación de subasta**         | Permite á lonxa crear unha nova poxa.                                  | Lonxa vendedora             | Tipo de marisco, cantidade, prezo inicial, imaxes           | Rexistro na base de datos e activación do evento en tempo real      | Subasta visible para compradores                             |
+| **Participación en subasta**    | O comprador realiza ofertas en tempo real.                             | Comprador rexistrado        | ID de subasta, importe da oferta                            | Envío da oferta mediante WebSocket e actualización global de prezos | Oferta actualizada visible para todos os usuarios conectados |
+| **Peche de subasta**            | Finaliza a poxa e determina o gañador.                                 | Sistema / Lonxa             | ID de subasta, tempo final                                  | Comparación de ofertas e determinación automática do mellor postor  | Notificación de venda e actualización do historial           |
+| **Xestión de usuarios**         | Administración de contas (activar, bloquear, eliminar).                | Administrador               | ID de usuario, acción a realizar                            | Actualización do estado do usuario na base de datos                 | Confirmación da acción e rexistro no log de administración   |
+| **Consulta de histórico**       | Permite ver subastas finalizadas e resultados.                         | Lonxa / Comprador           | Filtros (data, produto, estado)                             | Consulta SQL sobre o historial de vendas e compras                  | Listaxe de resultados filtrados                              |
+| **Xestión de facturas e pagos** | Control de transaccións e xeración de facturas automáticas.            | Sistema / Lonxa / Comprador | Datos de operación e importes                               | Procesamento de pagamento e almacenamento seguro                    | Factura descargable en PDF                                   |
+| **Notificacións en tempo real** | Avisos automáticos sobre poxas, vendas e incidencias.                  | Sistema                     | Evento desencadeante (nova oferta, fin de subasta, mensaxe) | Envío por WebSocket ou correo electrónico                           | Mensaxe instantánea ou email ao usuario                      |
+| **Servizos de fidelización**    | Bonificacións por volume ou uso continuado da plataforma.              | Lonxa / Comprador           | Historial de operacións                                     | Cálculo automático de bonificacións e descontos                     | Aplicación de desconto ou crédito na seguinte operación      |
+| **Panel de administración**     | Control global de configuracións, estatísticas e copias de seguridade. | Administrador               | Parámetros do sistema                                       | Execución de tarefas de mantemento e análise                        | Informes e rexistros de actividade                           |
 
-Exemplo:
-
-| Acción   |  Descrición        |
-|----------|--------------------|
-| Alta de productos   | Dar de alta os productos na base de datos|
-| Modificar productos | Modificación de productos na base de datos|
-| Presentación dos productos  | Mostra dos productos por medio da páxina web |
 
 ## 3- Tipos de usuarios
 
