@@ -74,9 +74,6 @@ Estes estados poden aplicarse a calquera usuario rexistrado (comprador ou lonxa)
 
 ## 4- Contorno operacional
 
-> *EXPLICACION* Neste apartado deben describirse os recursos necesarios, dende o punto de vista do usuario, para poder operar coa aplicación web. Habitualmente consiste nun navegador web actualizado e unha conexión a internet.
-Se é necesario algún hardware ou software adicional, deberá indicarse.
-
 O funcionamento de **Mariscamar** está deseñado para ser sinxelo, accesible e compatible cos medios dispoñibles tanto nas lonxas como nos compradores profesionais.
 
 ### Requisitos do usuario final
