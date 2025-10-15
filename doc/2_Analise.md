@@ -102,20 +102,84 @@ O funcionamento de **Mariscamar** está deseñado para ser sinxelo, accesible e 
 
 ## 5- Normativa
 
-> *EXPLICACION* Investigarase que normativa vixente afecta ao desenvolvemento do proxecto e de que maneira. O proxecto debe adaptarse ás esixencias legais dos territorios onde vai operar.
-> 
-> Pola natureza dos sistema de información, unha lei que se vai a ter que mencionar de forma obrigatoria é la [Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDPGDD)](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673). O ámbito da LOPDPGDD é nacional. Se a aplicación está pensada para operar a nivel europeo, tamén se debe facer referencia á [General Data Protection Regulation (GDPR)](https://eur-lex.europa.eu/eli/reg/2016/679/oj). Na documentación debe afirmarse que o proxecto cumpre coa normativa vixente.
->
-> Para cumplir a LOPDPGDD e/ou GDPR debe ter un apartado na web onde se indique quen é a persoa responsable do tratamento dos datos e para que fins se van utilizar. Habitualmente esta información estructúrase nos seguintes apartados:
->
-> - Aviso legal.
-> - Política de privacidade.
-> - Política de cookies.
->
-> É acosenllable ver [exemplos de webs](https://www.spotify.com/es/legal/privacy-policy/) que conteñan textos legais referenciando a LOPDPGDD ou GDPR.
+A plataforma **Mariscamar** cumpre coa normativa vixente en materia de protección de datos, comercio electrónico e trazabilidade alimentaria, conforme á lexislación nacional e europea aplicable.
+
+### Leis aplicables
+
+- **Ley Orgánica 3/2018**, de Protección de Datos Personales y garantía de los derechos digitales (LOPDPGDD)  
+- **Regulamento (UE) 2016/679 (GDPR)**  
+- **Lei 34/2002**, de Servizos da Sociedade da Información e do Comercio Electrónico (LSSI-CE)  
+- **Regulamento (CE) 178/2002**, sobre trazabilidade alimentaria  
+- **Real Decreto 1376/2003**, sobre condicións sanitarias de produtos pesqueiros  
+- **Lei 16/1987**, de Ordenación dos Transportes Terrestres  
+
+---
+
+### Aviso Legal
+
+O sitio web **www.mariscamar.es** é un proxecto educativo desenvolvido para fins demostrativos.
+
+**Propietario do proxecto:** Mariscamar
+**Identificador fiscal:** CIF DEMO-000000  
+**Domicilio ficticio:** Rúa das Lonxas, 14 - 15960 Rianxo (A Coruña), Galicia, España  
+**Correo de contacto:** info@mariscamar.es
+
+O acceso a este sitio web implica a aceptación das condicións de uso.  
+Queda prohibida a reprodución ou distribución non autorizada dos contidos.  
+Os dereitos de propiedade intelectual pertencen ao autor do proxecto.
+
+---
+
+### Política de Privacidade
+
+**Responsable do tratamento:** Mariscamar  
+**Correo de contacto:** privacidade@mariscamar.es  
+
+**Finalidade:**  
+- Rexistro e autenticación de usuarios  
+- Participación en subastas  
+- Facturación simulada e xestión de operacións  
+- Comunicacións e avisos automatizados  
+- Control de trazabilidade e servizos de transporte
+
+**Base xurídica:** consentimento do usuario e simulación de execución contractual.  
+**Cesión de datos:** non se realiza cesión real de datos a terceiros.  
+**Dereitos:** acceso, rectificación, supresión e oposición.  
+
+As medidas de seguridade seguen as boas prácticas recomendadas: cifrado SSL, copias de seguridade e restrición de acceso.
+
+---
+
+### Política de Cookies
+
+Este sitio emprega **cookies propias e de terceiros**, co obxectivo de mellorar a experiencia de navegación.
+
+**Tipos de cookies utilizadas:**
+- Técnicas: necesarias para o funcionamento da plataforma.  
+- De preferencias: gardan opcións de usuario.  
+- De análise: permiten medir o rendemento da aplicación (exemplo: Google Analytics).
+
+O usuario pode aceptar, configurar ou rexeitar as cookies mediante o banner inicial ou a configuración do navegador.
+
+---
+
+### Normativa sobre trazabilidade e transporte
+
+No caso de servizos complementarios de **loxística e trazabilidade**, Mariscamar segue as directrices da lexislación vixente:
+
+- **Regulamento (CE) 178/2002**, sobre trazabilidade alimentaria.  
+- **Regulamento (CE) 852/2004**, sobre hixiene dos produtos alimentarios.  
+- **Real Decreto 1376/2003**, sobre comercialización de produtos pesqueiros.  
+- **Lei 16/1987**, de Ordenación dos Transportes Terrestres.
 
 ## 6- Melloras futuras
 
-> *EXPLICACION* É posible que o noso proxecto se centre en resolver un problema concreto que se poderá ampliar no futuro con novas funcionalidades, novas interfaces, etc.
+O proxecto **Mariscamar** está deseñado inicialmente para xestionar subastas de marisco en tempo real entre lonxas e compradores. No futuro, poderían implementarse diversas melloras para ampliar a funcionalidade e o valor engadido da plataforma, presentamos como posibles melloras as seguintes propostas:
+
+- **Alertas e notificacións en tempo real**: Para avisar aos compradores de novas subastas ou lotes de interese.  
+- **Sistema de fidelización avanzado**: Descontos por volume, maiores recompensas por participación continuada, programas de suscrición e servizos premium.  
+- **Aplicación móbil**: Para facilitar o acceso e participación nas subastas desde calquer dispositivo.  
+- **Análise de datos e estatísticas**: Informes sobre vendas, prezos medios e comportamento do mercado para apoiar a toma de decisións.  
+- **Melloras na experiencia de usuario**: Interfaces máis intuitivas, personalización de notificacións e filtros avanzados de subastas.
 
 [**<-Anterior**](../../README.md)
