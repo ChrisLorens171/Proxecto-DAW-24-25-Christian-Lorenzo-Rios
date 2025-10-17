@@ -10,113 +10,106 @@
 
 ## 1- Descrición Xeral
 
-Mariscamar é unha plataforma web orientada a lonxas e compradores profesionais do sector marisqueiro que permite realizar subastas en tempo real de produtos do mar, garantindo rapidez e trazabilidade no proceso de venda.
+Mariscamar é un sitio web deseñado para as lonxas e os compradores profesionais do sector do marisco, onde poden realizarse poxas de produtos do mar en tempo real.
 
-O obxectivo principal é modernizar o sistema tradicional de poxas das lonxas, ofrecendo unha ferramenta dixital que mellore a comunicación entre vendedores e compradores, reduza intermediarios e facilite o acceso a un mercado máis amplo e competitivo.
+O obxetivo da páxina é modernizar o xeito tradicional de poxar nas lonxas. Para iso, poñemos a disposición unha ferramenta dixital que axuda a que vendedores e compradores se comuniquen mellor, diminúe os intermediarios e simplifica a entrada a un mercado máis extenso e con máis competencia.
 
-A plataforma funcionará baixo un modelo B2B (Business to Business), no que as lonxas rexistradas poden publicar os seus lotes de marisco e os compradores autorizados participan nas subastas en tempo real a través dun sistema baseado en WebSockets, que asegura actualizacións instantáneas de prezos e estado das poxas.
+A plataforma operará seguindo un esquema B2B (Business to Business), no que as lonxas que se dean de alta poderán anunciar os seus lotes de marisco, e os compradores que teñan permiso poderán participar nas poxas mediante un sistema baseado en WebSockets.
 
 ## 2- Funcionalidades
 
-| **Acción / Funcionalidade**     | **Descrición**                                                         | **Actor principal**         | **Datos de entrada**                                        | **Proceso interno**                                                 | **Datos de saída**                                           |
-| ------------------------------- | ---------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Rexistro de usuario**         | Permite crear unha conta de lonxa ou comprador.                        | Usuario anónimo             | Nome, correo, contrasinal, tipo de conta, CIF/NIF           | Validación de datos e creación do perfil na base de datos           | Confirmación por correo electrónico e acceso á conta         |
-| **Inicio de sesión**            | Acceso ao panel persoal da conta rexistrada.                           | Usuario rexistrado          | Correo e contrasinal                                        | Autenticación e comprobación de permisos                            | Acceso ao panel correspondente                               |
-| **Creación de subasta**         | Permite á lonxa crear unha nova poxa.                                  | Lonxa vendedora             | Tipo de marisco, cantidade, prezo inicial, imaxes           | Rexistro na base de datos e activación do evento en tempo real      | Subasta visible para compradores                             |
-| **Participación en subasta**    | O comprador realiza ofertas en tempo real.                             | Comprador rexistrado        | ID de subasta, importe da oferta                            | Envío da oferta mediante WebSocket e actualización global de prezos | Oferta actualizada visible para todos os usuarios conectados |
-| **Peche de subasta**            | Finaliza a poxa e determina o gañador.                                 | Sistema / Lonxa             | ID de subasta, tempo final                                  | Comparación de ofertas e determinación automática do mellor postor  | Notificación de venda e actualización do historial           |
-| **Xestión de usuarios**         | Administración de contas (activar, bloquear, eliminar).                | Administrador               | ID de usuario, acción a realizar                            | Actualización do estado do usuario na base de datos                 | Confirmación da acción e rexistro no log de administración   |
-| **Consulta de histórico**       | Permite ver subastas finalizadas e resultados.                         | Lonxa / Comprador           | Filtros (data, produto, estado)                             | Consulta SQL sobre o historial de vendas e compras                  | Listaxe de resultados filtrados                              |
-| **Xestión de facturas e pagos** | Control de transaccións e xeración de facturas automáticas.            | Sistema / Lonxa / Comprador | Datos de operación e importes                               | Procesamento de pagamento e almacenamento seguro                    | Factura descargable en PDF                                   |
-| **Notificacións en tempo real** | Avisos automáticos sobre poxas, vendas e incidencias.                  | Sistema                     | Evento desencadeante (nova oferta, fin de subasta, mensaxe) | Envío por WebSocket ou correo electrónico                           | Mensaxe instantánea ou email ao usuario                      |
-| **Servizos de fidelización**    | Bonificacións por volume ou uso continuado da plataforma.              | Lonxa / Comprador           | Historial de operacións                                     | Cálculo automático de bonificacións e descontos                     | Aplicación de desconto ou crédito na seguinte operación      |
-| **Panel de administración**     | Control global de configuracións, estatísticas e copias de seguridade. | Administrador               | Parámetros do sistema                                       | Execución de tarefas de mantemento e análise                        | Informes e rexistros de actividade                           |
-
+| **Funcionalidade** | **Descrición** |
+|---------------------|----------------|
+| **Rexistro de usuario** | O usuario pode facer unha conta nova para entrar na plataforma, poñendo os seus datos básicos. Hai que indicar tamén se é comprador ou lonxa. O sistema comproba que todo estea correcto e despois xa se pode usar a conta sen problema. |
+| **Inicio de sesión** | Serve para acceder á conta xa creada. O usuario entra co seu correo e contrasinal, e segundo o tipo de perfil vé diferente información, no caso de que algo non coincide, o sistema impídelle o acceso. |
+| **Creación de subasta** | As lonxas poden publicar as súas poxas xunto coa cantidade e prezo que consideren axeitado. Pódense subir imaxes que se consideren relevantes, despois disto a subasta estaría lista para comenzar. |
+| **Participación en subasta** | Os compradores poden facer ofertas sobre os lotes en tempo real. Cando alguén oferta máis, o sistema cambia o prezo automaticamente e mándalle unha mensaxe aos demáis. Así todos os compradores poden saber a poxa actual. |
+| **Peche de subasta** | Cando se acaba o tempo, o sistema elixe ao gañador da poxa, que será quen fixo a mellor oferta. Tanto o comprador coma a lonxa reciben unha mensaxe co resultado final e queda gardado no historial. |
+| **Xestión de usuarios** | O administrador pode controlar as contas: activalas, bloquealas ou borralas se fan algo raro. Tamén pode ver un rexistro coas accións que se fixeron. Deste xeito o sistema mantense “limpo”. |
+| **Consulta de histórico** | Tanto lonxas como compradores poden mirar as súas poxas anteriores, as compras feitas e outros datos. Pódese buscar por datas ou por tipo de marisco, o que facilita atopar os datos necesarios. |
+| **Xestión de facturas e pagos** | A plataforma fai as facturas de forma automática cando se vende algo. Os pagos fanse por medios seguros e queda todo gardado. Despois cada usuario pode descargar a súa factura en PDF. |
+| **Panel de administración** | É a parte onde o administrador controla todo o que pasa na plataforma. |
 
 ## 3- Tipos de usuarios
 
-Na plataforma **Mariscamar** existirán diferentes tipos de usuarios, cada un con permisos e funcionalidades específicas segundo o seu papel dentro do sistema. O obxectivo é garantir unha xestión eficiente, segura e adaptada ás necesidades de cada perfil.
+Dentro de Mariscamar, haberá varios tipos de usuarios, cada un con accesos e funcións distintos según o seu rol. A idea é asegurar que todo funcione correctamente, de forma segura e a medida do que cada usuario precise. 
 
 ### 1. Usuario anónimo
-- Pode acceder á páxina principal e ver información xeral sobre as lonxas e o funcionamento da plataforma.
-- Non pode participar en subastas nin visualizar datos detallados de produtos.
-- Pode rexistrarse para crear unha conta de comprador ou lonxa.
+- Pode entrar na web e ver á información básica das lonxas e do funcionamento na plataforma. 
+- Non pode entrar nas poxas nin ver os detalles dos produtos. 
+- Ten a opción de darse de alta como comprador ou como lonxa. 
 
 ### 2. Comprador rexistrado
-- Pode visualizar as subastas activas en tempo real.
-- Participa nas poxas e realiza ofertas sobre lotes dispoñibles.
-- Accede ao historial das súas compras e descargas de facturas.
+- Pode ver as poxas que están abertas nese momento. 
+- Entra nas poxas e fai ofertas polos lotes dispoñibles. 
+- Pode consultar o seu historial de compras e baixar as facturas. 
 
 ### 3. Lonxa vendedora
-- Pode crear e xestionar subastas (rexistro de lotes, prezos iniciais, imaxes e descricións).
-- Accede a estatísticas de vendas e informes de actividade.
-- Pode solicitar servizos adicionais (loxística, transporte, promoción).
+- Pode crear e organizar poxas (poñer os lotes, os prezos de saída, fotos e explicacións). 
+- Consulta datos das vendas e informes da súa actividade. 
+- Pode solicitar outros servizos (transporte, loxística, publicidade). 
 
-### 4. Administrador do sistema
-- Xestiona todos os usuarios (activación, bloqueo, permisos).
-- Supervisa as subastas e resolve incidencias técnicas ou comerciais.
-- Controla os rexistros de actividade e garante o cumprimento das normas.
-- Administra a configuración global da plataforma (comisións, tarifas, backups, etc.).
-- Ten acceso completo á base de datos e ás ferramentas de mantemento.
+### 4. Xestor da plataforma 
+- Leva o control de todos os usuarios (dar de alta, bloquear, dar permisos). 
+- Está atento ás poxas e arranxa problemas técnicos ou de vendas. 
+- Revisa os rexistros de actividade e mira que se cumpra o regulamento. 
+- Organiza a configuración xeral da web (comisións, prezos, copias de seguridade, etc.). 
+- Ten acceso total á base de datos e ás ferramentas para mantela. 
 
----
+--- 
 
-### Estados de conta e control de acceso
+### Situación das contas e control de acceso 
 
-Ademais dos tipos de usuario anteriores, existirán dous estados de conta:
+A parte dos usuarios anteriores, teremos dous tipos de estado da conta: 
 
-- **Usuario verificado:** conta confirmada mediante correo electrónico e validación fiscal.  
-- **Usuario bloqueado:** acceso suspendido temporal ou permanentemente por incumprimento das normas ou actividade sospeitosa.  
+- **Usuario verificado:** conta confirmada por correo e comprobación fiscal. 
+- **Usuario bloqueado:** acceso bloqueado temporal ou permanentemente por saltarse as normas ou por actividade sospeitosa. 
 
-Estes estados poden aplicarse a calquera usuario rexistrado (comprador ou lonxa).
-
+Estes estados pódense aplicar a calquera usuario que se rexistrou (comprador ou lonxa).
 
 ## 4- Contorno operacional
 
-O funcionamento de **Mariscamar** está deseñado para ser sinxelo, accesible e compatible cos medios dispoñibles tanto nas lonxas como nos compradores profesionais.
+A forma na que Mariscamar está feita é para que sexa fácil, dispoñible e funcione coas ferramentas que hai tanto nas lonxas coma para os que compran ao por maior. 
 
-### Requisitos do usuario final
-- **Navegador web actualizado**:  
-  - Compatible con Google Chrome, Mozilla Firefox, Microsoft Edge ou Safari (con soporte para JavaScript e WebSockets).
-  
-- **Conexión a Internet estable**:
-  - Requírese unha velocidade mínima de **10 Mbps** para garantir unha comunicación fluída durante as poxas en tempo real.
-  
-- **Dispositivo compatible:**  
-  - Ordenador de sobremesa ou portátil (recomendado para xestión de lotes).  
-  - Tablet ou smartphone.
+### 🧔 Requisitos que precisa o usuario 
+- **Navegador de internet actualizado**
+    - Funciona con Google Chrome, Mozilla Firefox, Microsoft Edge ou Safari (que poidan usar JavaScript e WebSockets). 
 
-### Requisitos adicionais para lonxas
-- **Hardware recomendado:**
-  - Procesador Intel i3 ou superior.  
-  - 8 GB de memoria RAM.  
-  - Cámara opcional para capturar imaxes dos lotes.  
-  - Acceso a impresora para xerar informes e comprobantes.
-  
-- **Software necesario:**
-  - Sistema operativo Windows, macOS ou Linux actualizado.  
-  - Navegador compatible (non se require software adicional).  
-  - Acceso á plataforma mediante protocolo **HTTPS**.
+- **Internet estable**
+    - Unha velocidade mínima de 10 Mbps para que poida transcurrir sen problemas as poxas. 
 
+- **Dispositivo compatible**. 
+    - Preferiblemente un ordenador de mesa ou portátil (para traballar cos lotes). 
+    - Tablet ou smartphone. 
+
+### 💻 Requisitos adicionais para as lonxas
+- **Hardware recomendado**: 
+    - Procesador Intel i3 ou mellor. 
+    - 8 GB de memoria RAM. 
+    - Cámara para sacar fotos dos lotes (opcional). 
+    - Poder imprimir para ter informes e probas de compra. 
+
+- **Software necesario**: 
+    - Sistema operativo Windows, macOS ou Linux ao día. 
+    - Un navegador que funcione (non fai falta máis programas). 
+    - Acceder a plataforma con HTTPS.
 
 ## 5- Normativa
 
-A plataforma **Mariscamar** cumpre coa normativa vixente en materia de protección de datos, comercio electrónico e trazabilidade alimentaria, conforme á lexislación nacional e europea aplicable.
+Mariscamar adáptase ás regras actuais sobre a protección dos datos, as compras en liña e a trazabilidade alimentaria, seguindo a lexislación nacional e Europea.
 
 ### Leis aplicables
 
-- **Ley Orgánica 3/2018**, de Protección de Datos Personales y garantía de los derechos digitales (LOPDPGDD)  
-- **Regulamento (UE) 2016/679 (GDPR)**  
-- **Lei 34/2002**, de Servizos da Sociedade da Información e do Comercio Electrónico (LSSI-CE)  
-- **Regulamento (CE) 178/2002**, sobre trazabilidade alimentaria  
-- **Real Decreto 1376/2003**, sobre condicións sanitarias de produtos pesqueiros  
-- **Lei 16/1987**, de Ordenación dos Transportes Terrestres  
+- **Lei Orgánica 3/2018**, de Protección de Datos Personales e garantía dos dereitos dixitales (LOPDPGDD)
+- **Regulamento (UE) 2016/679 (GDPR)**
+- **Lei 34/2002**, de Servizos da Sociedade da Información e do Comercio Electrónico (LSSI-CE)
+- **Regulamento (CE) 178/2002**, sobre trazabilidade alimentaria
+- **Real Decreto 1376/2003**, sobre condicións sanitarias de produtos pesqueiros
+- **Lei 16/1987**, de Ordenación dos Transportes Terrestres
 
 ---
 
 ### Aviso Legal
-
-O sitio web **www.mariscamar.es** é un proxecto educativo desenvolvido para fins demostrativos.
 
 **Propietario do proxecto:** Mariscamar
 **Identificador fiscal:** CIF DEMO-000000  
