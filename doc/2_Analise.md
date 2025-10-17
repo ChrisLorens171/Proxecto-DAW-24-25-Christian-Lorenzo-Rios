@@ -161,17 +161,6 @@ Este sitio emprega **cookies propias e de terceiros**, co obxectivo de mellorar 
 
 O usuario pode aceptar, configurar ou rexeitar as cookies mediante o banner inicial ou a configuración do navegador.
 
----
-
-### Normativa sobre trazabilidade e transporte
-
-No caso de servizos complementarios de **loxística e trazabilidade**, Mariscamar segue as directrices da lexislación vixente:
-
-- **Regulamento (CE) 178/2002**, sobre trazabilidade alimentaria.  
-- **Regulamento (CE) 852/2004**, sobre hixiene dos produtos alimentarios.  
-- **Real Decreto 1376/2003**, sobre comercialización de produtos pesqueiros.  
-- **Lei 16/1987**, de Ordenación dos Transportes Terrestres.
-
 ## 6- Melloras futuras
 
 O proxecto **Mariscamar** está deseñado inicialmente para xestionar subastas de marisco en tempo real entre lonxas e compradores. No futuro, poderían implementarse diversas melloras para ampliar a funcionalidade e o valor engadido da plataforma, presentamos como posibles melloras as seguintes propostas:
