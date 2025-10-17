@@ -182,4 +182,4 @@ O proxecto **Mariscamar** está deseñado inicialmente para xestionar subastas d
 - **Análise de datos e estatísticas**: Informes sobre vendas, prezos medios e comportamento do mercado para apoiar a toma de decisións.  
 - **Melloras na experiencia de usuario**: Interfaces máis intuitivas, personalización de notificacións e filtros avanzados de subastas.
 
-[**<-Anterior**](../../README.md)
+[**<-Anterior**](../README.md)
