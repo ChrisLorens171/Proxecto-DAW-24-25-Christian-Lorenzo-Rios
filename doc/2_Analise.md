@@ -155,12 +155,12 @@ O usuario pode aceptar, configurar ou rexeitar as cookies mediante o banner inic
 
 ## 6- Melloras futuras
 
-O proxecto **Mariscamar** está deseñado inicialmente para xestionar subastas de marisco en tempo real entre lonxas e compradores. No futuro, poderían implementarse diversas melloras para ampliar a funcionalidade e o valor engadido da plataforma, presentamos como posibles melloras as seguintes propostas:
+O proxecto Mariscamar naceu coa idea de manexar subastas de marisco en tempo real entre lonxas e compradores. De aquí en diante, daríanse máis cambios para que a plataforma fose mellor e máis útil. Presentamos como posibles melloras as seguintes propostas: 
 
-- **Alertas e notificacións en tempo real**: Para avisar aos compradores de novas subastas ou lotes de interese.  
-- **Sistema de fidelización avanzado**: Descontos por volume, maiores recompensas por participación continuada, programas de suscrición e servizos premium.  
-- **Aplicación móbil**: Para facilitar o acceso e participación nas subastas desde calquer dispositivo.  
-- **Análise de datos e estatísticas**: Informes sobre vendas, prezos medios e comportamento do mercado para apoiar a toma de decisións.  
-- **Melloras na experiencia de usuario**: Interfaces máis intuitivas, personalización de notificacións e filtros avanzados de subastas.
+  - Alertas e notificacións en tempo real: Para que os compradores poidan saber se hai poxas novas ou temas de interés. 
+  - Sistemas de fidelización avanzado: Aforro por mercar maior volume, maiores recompensas por participación continuada e servizos premium. 
+  - App móbil: Para facilitar o acceso e participación desde calquera dispositivo. 
+  - Análise de datos e estatísticas: Explicacións de vendas, prezos e como se move o mercado para axudar a toma de decisións. 
+  - Mellora na experiencia do usuario: Pantallas sinxelas, personalización e filtros avanzados para as subastas.
 
 [**<-Anterior**](../README.md)
