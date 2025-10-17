@@ -70,7 +70,6 @@ Ademais dos tipos de usuario anteriores, existirán dous estados de conta:
 
 Estes estados poden aplicarse a calquera usuario rexistrado (comprador ou lonxa).
 
----
 
 ## 4- Contorno operacional
 
