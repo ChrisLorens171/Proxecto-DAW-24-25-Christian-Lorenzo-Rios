@@ -96,62 +96,59 @@ A forma na que Mariscamar está feita é para que sexa fácil, dispoñible e fun
 
 ## 5- Normativa
 
-Mariscamar adáptase ás regras actuais sobre a protección dos datos, as compras en liña e a trazabilidade alimentaria, seguindo a lexislación nacional e Europea.
+A plataforma **Mariscamar** cumpre coa lexislación vixente tanto en materia de protección de datos como en comercio electrónico e trazabilidade alimentaria. O obxectivo sería proporcionar un entorno seguro segundo as leis e regulacións actuais.
 
-### Leis aplicables
+As principais leis que se teñen en conta son:
 
-- **Lei Orgánica 3/2018**, de Protección de Datos Personales e garantía dos dereitos dixitales (LOPDPGDD)
-- **Regulamento (UE) 2016/679 (GDPR)**
-- **Lei 34/2002**, de Servizos da Sociedade da Información e do Comercio Electrónico (LSSI-CE)
-- **Regulamento (CE) 178/2002**, sobre trazabilidade alimentaria
-- **Real Decreto 1376/2003**, sobre condicións sanitarias de produtos pesqueiros
-- **Lei 16/1987**, de Ordenación dos Transportes Terrestres
-
----
-
-### Aviso Legal
-
-**Propietario do proxecto:** Mariscamar
-**Identificador fiscal:** CIF DEMO-000000  
-**Domicilio ficticio:** Rúa das Lonxas, 14 - 15960 Rianxo (A Coruña), Galicia, España  
-**Correo de contacto:** info@mariscamar.es
-
-O acceso a este sitio web implica a aceptación das condicións de uso.  
-Queda prohibida a reprodución ou distribución non autorizada dos contidos.  
-Os dereitos de propiedade intelectual pertencen ao autor do proxecto.
+- **Lei Orgánica 3/2018**, de Protección de Datos Personais e garantía dos dereitos dixitais (LOPDPGDD)  
+- **Regulamento (UE) 2016/679 (GDPR)**  
+- **Lei 34/2002**, de Servizos da Sociedade da Información e do Comercio Electrónico (LSSI-CE)  
+- **Regulamento (CE) 178/2002**, sobre seguridade e trazabilidade alimentaria  
+- **Real Decreto 1376/2003**, sobre condicións sanitarias de produtos pesqueiros  
+- **Lei 16/1987**, de Ordenación dos Transportes Terrestres  
 
 ---
 
-### Política de Privacidade
+### Aviso legal
 
-**Responsable do tratamento:** Mariscamar  
-**Correo de contacto:** privacidade@mariscamar.es  
+O sitio é propiedade de **Mariscamar**, con domicilio en **Rúa das Lonxas, 14 – 15960 Rianxo (A Coruña)**.  
+O aceso a web implica aceptar as condicións de uso e o compromiso de usar os servizos de forma responsable.  
 
-**Finalidade:**  
-- Rexistro e autenticación de usuarios  
-- Participación en subastas  
-- Facturación simulada e xestión de operacións  
-- Comunicacións e avisos automatizados  
-- Control de trazabilidade e servizos de transporte
 
-**Base xurídica:** consentimento do usuario e simulación de execución contractual.  
-**Cesión de datos:** non se realiza cesión real de datos a terceiros.  
-**Dereitos:** acceso, rectificación, supresión e oposición.  
+📧 **Correo de contacto:** info@mariscamar.es  
 
-As medidas de seguridade seguen as boas prácticas recomendadas: cifrado SSL, copias de seguridade e restrición de acceso.
+O proxecto Mariscamar reserva o dereito de actualizar, modificar ou eliminar contidos da páxina sen previo aviso, co obxectivo de mellorar o servizo.  
+A información publicada (descricións de produtos, prezos simulados ou datos de contacto) ten carácter informativo e non constitúe unha oferta comercial real.  
+O uso indebido da plataforma, así como calquera intento de acceso non autorizado, poderá implicar a suspensión ou eliminación da conta do usuario.  
 
 ---
 
-### Política de Cookies
+### Política de privacidade
 
-Este sitio emprega **cookies propias e de terceiros**, co obxectivo de mellorar a experiencia de navegación.
+En **Mariscamar** tratamos os datos persoais co máximo coidado.  
+A información que se recolle (nome, correo, contrasinal, datos fiscais ou de contacto) utilízase unicamente para xestionar o rexistro de usuarios, as subastas e procesos interno da plataforma.  
+Non se comparten datos con terceiros nin se fan usos comerciais alleos á finalidade do proxecto.
 
-**Tipos de cookies utilizadas:**
-- Técnicas: necesarias para o funcionamento da plataforma.  
-- De preferencias: gardan opcións de usuario.  
-- De análise: permiten medir o rendemento da aplicación (exemplo: Google Analytics).
+O usuario pode solicitar o acceso, modificación ou eliminación dos seus datos escribindo a **privacidade@mariscamar.es**.  
 
-O usuario pode aceptar, configurar ou rexeitar as cookies mediante o banner inicial ou a configuración do navegador.
+---
+
+### Política de cookies
+
+Este sitio emprega **cookies** para mellorar a experiencia de navegación e analizar o uso da plataforma.  
+Usamos tres tipos principais de cookies:
+
+- **Técnicas:** necesarias para o funcionamento da aplicación.  
+- **De preferencias:** gardan as opcións do usuario.  
+- **De análise:** para coñecer o rendemento e mellorar o servizo.  
+
+En ningún caso se almacenan datos persoais sensibles que poden comprometer a integridade dos usuarios.  
+O usuario pode aceptar, rexeitar ou modificar o uso das cookies dende o banner inicial no momento de acceder a páxina ou nas opcións do seu navegador.
+
+---
+
+© 2025 **Mariscamar** – Todos os dereitos reservados
+
 
 ## 6- Melloras futuras
 
