@@ -10,7 +10,7 @@
 
 ## 1- Diagrama da arquitectura
 
-No seguinte diagrama mostramos o funcionamento de forma gráfica e sinxela, co seu funcionamente entre as diferentes partes e a súa interrelación.
+No seguinte diagrama mostramos o funcionamento de forma gráfica e sinxela entre as diferentes partes e a súa interrelación.
 
 ```mermaid
 sequenceDiagram
