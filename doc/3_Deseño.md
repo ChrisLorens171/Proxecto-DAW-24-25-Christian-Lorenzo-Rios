@@ -53,9 +53,9 @@ No seguinte diagrama de casos de uso vemos as diferentes posibilidades de acció
 
 **Diagrama de casos de uso**
 
-![Diagrama casos de uso](https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/b7b8863e27725bbac07bf1ae1cb14da5488603d7/doc/img/CasosdeUso.png)
-
-
+<p align="center">
+  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/b7b8863e27725bbac07bf1ae1cb14da5488603d7/doc/img/CasosdeUso.png" alt="Diagrama casos de uso">
+</p>
 
 ## 3- Diagrama de Base de Datos
 
