@@ -45,13 +45,7 @@ sequenceDiagram
     
 ## 2- Casos de uso
 
-> *EXPLICACIÓN:* Facer os diagramas de casos de uso que representen como as persoas usuarias interaccionan co sistema.
->
->Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
-
-No seguinte diagrama de casos de uso vemos as diferentes posibilidades de accións según o tipo de usuario.
-
-**Diagrama de casos para a xestión de Mariscamar**
+### Diagrama de casos para a xestión de Mariscamar
 
 <p align="center">
   <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/b7b8863e27725bbac07bf1ae1cb14da5488603d7/doc/img/CasosdeUso.png" alt="Diagrama casos de uso">
