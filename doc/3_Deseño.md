@@ -59,17 +59,10 @@ No seguinte diagrama de casos de uso vemos as diferentes posibilidades de acció
 
 ## 3- Diagrama de Base de Datos
 
-> *EXPLICACIÓN:* Neste apartado incluiranse os diagramas relacionados coa Base de Datos:
->
-> - Modelo Entidade/relación
-> - Modelo relacional
->
-> Pódese entregar a captura do phpMyAdmin se se emprega MariaDB como Modelo relacional.
-
 ### Modelo Entidade/relación
 
 <p align="center">
-  <img src="" alt="Modelo Entidade/Relación">
+  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/f1c32f010321aa23d7d1cc7de4a1edd2d8d6bef2/doc/img/Modelo_Entidad_Relacion.png" alt="Modelo Entidade/Relación">
 </p>
 
 ### Modelo Relacional
