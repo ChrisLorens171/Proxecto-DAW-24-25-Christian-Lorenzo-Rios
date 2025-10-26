@@ -51,7 +51,7 @@ sequenceDiagram
 
 No seguinte diagrama de casos de uso vemos as diferentes posibilidades de accións según o tipo de usuario.
 
-**Diagrama de casos de uso**
+**Diagrama de casos para a xestión de Mariscamar**
 
 <p align="center">
   <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/b7b8863e27725bbac07bf1ae1cb14da5488603d7/doc/img/CasosdeUso.png" alt="Diagrama casos de uso">
