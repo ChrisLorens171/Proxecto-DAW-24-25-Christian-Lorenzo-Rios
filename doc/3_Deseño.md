@@ -10,13 +10,45 @@
 
 ## 1- Diagrama da arquitectura
 
-> *EXPLICACIÓN:* Incluír os diagramas de arquitectura que representen de forma gráfica a aplicación, os seus compoñentes e a súa interrelación: front-end, back-end, bases de datos, nube, microservizos, etc.
+No seguinte diagrama mostramos o funcionamento de forma gráfica e sinxela, co seu funcionamente entre as diferentes partes e a súa interrelación.
 
+```mermaid
+sequenceDiagram
+    title Arquitectura Mariscamar
+    
+    participant L as Lonxa
+    participant C as Comprador
+    participant WS as Servidor WebSocket
+    participant App as Servidor Mariscamar
+    
+    L->>App: Crear poxa
+    App-->>L: Poxa creada
+    
+    Note over C,WS: Compradores e lonxas conéctanse o WS
+    C->>WS: Conexión WebSocket
+    L->>WS: Conexión WebSocket
+
+    loop Proceso da poxa
+        C->>WS: Mandar poxa (WebSockets)
+        WS->>App: Validar e procesar poxa
+        
+        Note over App: Almacenar nova poxa e actualizar precio
+        App->>WS: Actualización de poxa
+        WS-->>C: Notificación de nova poxa
+        WS-->>L: Notificación de nova poxa
+    end
+    
+    App->>WS: Finalizar poxa (Tempo Límite)
+    WS-->>C: Notificar resultado
+    WS-->>L: Notificar resultado
+```
+    
 ## 2- Casos de uso
 
 > *EXPLICACIÓN:* Facer os diagramas de casos de uso que representen como as persoas usuarias interaccionan co sistema.
 >
 >Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
+
 
 ## 3- Diagrama de Base de Datos
 
