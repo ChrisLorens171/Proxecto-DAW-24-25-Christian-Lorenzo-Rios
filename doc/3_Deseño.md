@@ -68,7 +68,7 @@ No seguinte diagrama de casos de uso vemos as diferentes posibilidades de acció
 ### Modelo Relacional
 
 <p align="center">
-  <img src="" alt="Modelo Relacional">
+  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/0eb21eb0a8745e8b44ad1ffadb0c065854d82fa8/doc/img/Modelo_Relacional.png" alt="Modelo Relacional">
 </p>
 
 ## 4- Deseño de interface de usuarios
