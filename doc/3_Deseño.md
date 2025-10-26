@@ -60,6 +60,7 @@ sequenceDiagram
 </p>
 
 ### Modelo Relacional
+Modelo relacional realizado coa plataforma ChartDB.io.  
 
 <p align="center">
   <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/0eb21eb0a8745e8b44ad1ffadb0c065854d82fa8/doc/img/Modelo_Relacional.png" alt="Modelo Relacional">
