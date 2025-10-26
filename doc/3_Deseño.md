@@ -49,6 +49,11 @@ sequenceDiagram
 >
 >Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
 
+**Diagrama de casos de uso**
+
+![Diagrama casos de uso]()
+
+
 
 ## 3- Diagrama de Base de Datos
 
