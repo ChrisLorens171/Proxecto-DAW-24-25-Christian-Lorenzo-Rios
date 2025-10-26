@@ -49,9 +49,11 @@ sequenceDiagram
 >
 >Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
 
+No seguinte diagrama de casos de uso vemos as diferentes posibilidades de accións según o tipo de usuario.
+
 **Diagrama de casos de uso**
 
-![Diagrama casos de uso]()
+![Diagrama casos de uso](https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/ac39312f94bfe16f7b48a193718cf073fab77e23/doc/img/Casos%20de%20uso%20Mariscamar.png)
 
 
 
