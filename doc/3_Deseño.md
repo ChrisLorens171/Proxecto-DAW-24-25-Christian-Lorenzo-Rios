@@ -13,34 +13,51 @@
 No seguinte diagrama mostramos o funcionamento de forma gráfica e sinxela entre as diferentes partes e a súa interrelación.
 
 ```mermaid
-sequenceDiagram
-    title Arquitectura Mariscamar
-    
-    participant L as Lonxa
-    participant C as Comprador
-    participant WS as Servidor WebSocket
-    participant App as Servidor Mariscamar
-    
-    L->>App: Crear poxa
-    App-->>L: Poxa creada
-    
-    Note over C,WS: Compradores e lonxas conéctanse o WS
-    C->>WS: Conexión WebSocket
-    L->>WS: Conexión WebSocket
+---
+config:
+  layout: dagre
+---
+flowchart LR
+  %% Frontend
+  subgraph Frontend["Cliente"]
+      A["Navegador Web"]
+  end
 
-    loop Proceso da poxa
-        C->>WS: Mandar poxa (WebSockets)
-        WS->>App: Validar e procesar poxa
-        
-        Note over App: Almacenar nova poxa e actualizar precio
-        App->>WS: Actualización de poxa
-        WS-->>C: Notificación de nova poxa
-        WS-->>L: Notificación de nova poxa
-    end
-    
-    App->>WS: Finalizar poxa (Tempo Límite)
-    WS-->>C: Notificar resultado
-    WS-->>L: Notificar resultado
+  %% Backend
+  subgraph Backend["Lóxica de Negocio"]
+      B["Balanceador de Carga (LB)"]
+      subgraph API["Servidores API REST"]
+          API1["Servidor Express API"]
+      end
+      subgraph WS["Servidores WebSockets"]
+          WS1["Servidor Socket.io"]
+      end
+      Redis[("Redis Caché / PubSub")]
+  end
+
+  %% Almacenamento
+  subgraph Almacenamento["Datos e Arquivos"]
+      DB[("Base de Datos MySQL/MariaDB")]
+      FS["Almacenamento de Arquivos"]
+  end
+
+  %% Conexións
+  A -- "1. Login / CRUD (HTTPS)" --> B
+  A -- "2. Conexión en tempo real (WSS)" --> B
+
+  B -- "1a. Accións Admin" --> API1
+  B -- "2a. Notificacións en tempo real" --> WS1
+
+  API1 -- "Consultas SQL" --> DB
+  WS1 -- "Consultas de estado" --> DB
+  API1 -- "Gardar imaxes" --> FS
+  API1 -- "Lectura/Escritura de sesión" --> Redis
+  WS1 -- "Eventos" --> Redis
+
+  style A fill:#ADD8E6,stroke:#333,color:#FFFFFF,stroke-width:1px
+  style B fill:#FFCCE6,stroke:#333,color:#FFFFFF,stroke-width:1px
+  style Redis fill:#FFE680,stroke:#333,stroke-width:1px
+
 ```
     
 ## 2- Casos de uso
