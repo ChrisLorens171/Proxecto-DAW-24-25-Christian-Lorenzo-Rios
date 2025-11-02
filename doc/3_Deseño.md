@@ -80,7 +80,7 @@ flowchart LR
 Modelo relacional realizado coa plataforma ChartDB.io.  
 
 <p align="center">
-  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/640bc7609cdabd9b2bc74849ceef17afd7fb03e2/doc/img/ModeloEntidadRelacion.png" alt="Modelo Relacional">
+  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/3c5e5f9e5277560cad4223ef2acfca0fa9702fa7/doc/img/Modelo_Relacional.png" alt="Modelo Relacional">
 </p>
 
 ## 4- Deseño de interface de usuarios
