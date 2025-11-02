@@ -65,7 +65,7 @@ flowchart LR
 ### Diagrama de casos para a xestión de Mariscamar
 
 <p align="center">
-  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/b7b8863e27725bbac07bf1ae1cb14da5488603d7/doc/img/CasosdeUso.png" alt="Diagrama casos de uso">
+  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/7864b1e3782034d93ee6c1a3327137218663d263/doc/img/CasosUsoMariscamar.png" alt="Diagrama casos de uso">
 </p>
 
 ## 3- Diagrama de Base de Datos
