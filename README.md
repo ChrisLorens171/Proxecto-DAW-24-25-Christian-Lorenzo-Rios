@@ -18,7 +18,7 @@ As tarefas de estudo preliminar e análise están finalizadas, e a codificación
 
 ## Descrición
 
-![Logo Mariscamar]((https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/e8472bba37354967715c0280d7a7f41fe99c3ab7/doc/img/MARISCAMAR.png))
+![Logo Mariscamar](doc/img/MARISCAMAR.png)
 
 Mariscamar é unha aplicación web pensada para facilitar a venda de marisco directamente desde as lonxas a compradores profesionais. A idea principal é ofrecer un sistema sinxelo no que as lonxas poidan crear as súas subastas, engadir os produtos dispoñibles e xestionar as cantidades á vender, mentres que os compradores poden participar nelas e adquirir o marisco, o sistema está pensado principalmente co sistema B2B(Business to Business). Esta diseñado para ser o mais intuitivo posible, mantendo a esencia do funcionamento tradicional das lonxas en un entorno dixital.
 
