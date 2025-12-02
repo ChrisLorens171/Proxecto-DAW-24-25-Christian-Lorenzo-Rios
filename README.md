@@ -61,29 +61,29 @@ Agradecemos a participación en ampliar Mariscamar, proxecto de software libre. 
 
   - Mellora e Optimización do Código
 
-    Refactorización do código, para optimizar o rendemento do código Node.js/Express, especialmente na lóxica de poxa en tempo real.
+      Refactorización do código, para optimizar o rendemento do código Node.js/Express, especialmente na lóxica de poxa en tempo real.
     
-    Corrección de Bugs e identificación de erros identificados polos usuarios.
+      Corrección de Bugs e identificación de erros identificados polos usuarios.
 
   - Desenvolvemento de Novas Funcionalidades
 
-    Implementación de funcionalidades como sistemas avanzados de filtros de busca de produtos ou melloras na área de administración de usuarios.
+      Implementación de funcionalidades como sistemas avanzados de filtros de busca de produtos ou melloras na área de administración de usuarios.
     
-    Desenvolvemento de novas interfaces para Lonxas e Compradores que faciliten a usabilidade e faciliten a entrada a novos usuarios.
+      Desenvolvemento de novas interfaces para Lonxas e Compradores que faciliten a usabilidade e faciliten a entrada a novos usuarios.
 
   - Testing
 
-    Creación de probas unitarias e de integración para o backend (Node.js) e end-to-end para o fluxo de poxa en tempo real.
+      Creación de probas unitarias e de integración para o backend (Node.js) e end-to-end para o fluxo de poxa en tempo real.
     
-    Probas de estrés para Socket.io e a base de datos PostgreSQL, asegurando que o sistema soporta un alto volume de ofertas simultáneas.
+      Probas de estrés para Socket.io e a base de datos PostgreSQL, asegurando que o sistema soporta un alto volume de ofertas simultáneas.
 
   - Documentación e Soporte
 
-    Mellora e tradución da documentación técnica para facilitar futuros desarrollos.
+      Mellora e tradución da documentación técnica para facilitar futuros desarrollos.
 
   - Integracións e Extensións
 
-    Proposta e desenvolvemento de plugins ou módulos para a integración con servizos externos (por exemplo, pasarelas de pago adicionais ou sistemas de loxística).
+      Proposta e desenvolvemento de plugins ou módulos para a integración con servizos externos (por exemplo, pasarelas de pago adicionais ou sistemas de loxística).
 
 ## Links
 
