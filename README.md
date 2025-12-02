@@ -22,7 +22,7 @@ As tarefas de estudo preliminar e análise están finalizadas, e a codificación
   <img src="doc/img/MARISCAMAR.png" alt="Logo Mariscamar"></img>
 </p>
 
-Mariscamar é unha aplicación web pensada para facilitar a venda de marisco directamente desde as lonxas a compradores profesionais. A idea principal é ofrecer un sistema sinxelo no que as lonxas poidan crear as súas subastas, engadir os produtos dispoñibles e xestionar as cantidades á vender, mentres que os compradores poden participar nelas e adquirir o marisco, o sistema está pensado principalmente co sistema B2B(Business to Business). Esta diseñado para ser o mais intuitivo posible, mantendo a esencia do funcionamento tradicional das lonxas en un entorno dixital.
+Una aplicación web pensada para facilitar a venda de marisco directamente desde as lonxas a compradores profesionais. A idea principal é ofrecer un sistema sinxelo no que as lonxas poidan crear as súas subastas, engadir os produtos dispoñibles e xestionar as cantidades á vender, mentres que os compradores poden participar nelas e adquirir o marisco, o sistema está pensado principalmente co sistema B2B(Business to Business). Esta diseñado para ser o mais intuitivo posible, mantendo a esencia do funcionamento tradicional das lonxas en un entorno dixital.
 
 Para o desenvolvemento empregouse o framework Express e os lenguaxes: HTML, CSS e JS. Complementariamente utilízanse ferramentas como Visual Paradigm para os diagramas, Github para o control de versións e pgAdmin4 para o manexo da base de datos. O obxectivo final é crear unha plataforma práctica, segura e robusta que conecte aos diferentes partes do sector marisqueiro dun modo moderno e eficiente.
 
