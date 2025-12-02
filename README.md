@@ -58,8 +58,6 @@ O proxecto Mariscamar esta licendiado con GNU Free Documentation Licence Version
 
 ## Guía de contribución
 
-> EXPLICACIÓN*: Tratándose dun proxecto de software libre, é moi importante que expoñas como se pode contribuír co teu proxecto. Algúns exemplos disto son realizar novas funcionalidades, corrección e/o optimización do código, realización de tests automatizados, novas interfaces de integración, desenvolvemento de plugins etc. Se o máis conciso que poidas.
-
 Agradecemos a participación en ampliar Mariscamar, proxecto de software libre. Existen múltiples formas de colaborar no seu desarrollo, listamos varias posibilidades a continuación:
 
   - Mellora e Optimización do Código
