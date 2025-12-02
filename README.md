@@ -18,7 +18,7 @@ As tarefas de estudo preliminar e análise están finalizadas, e a codificación
 
 ## Descrición
 
-<p text-align="center">
+<p align="center">
   <img src="doc/img/MARISCAMAR.png" alt="Logo Mariscamar"></img>
 </p>
 
