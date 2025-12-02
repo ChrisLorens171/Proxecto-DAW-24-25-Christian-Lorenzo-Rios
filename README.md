@@ -29,10 +29,9 @@ Para o desenvolvemento empregouse o framework Express e os lenguaxes: HTML, CSS 
 
 ## Uso
 
-> *EXPLICACIÓN*: É este apartado describe brevemente como se usará a aplicación Web do proxecto. Describe o uso da interface web *só o uso** (a modo de sumario) *dos aspectos máis relevantes do seu funcionamento** (máxima brevidade, coma se fose un anuncio reclamo ou comercial).
->
+A aplicación web destaca pola súa interface sinxela e intuitiva, permitindo ao usuario realizar todas as accións principais en poucos clics. Desde o panel inicial pódese acceder rapidamente ás funcións máis importantes, como a creación ou participación en poxas. Navegación fluída, con menús claros e opcións visibles en todo momento. 
 
-A aplicación web destaca pola súa interface sinxela e intuitiva, permitindo ao usuario realizar todas as accións principais en poucos clics. Desde o panel inicial pódese acceder rapidamente ás funcións máis importantes, como a creación ou participación en poxas. Navegación fluída, con menús claros e opcións visibles en todo momento. Cada pantalla está deseñada para guiar ao usuario dun xeito natural, facilitando o uso incluso a persoas con pouca experiencia tecnolóxica. En poucos instantes o usuario pode realizar as operación necesarias para participar ou crear unha poxa de forma sencilla e eficiente.
+Cada pantalla está deseñada para guiar ao usuario dun xeito natural, facilitando o uso incluso a persoas con pouca experiencia tecnolóxica. En poucos instantes o usuario pode realizar as operación necesarias para participar ou crear unha poxa de forma sencilla e eficiente.
 
 ## Sobre o autor
 
