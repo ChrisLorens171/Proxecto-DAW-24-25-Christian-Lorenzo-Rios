@@ -10,7 +10,6 @@
   - [Índice](#índice)
   - [Guía de contribución](#guía-de-contribución)
   - [Links](#links)
-  - 
 ## Taboleiro do proyecto
 
 O proxecto **Mariscamar** atópase actualmente en **fase de desenvolvemento**. 
