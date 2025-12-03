@@ -37,7 +37,7 @@ flowchart LR
 
   %% Almacenamento
   subgraph Almacenamento["Datos e Arquivos"]
-      DB[("Base de Datos MySQL/MariaDB")]
+      DB[("Base de Datos PostgreSQL")]
       FS["Almacenamento de Arquivos"]
   end
 
