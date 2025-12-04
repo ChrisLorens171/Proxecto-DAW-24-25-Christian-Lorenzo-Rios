@@ -21,6 +21,41 @@
 > - Usuarios da aplicación.
 > - Diagrama final de despregue (se hai variacións con respecto ó realizado na anterior fase).
 
+Os pasos e requisitos necesarios para a descarga e continuación do desenvolvemento deste proxecto son os seguintes:
+
+1. Requerimentos:
+
+    - Hardware recomendado:
+        - Sobre 4GB de RAM.
+        - Espazo suficiente no disco duro.
+        - Conexión a internet estable.
+        
+    - Sofware:
+        - Node.js.
+        - Cliente SQL PgAdmin4 (recomendado) ou cualquer xestor de bases de datos PostgreSQL.
+        - Editor de código, VsCode (recomendado).
+
+2. Descarga os arquivos da carpeta src do repositorio
+    
+3. Instalación de dependencias e arranque
+
+    - Descargar Node.js (no caso de non telo no equipo).
+    - Comprobar con "<strong>npm -v</strong>" que este instalado correctamente.
+    - Instalar as dependecias desde a raíz do proxecto co comando "<strong>npm install</strong>".
+    - Lanzamos o servidor con "<strong>npm start</strong>" ou "<strong>npm run dev</strong>" e deberíamos ver algo como o seguinte:
+
+    <p align="center" style="margin: 30px;">
+      <img width="362" height="99" alt="image" src="https://github.com/user-attachments/assets/a0869aff-4290-4037-9867-67aca16e0a6f" />
+    </p>
+    
+4. Configuración de base de datos
+
+    - Dentro da carpeta src atopamos o directorio sql donde esta aloxado o arquivo mariscamar.sql, que conten o script para a creación da base de datos.
+
+5. Usuarios iniciais
+
+    - Existen 3 tipos de usuarios, que son: Admin, Lonxa e Comprador.
+   
 ### 1.2- Administración do sistema
 
 > *EXPLICACIÓN:* Neste apartado indicarase información relativa á administración do sistema, é dicir, tarefas que se deberán realizar unha vez que o sistema estea funcionando.
