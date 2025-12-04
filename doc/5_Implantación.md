@@ -151,7 +151,7 @@ A xestión de usuarios realízase desde o panel de administración da aplicació
 
    - Validación de datos.
 
-#### - <ins>Xestión de incidencias</ins>
+#### <ins>Xestión de incidencias</ins>
 
 Railway xestiona automaticamente problemas de servidor notificando automáticamente os administradores en cuestión.
 
