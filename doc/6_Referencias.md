@@ -10,6 +10,18 @@
 
 ## 1- Sitios web de documentación técnica
 
+Node.js: https://nodejs.org/en/docs/
+
+Express.js: https://expressjs.com/
+
+Socket.IO: https://socket.io/docs/v4/
+
+PostgreSQL: https://www.postgresql.org/docs/
+
+Railway: https://docs.railway.app/
+
+Github: https://docs.github.com/es/
+
 ## 2- Fontes de interes
 
 ## 3- Sitios oficiais do software utilizado
