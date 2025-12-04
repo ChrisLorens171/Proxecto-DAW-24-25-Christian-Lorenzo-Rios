@@ -14,6 +14,16 @@
 
 ## 3- Sitios oficiais do software utilizado
 
+[Node.js](https://nodejs.org/)
+
+[Express](https://expressjs.com/)
+
+[Sockets.io](https://socket.io/)
+
+[PostgreSQL](https://www.postgresql.org/)
+
+[Railway](https://railway.app/)
+
 ## 4- Normas ou documentos legais
 
 [**<-Anterior**](../../README.md)
