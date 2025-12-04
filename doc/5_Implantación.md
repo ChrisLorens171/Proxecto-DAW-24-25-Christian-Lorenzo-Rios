@@ -171,7 +171,7 @@ Railway xestiona automaticamente problemas de servidor notificando automáticame
 >
 > Todo esto se a aplicación require de manual de usuario.
 
-Mariscamar coa sinxeleza como principio fundamental. A plataforma funciona de forma intuitiva. Non se precisa formación nin instrucións demasiado complexas. Cada pantalla guía visualmente os usuarios para que cos botóns e opcións que ofrecemos poidas navegar comoda e rápidamente. 
+Mariscamar diseñouse coa sinxeleza como principio fundamental. A plataforma funciona de forma intuitiva. Non se precisa formación nin instrucións demasiado complexas. Cada pantalla guía visualmente os usuarios para que cos botóns e opcións que ofrecemos poidas navegar comoda e rápidamente. 
 
 Se sabes usar un navegador web e facer clics, xa sabes usar Mariscamar. A interface é limpa, directa e libre de complicacións innecesarias.
 
