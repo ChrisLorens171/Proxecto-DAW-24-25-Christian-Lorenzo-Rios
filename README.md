@@ -74,11 +74,13 @@ Agradecemos a participación en ampliar Mariscamar, proxecto de software libre. 
   
     - Desenvolvemento de novas interfaces para Lonxas e Compradores que faciliten a usabilidade e faciliten a entrada a novos usuarios.
 
+    - Sistemas de alertas en tempo real de comezo, finalizacion de poxa e precio obxetivo.
+
 - Testing:
 
     - Creación de probas unitarias e de integración para o backend (Node.js) e end-to-end para o fluxo de poxa en tempo real.
   
-    - Probas de estrés para Socket.io e a base de datos PostgreSQL, asegurando que o sistema soporta un alto volume de ofertas simultáneas.
+    - Probas de estrés para Socket.io e a base de datos PostgreSQL, asegurando que o sistema soporta un volume moderado de ofertas simultáneas.
 
 - Documentación e Soporte:
 
