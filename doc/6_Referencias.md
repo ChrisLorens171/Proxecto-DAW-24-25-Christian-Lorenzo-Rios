@@ -14,16 +14,34 @@
 
 ## 3- Sitios oficiais do software utilizado
 
-[Node.js](https://nodejs.org/)
+Node.js: https://nodejs.org/
 
-[Express](https://expressjs.com/)
+Express.js: https://expressjs.com/
 
-[Sockets.io](https://socket.io/)
+Socket.IO: https://socket.io/
 
-[PostgreSQL](https://www.postgresql.org/)
+PostgreSQL: https://www.postgresql.org/
 
-[Railway](https://railway.app/)
+Railway: https://railway.app/
+
+GitHub: https://github.com/
 
 ## 4- Normas ou documentos legais
+
+### Protección de datos
+Lei Orgánica 3/2018, de Protección de Datos Personais e garantía dos dereitos dixitais (LOPDPGDD): https://www.boe.es/eli/es/lo/2018/12/05/3
+
+Regulamento (UE) 2016/679 (GDPR): https://eur-lex.europa.eu/eli/reg/2016/679/oj
+
+### Sociedade da Información
+Lei 34/2002, de Servizos da Sociedade da Información e do Comercio Electrónico (LSSI-CE): https://www.boe.es/eli/es/l/2002/07/11/34
+
+### Seguridade alimentaria e pesqueira
+  Regulamento (CE) 178/2002, sobre seguridade e trazabilidade alimentaria: https://eur-lex.europa.eu/eli/reg/2002/178/oj
+
+Real Decreto 1376/2003, sobre condicións sanitarias de productos pesqueiros: https://www.boe.es/eli/es/rd/2003/11/07/1376
+
+### Transporte e distribución
+Lei 16/1987, de Ordenación dos Transportes Terrestres: https://www.boe.es/eli/es/l/1987/07/30/16
 
 [**<-Anterior**](../../README.md)
