@@ -105,6 +105,8 @@ graph TB
     APP --> LOGS
 ```
 
+---
+
 ### 1.2- Administración do sistema
 
 En este apartado indicaremos a información relativa a administración do sistema, e dicir, as tarefas que teremos que realizar unha vez o sistema este funcionando.  
