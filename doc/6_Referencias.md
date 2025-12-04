@@ -24,6 +24,10 @@ Github: https://docs.github.com/es/
 
 ## 2- Fontes de interes
 
+Curso introducción a Express: https://www.youtube.com/watch?v=YmZE1HXjpd4&t=3509s
+
+Exercicios e apuntes de clase
+
 ## 3- Sitios oficiais do software utilizado
 
 Node.js: https://nodejs.org/
