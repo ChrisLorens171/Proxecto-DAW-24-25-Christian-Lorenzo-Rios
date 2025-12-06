@@ -1,94 +1,103 @@
--- Script de Creación da Base de Datos 'mariscamar'
-USE mariscamar_db;
+-- =============================================================
+-- DROP previo para reiniciar entorno (opcional)
+-- =============================================================
+DROP TABLE IF EXISTS Facturas CASCADE;
+DROP TABLE IF EXISTS Ofertas CASCADE;
+DROP TABLE IF EXISTS Subastas CASCADE;
+DROP TABLE IF EXISTS Produtos CASCADE;
+DROP TABLE IF EXISTS Usuarios CASCADE;
 
--- TÁBOA BASE: USUARIOS
+-- =============================================================
+-- TABLA USUARIOS
+-- =============================================================
 CREATE TABLE Usuarios (
-    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
-    correo VARCHAR(100) NOT NULL UNIQUE,
-    contrasinal_hash VARCHAR(255) NOT NULL,
-    nome_completo VARCHAR(150) NOT NULL,
-    tipo ENUM('Comprador', 'Lonxa', 'Administrador') NOT NULL,
-    estado ENUM('Pendente_de_Verificación', 'Verificado', 'Suspendido') NOT NULL DEFAULT 'Pendente_de_Verificación',
-    data_rexistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    id_usuario SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
+    correo VARCHAR(150) UNIQUE,
+    contrasinal VARCHAR(150),
+    tipo VARCHAR(20) CHECK (tipo IN ('admin', 'comprador', 'lonxa')),
+    estado VARCHAR(50),
+    CIF_NIF VARCHAR(30)
 );
 
--- TÁBOAS SUBCLASE (Relación 1:1 coa táboa Usuarios)
-
-CREATE TABLE Administradores (
-    id_usuario INT PRIMARY KEY,
-    nivel_acceso ENUM('Superadmin', 'Moderador', 'Soporte') NOT NULL,
-    departamento VARCHAR(50),
-    data_incorporacion DATE,
-    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE
-);
-
-CREATE TABLE Lonxas (
-    id_usuario INT PRIMARY KEY,
-    nome_comercial VARCHAR(100) NOT NULL,
-    CIF VARCHAR(20) UNIQUE,
-    telefono_contacto VARCHAR(20),
-    endereco_envio VARCHAR(255),
-    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE
-);
-
-CREATE TABLE Compradores (
-    id_usuario INT PRIMARY KEY,
-    DNI VARCHAR(20) UNIQUE,
-    telefono_contacto VARCHAR(20),
-    endereco_envio_predeterminado VARCHAR(255),
-    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE
-);
-
-
--- TÁBOA PRODUTOS
+-- =============================================================
+-- TABLA PRODUCTOS
+-- =============================================================
 CREATE TABLE Produtos (
-    id_produto INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
+    id_produto SERIAL PRIMARY KEY,
+    nome VARCHAR(100),
     tipo VARCHAR(50),
-    cantidade_total DECIMAL(10, 2) NOT NULL,
-    unidade_medida VARCHAR(10) NOT NULL DEFAULT 'kg',
-    id_lonxa INT NOT NULL,
-    data_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
-    FOREIGN KEY (id_lonxa) REFERENCES Lonxas(id_usuario) ON DELETE RESTRICT -- Un produto sempre debe ter unha Lonxa
+    cantidade INT CHECK (cantidade >= 0),
+    prezo_inicial NUMERIC(10,2),
+    id_usuario_propietario INT NOT NULL,
+    FOREIGN KEY (id_usuario_propietario) REFERENCES Usuarios(id_usuario)
 );
 
--- TÁBOA SUBASTAS
+-- =============================================================
+-- TABLA SUBASTAS
+-- =============================================================
 CREATE TABLE Subastas (
-    id_subasta INT AUTO_INCREMENT PRIMARY KEY,
-    id_produto INT NOT NULL UNIQUE, -- CHAVE FORÁNEA ÚNICA (Forza a relación 1:1 con Produtos)
-    prezo_inicial DECIMAL(10, 2) NOT NULL,
-    cantidade_actual_restante DECIMAL(10, 2) NOT NULL,
+    id_subasta SERIAL PRIMARY KEY,
+    id_produto INT UNIQUE NOT NULL,
+    id_usuario_lonxa INT NOT NULL,
     data_inicio TIMESTAMP NOT NULL,
     data_fin TIMESTAMP NOT NULL,
-    estado ENUM('Activa', 'Pechada', 'Cancelada') NOT NULL DEFAULT 'Activa',
-    
-    FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto) ON DELETE CASCADE
+    estado VARCHAR(20) CHECK (estado IN ('pendiente', 'activa', 'cerrada')),
+    FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto),
+    FOREIGN KEY (id_usuario_lonxa) REFERENCES Usuarios(id_usuario)
 );
 
-
--- TÁBOA OFERTAS
+-- =============================================================
+-- TABLA OFERTAS
+-- =============================================================
 CREATE TABLE Ofertas (
-    id_oferta INT AUTO_INCREMENT PRIMARY KEY,
+    id_oferta SERIAL PRIMARY KEY,
     id_subasta INT NOT NULL,
-    id_comprador INT NOT NULL, -- Chave Foránea a Compradores
-    importe DECIMAL(10, 2) NOT NULL,
-    cantidade_poxada DECIMAL(10, 2) NOT NULL,
-    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
-    FOREIGN KEY (id_subasta) REFERENCES Subastas(id_subasta) ON DELETE CASCADE,
-    FOREIGN KEY (id_comprador) REFERENCES Compradores(id_usuario) ON DELETE RESTRICT
+    id_usuario INT NOT NULL,
+    importe NUMERIC(10,2) NOT NULL,
+    cantidades INT CHECK (cantidades > 0),
+    data_hora TIMESTAMP DEFAULT NOW(),
+    FOREIGN KEY (id_subasta) REFERENCES Subastas(id_subasta),
+    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario)
 );
 
--- TÁBOA FACTURAS
+-- =============================================================
+-- TABLA FACTURAS
+-- =============================================================
 CREATE TABLE Facturas (
-    id_factura INT AUTO_INCREMENT PRIMARY KEY,
-    id_subasta INT NOT NULL, -- Permite varias facturas por poxa
-    id_comprador INT NOT NULL, -- Comprador que recibirá a factura
-    importe_total DECIMAL(10, 2) NOT NULL,
-    cantidade_comprada DECIMAL(10, 2) NOT NULL,
-    data_emision TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
-    FOREIGN KEY (id_subasta) REFERENCES Subastas(id_subasta) ON DELETE RESTRICT,
-    FOREIGN KEY (id_comprador) REFERENCES Compradores(id_usuario) ON DELETE RESTRICT
+    id_factura SERIAL PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    id_subasta INT NOT NULL,
+    importe_total NUMERIC(10,2),
+    cantidad INT NOT NULL,
+    data_emision TIMESTAMP DEFAULT NOW(),
+    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario),
+    FOREIGN KEY (id_subasta) REFERENCES Subastas(id_subasta)
 );
+
+-- =============================================================
+-- TRIGGER PARA CERRAR SUBASTA CUANDO SE AGOTA EL STOCK
+-- =============================================================
+CREATE OR REPLACE FUNCTION cerrar_subasta_si_agotado()
+RETURNS TRIGGER AS $$
+DECLARE
+    producto_id INT;
+BEGIN
+    producto_id := NEW.id_produto;
+
+    IF NEW.cantidade <= 0 THEN
+        UPDATE Subastas
+        SET estado = 'cerrada',
+            data_fin = NOW()
+        WHERE id_produto = producto_id;
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_cerrar_subasta
+AFTER UPDATE ON Produtos
+FOR EACH ROW
+WHEN (OLD.cantidade <> NEW.cantidade)
+EXECUTE FUNCTION cerrar_subasta_si_agotado();
