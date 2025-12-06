@@ -4,32 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariscamar</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/png" href="./img/logoFafafa.png">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/css/landing.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.all.min.js"></script>
+    
+    <!-- Scripts -->
+    <script src="/js/static.js"></script>
 </head>
 <body>
-    <header>
-        <img src="./img/logoFafafa.png" alt="Logo de Mariscamar" class="logo-header">
-        <nav class="navegacion-principal" aria-roledescription="navegación principal">
-            <ul>
-                <!-- Ponemos debajo de cada li un div para usar en el hover -->
-                <li>Inicio</li>
-                <li>Contacto</li>
-                <li>Sobre nosotros</li>
-            </ul>
-        </nav>
+    <div class="wrapper-fondo">
+        <header>
+            <a href="index.html">
+                <img src="./img/logoFafafa.png" alt="Logo de Mariscamar" class="logo-header">
+            </a>
+            <nav class="navegacion-principal" aria-roledescription="navegación principal">
+                <ul class="menu-header">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/contact">Contacto</a></li>
+                    <li><a href="/about">Sobre nosotros</a></li>
+                </ul>
+            </nav>
 
-        <div class="container-botones-header">
-            <button class="boton-header empieza" aria-roledescription="botón de registro">Empieza</button>
-            <button class="boton-header sesion" aria-roledescription="botón de inicio de sesión">Iniciar sesión</button>
-        </div>
-    </header>
+            <div class="container-botones-header">
+                <button class="boton-header empieza" aria-roledescription="botón de registro">Empieza</button>
+                <button class="boton-header sesion" aria-roledescription="botón de inicio de sesión">Iniciar sesión</button>
+            </div>
+        </header>
 
-    <main>
+        <main>
+            <section>
+                <h1>Del mar a tu tienda</h1>
+                <p>Suministro profesional de marisco de lonja con rapidez y calidad constante para su negocio.</p>
+            </section>
 
-    </main>
-
-    <footer>
-
-    </footer>
+            <section class="container-botones-main">
+                <button class="boton-main vendedor">Vendedor</button>
+                <button class="boton-main comprador">Comprador</button>
+            </section>
+        </main>
+        
+        <footer>
+            
+            <section>
+                <nav class="navegacion-footer" aria-roledescription="navegación de pie de página">
+                    <ul>
+                        <!-- Ponemos debajo de cada li un div para usar en el hover -->
+                        <li><a href="#">Términos y servicios</a></li>
+                        <li><a href="#">Aviso legal</a></li>
+                        <li><a href="#">Política de cookies</a></li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <section>
+                <p>© 2025 Mariscamar. Todos los derechos reservados.</p>
+            </section>
+            
+            <section>
+                <ul class="redes-sociales-footer">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </section>
+            
+        </footer>
+    </div>
 </body>
 </html>

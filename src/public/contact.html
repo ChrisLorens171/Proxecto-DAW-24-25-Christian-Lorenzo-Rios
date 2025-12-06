@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mariscamar</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/css/footer_header_component.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/img/logoFafafa.png">
+
+    <!-- Librerías y scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.26.3/dist/sweetalert2.all.min.js"></script>
+    <script src="/js/components.js"></script>
+    <script src="/js/static.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="contacto-seccion" role="main" aria-label="Sección de contacto y formulario">
+            <div class="formulario-panel" role="region" aria-labelledby="titulo-formulario">
+                <h2 id="titulo-formulario">Introduce tus datos <span class="icon-user" aria-hidden="true">👤</span></h2>
+                
+                <form id="formulario-contacto" role="form">
+                    <div class="campos-fila">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" 
+                            required aria-label="Nombre" aria-required="true">
+                            
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" 
+                            required aria-label="Apellidos" aria-required="true">
+                    </div>
+                    
+                    <div class="campos-fila">
+                        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" 
+                            required aria-label="Correo electrónico" aria-required="true">
+                            
+                        <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" 
+                            aria-label="Número de teléfono">
+                    </div>
+                    
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="4" 
+                            required aria-label="Escribe tu mensaje" aria-required="true"></textarea>
+
+                    <button type="submit" class="btn-contacto" aria-label="Enviar formulario de contacto">CONTACTA</button>
+                </form>
+            </div>
+
+            <div class="info-panel" role="complementary" aria-labelledby="titulo-contacto-info">
+                <h2 id="titulo-contacto-info">Contacto <span class="icon-mail" aria-hidden="true">✉️</span></h2>
+                <p>Rúa das Lonxas, 14 - 15940 Rianxo (A Coruña)</p>
+                <p>info@mariscamar.es</p>
+                <p>+34 677 12 45 69</p>
+                <span class="fondo-logo" aria-hidden="true">MARISCAMAR</span>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>

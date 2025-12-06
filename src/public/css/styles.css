@@ -1,82 +1,325 @@
-* {
+/*=============================================
+=        Importación de Variables             =
+=============================================*/
+@import url('./variables.css');
+
+/* Archivo de estilos generales */
+
+/*=============================================
+=            Estilos generales            =
+=============================================*/
+
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-  background: url("../img/barcoindex.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-  z-index: 0;
-}
-
-body > * {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-image: url("../img/FONDO-02.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     position: relative;
+    font-family: var(--fuente-base);
     z-index: 1;
 }
 
+/*=====  End of Estilos generales  ======*/
 
-header {
-    max-width: 1500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+/*=============================================
+=            Estilos main            =
+=============================================*/
+
+main {
     margin: 0 auto;
-    padding: 1rem;
+    width: 100%;
+    max-width: var(--max-content-width);
+    background-color: var(--color-fondo-main);
+    box-shadow: var(--shadow-main);
+    position: relative;
 }
 
-.logo-header {
-    width: 86px;
-    height: 80px;
-    margin-right: 1rem;
+/*=====  End of Estilos main  ======*/
+
+/*=============================================
+=            Estilos Popups            =
+=============================================*/
+
+/* Fondo oscuro del backdrop */
+.swal2-backdrop {
+    background-color: rgba(0, 0, 0, 0.75) !important;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    text-transform: uppercase;
-    color: #fafafa;
+/* Contenedor principal del modal */
+.swal2-popup {
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0e0e0;
+    padding: 2rem;
+    max-width: 650px;
+    width: 90vw;
 }
 
-.container-botones-header {
-    margin-left: auto;
+/* Título del popup */
+.swal2-title {
+    color: var(--color-hover);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+    letter-spacing: 0.05em;
 }
 
-.boton-header {
-    padding: 0.5rem 1rem;
+/* Texto del popup */
+.swal2-html-container {
+    color: #555;
     font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    line-height: 1.5;
 }
 
-
-.boton-header.empieza {
-    background-color: #467FB1;
-    border: 2px solid #467FB1;
-    color: #fafafa;
+.swal2-label {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--color-hover);
+    font-size: 0.9rem;
 }
 
-.boton-header.sesion {
+/* Input dentro del popup */
+.swal2-input {
+    border: 1px solid #d0d0d0;
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: var(--color-hover);
     background-color: #fafafa;
-    border: 2px solid #fafafa;
-    color: #467FB1;
+    margin: 0;
+    margin-bottom: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+    width: 100%;
 }
 
-.boton-header:hover {
-    background-color: #192738;
-    color: #fafafa;
-    border: 2px solid #192738;
+.swal2-input:last-of-type {
+    margin-bottom: 0;
 }
+
+.swal2-input:focus {
+    border-color: var(--color-boton);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(70, 127, 177, 0.1);
+    outline: none;
+}
+
+.swal2-input::placeholder {
+    color: #999;
+}
+
+/* Contenedor de campos en 2 columnas */
+.swal2-campos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.swal2-campo-full {
+    grid-column: 1 / -1;
+}
+
+.swal2-campos-grid > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.swal2-campos-grid .swal2-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-hover);
+}
+
+.swal2-campos-grid .swal2-input {
+    margin: 0;
+}
+
+/* Botones del popup */
+.swal2-confirm,
+.swal2-cancel,
+.swal2-deny {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.75rem;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Botón confirmar (primario) */
+.swal2-confirm {
+    background-color: var(--color-boton);
+    color: var(--color-texto-index);
+}
+
+.swal2-confirm:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-1px);
+}
+
+.swal2-confirm:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(70, 127, 177, 0.25);
+}
+
+/* Botón cancelar (secundario) */
+.swal2-cancel {
+    background-color: transparent;
+    color: #666;
+    border: 1px solid #d0d0d0;
+}
+
+.swal2-cancel:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+    color: var(--color-hover);
+}
+
+.swal2-cancel:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor de botones */
+.swal2-actions {
+    gap: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mensajes de validación */
+.swal2-validation-message {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* Texto de registro/enlace en popup */
+.swal2-registro-text {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.swal2-link-registro {
+    color: var(--color-boton);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.swal2-link-registro:hover {
+    color: var(--color-hover);
+    text-decoration: underline;
+}
+
+/* Botones de selección de tipo de usuario dentro del formulario */
+.swal2-tipo-usuario-container {
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: var(--border-radius);
+}
+
+.swal2-tipo-usuario-titulo {
+    font-size: 0.9rem;
+    color: var(--color-hover);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.swal2-tipo-botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.swal2-tipo-btn {
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    border: 2px solid #d0d0d0;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.swal2-tipo-btn:hover {
+    border-color: var(--color-boton);
+    color: var(--color-boton);
+}
+
+.swal2-tipo-btn.swal2-tipo-activo {
+    background-color: var(--color-boton);
+    border-color: var(--color-boton);
+    color: var(--color-texto-index);
+}
+
+.swal2-tipo-btn.swal2-tipo-activo:hover {
+    background-color: var(--color-hover);
+    border-color: var(--color-hover);
+}
+
+/* Icono de éxito/error/información */
+.swal2-icon {
+    border-color: var(--color-boton);
+    color: var(--color-boton);
+}
+
+.swal2-icon.swal2-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.swal2-icon.swal2-success [class*='success-'],
+.swal2-icon.swal2-success [class*='success'] {
+    background-color: #28a745;
+}
+
+.swal2-icon.swal2-error {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.swal2-icon.swal2-warning {
+    border-color: #ffc107;
+    color: #ffc107;
+}
+
+/*=====  End of Estilos Popups  ======*/
+
+
+
+
+
 

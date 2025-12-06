@@ -1,0 +1,169 @@
+/*=============================================
+=        Importación de Variables             =
+=============================================*/
+@import url('./variables.css');
+
+.sobre-nosotros-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 1. Estilos del Banner Superior --- */
+.banner-sobre-nosotros {
+    background-color: var(--color-principal);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.banner-sobre-nosotros h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Efecto de marco blanco que rodea el título */
+.marco-efecto {
+    border: 3px solid white;
+    display: inline-block;
+    padding: 10px 40px;
+    position: relative;
+}
+
+.marco-efecto::before, 
+.marco-efecto::after,
+.marco-efecto h1::before, 
+.marco-efecto h1::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+}
+
+.marco-efecto::before { /* Esquina superior izquierda (visible) */
+    top: -3px; left: -3px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.marco-efecto h1::before { /* Esquina superior derecha */
+    top: -3px; right: -3px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.marco-efecto::after { /* Esquina inferior izquierda */
+    bottom: -3px; left: -3px;
+    border-right: none;
+    border-top: none;
+}
+
+.marco-efecto h1::after { /* Esquina inferior derecha */
+    bottom: -3px; right: -3px;
+    border-left: none;
+    border-top: none;
+}
+
+
+/* --- 2. Estilos del Contenido Principal (Imagen + Texto) --- */
+.contenido-principal {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.info-central {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+    gap: 40px;
+}
+
+.imagen-redonda {
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #5a5a5a; /* Color de fondo para simular la imagen */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid white;
+    box-shadow: 0 0 0 5px var(--color-borde-tarjeta);
+}
+
+.imagen-redonda p {
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.texto-central {
+    text-align: left;
+}
+
+.texto-central p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* --- 3. Estilos de las Tarjetas (Artículos) --- */
+.caracteristicas-grid {
+    background-color: var(--color-fondo-claro);
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-caracteristica {
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid var(--color-borde-tarjeta);
+    border-top: 5px solid var(--color-principal); /* Borde superior azul */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-caracteristica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-caracteristica h3 {
+    color: var(--color-principal);
+    margin-top: 10px;
+    font-size: 1.4em;
+}
+
+.tarjeta-caracteristica p {
+    color: #666;
+}
+
+/* Estilo para los iconos simulados */
+.icono-fondo {
+    font-size: 2em;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+    /* Efecto de fondo sutil si es necesario */
+    /* background-color: rgba(58, 117, 184, 0.1); */
+    /* padding: 10px; */
+    /* border-radius: 50%; */
+}
+
+
+/* --- Media Queries (Adaptación para móviles) --- */
+@media (max-width: 768px) {
+    .info-central {
+        flex-direction: column; /* Apila imagen y texto */
+        text-align: center;
+    }
+
+    .texto-central {
+        text-align: center;
+    }
+}
