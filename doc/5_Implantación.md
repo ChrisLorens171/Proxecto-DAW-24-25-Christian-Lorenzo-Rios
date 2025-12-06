@@ -180,5 +180,15 @@ Se sabes usar un navegador web e facer clics, xa sabes usar Mariscamar. A interf
 ## 3- Melloras futuras
 
 > *EXPLICACIÓN:* Neste apartado incluiranse as posibilidades de mellora da aplicación no futuro.
->
+
+Durante o desenvolvemento de Mariscamar atopamos mais melloras a futuro que se poderían implementar para mellorar o servizo da web, mantemos as xa vistas e añadimos varios puntos a maiores na seguinte lista:
+
+  - Alertas e notificacións en tempo real: Para que os compradores poidan saber se hai poxas novas ou temas de interés.
+  - Sistema de precio obxetivo: Para que o comprador marque un precio que estaría disposto a pagar na poxa e compre automáticamente.
+  - Vista de control de usuarios: Permitiría ver a actividade dos usuarios para poder administrar mais eficientemente, tanto suspensiones como limpieza de cuentas.
+  - Sistemas de fidelización avanzado: Aforro por mercar maior volume, maiores recompensas por participación continuada e servizos premium. 
+  - App móbil: Para facilitar o acceso e participación desde calquera dispositivo. 
+  - Análise de datos e estatísticas: Explicacións de vendas, prezos e como se move o mercado para axudar a toma de decisións. 
+  - Mellora na experiencia do usuario: Pantallas sinxelas, personalización e filtros avanzados para as subastas.
+
 [**<-Anterior**](../../README.md)
