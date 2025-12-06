@@ -10,10 +10,6 @@
   - [Índice](#índice)
   - [Guía de contribución](#guía-de-contribución)
   - [Links](#links)
-
-> *EXPLICACIÓN*: Este documento será a "*páxina de aterrizaxe*" do teu proxecto. Será ou primeiro que vexan vos que se interesen por el. Cúida a sua redacción con todo ou mimo. Elimina posteriormente todas as lineas "EXPLICACIÓN*" cando creas finalizada a súa redacción.
-> Podes acompañar á redacción deste ficheiro con imaxes ou gifs, pero non abuses deles.
-
 ## Taboleiro do proyecto
 
 O proxecto **Mariscamar** atópase actualmente en **fase de desenvolvemento**. 
@@ -21,8 +17,13 @@ As tarefas de estudo preliminar e análise están finalizadas, e a codificación
 
 ## Descrición
 
-> *EXPLICACIÓN*: Realiza unha breve descrición do proxecto. Non menos de 100 palabras e non máis de 300. Resalta o fundamental *coas túas propias palabras**. Utiliza unha linguaxe correcta, *pero natural**, que o entenda todo o mundo, mesmo e en especial, as persoas que non teñan un coñecemento técnico avanzado. Pode ser un estracto ou resumo de apartados que xa contemples noutros ficheiros.
-> Descrición básica das ferramentas/tecnoloxías/linguaxes de programación,... empregados.
+<p align="center">
+  <img src="doc/img/MARISCAMAR.png" alt="Logo Mariscamar"></img>
+</p>
+
+Una aplicación web pensada para facilitar a venda de marisco directamente desde as lonxas a compradores profesionais. A idea principal é ofrecer un sistema sinxelo no que as lonxas poidan crear as súas subastas, engadir os produtos dispoñibles e xestionar as cantidades á vender, mentres que os compradores poden participar nelas e adquirir o marisco, o sistema está pensado principalmente co sistema B2B(Business to Business). Esta diseñado para ser o mais intuitivo posible, mantendo a esencia do funcionamento tradicional das lonxas en un entorno dixital.
+
+Para o desenvolvemento empregouse o framework Express e os lenguaxes: HTML, CSS e JS. Complementariamente utilízanse ferramentas como Visual Paradigm para os diagramas, Github para o control de versións e pgAdmin4 para o manexo da base de datos. O obxectivo final é crear unha plataforma práctica, segura e robusta que conecte aos diferentes partes do sector marisqueiro dun modo moderno e eficiente.
 
 ## Instalación / Posta en marcha
 
@@ -31,20 +32,23 @@ As tarefas de estudo preliminar e análise están finalizadas, e a codificación
 
 ## Uso
 
-> *EXPLICACIÓN*: É este apartado describe brevemente como se usará a aplicación Web do proxecto. Describe o uso da interface web *só o uso** (a modo de sumario) *dos aspectos máis relevantes do seu funcionamento** (máxima brevidade, coma se fose un anuncio reclamo ou comercial).
->
+A aplicación web destaca pola súa interface sinxela e intuitiva, permitindo ao usuario realizar todas as accións principais en poucos clics. Desde o panel inicial pódese acceder rapidamente ás funcións máis importantes, como a creación ou participación en poxas. Navegación fluída, con menús claros e opcións visibles en todo momento. 
+
+Cada pantalla está deseñada para guiar ao usuario dun xeito natural, facilitando o uso incluso a persoas con pouca experiencia tecnolóxica. En poucos instantes o usuario pode realizar as operación necesarias para participar ou crear unha poxa de forma sencilla e eficiente.
 
 ## Sobre o autor
 
-> *EXPLICACIÓN*: Realiza unha breve descrición de quen es (perfil profesional), os teus puntos fortes, ou tecnoloxías que máis dominas... a motivación do proxecto, tendo sobre todo en conta un nicho de mercado sen explotar.. *Non máis de 200 palabras**. Indica a forma fiable de contactar contigo durante o proceso de creación do proxecto.
+Son estudante do Ciclo Superior de Técnico en Desenvolvemento de Aplicacións Web. Teño formación en HTML, CSS, JavaScript, PHP, SQL e varios frameworks actuais, así como curiosidade constante por aprender novas tecnoloxías. Destaco pola miña capacidade para adaptarme ao entorno e de solucionar problemas de forma eficaz.
+
+A motivación deste proxecto xorde da experiencia personal de traballar como mariscador nunha lonxa local que usaba os métodos tradicionais de venta de marisco, experimentando de primeira man os problemas e inquietudes que aparecen desde a perspectiva dun vendedor pequeno con clientes limitados, por isto decidimos crear esta aplicación web e aproveitar a oportunidade para entrar no sector. 
+
+A forma máis fiable de contacto durante todo o proceso de creación do proxecto é o seguinte correo electrónico: chrislorenzorios@gmail.com
 
 ## Licenza
 
-> *EXPLICACIÓN*: É requisito INDISPENSABLE o licenciar explicitamente o proxecto software. Recoméndase licenciar con GNU Free Documentation License Version 1.3*. Crear un ficheiro `LICENSE` na raiz do repo, co teu ficheiro de licenza. Lembra que se empregas unha licenza de software libre estás a autorizar a derivación da túa obra baixo a mesma licenza que elixas, podendo dar continuidade, p. e. outro alumno, para continuar o teu proxecto noutro curso.
+O proxecto Mariscamar esta licendiado con GNU Free Documentation Licence Version 1.3*, consultar ficheiro LICENSE en raíz.
 
 ## Índice
-
-> *EXPLICACIÓN*: Simplemente indexa ordenadamente todo o tey proxecto.
 
 1. [Anteproyecto](doc/1_Anteproxecto.md)
 2. [Análise](doc/2_Analise.md)
@@ -56,7 +60,35 @@ As tarefas de estudo preliminar e análise están finalizadas, e a codificación
 
 ## Guía de contribución
 
-> EXPLICACIÓN*: Tratándose dun proxecto de software libre, é moi importante que expoñas como se pode contribuír co teu proxecto. Algúns exemplos disto son realizar novas funcionalidades, corrección e/o optimización do código, realización de tests automatizados, novas interfaces de integración, desenvolvemento de plugins etc. Se o máis conciso que poidas.
+Agradecemos a participación en ampliar Mariscamar, proxecto de software libre. Existen múltiples formas de colaborar no seu desarrollo, listamos varias posibilidades a continuación:
+
+- Mellora e Optimización do Código:
+
+    - Refactorización do código, para optimizar o rendemento do código Node.js/Express, especialmente na lóxica de poxa en tempo real.
+  
+    - Corrección de Bugs e identificación de erros identificados polos usuarios.
+
+- Desenvolvemento de Novas Funcionalidades:
+
+    - Implementación de funcionalidades como sistemas avanzados de filtros de busca de produtos ou melloras na área de administración de usuarios.
+  
+    - Desenvolvemento de novas interfaces para Lonxas e Compradores que faciliten a usabilidade e faciliten a entrada a novos usuarios.
+
+    - Sistemas de alertas en tempo real de comezo, finalizacion de poxa e precio obxetivo.
+
+- Testing:
+
+    - Creación de probas unitarias e de integración para o backend (Node.js) e end-to-end para o fluxo de poxa en tempo real.
+  
+    - Probas de estrés para Socket.io e a base de datos PostgreSQL, asegurando que o sistema soporta un volume moderado de ofertas simultáneas.
+
+- Documentación e Soporte:
+
+    - Mellora e tradución da documentación técnica para facilitar futuros desarrollos.
+
+- Integracións e Extensións:
+
+    - Proposta e desenvolvemento de plugins ou módulos para a integración con servizos externos (por exemplo, pasarelas de pago adicionais ou sistemas de loxística).
 
 ## Links
 

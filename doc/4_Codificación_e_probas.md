@@ -30,6 +30,8 @@
 > **Comparte o prototipo cos profesores por medio de Figma ou descarga o arquivo local o cal subirás o teu repositorio de GitHub**.
 > **Este prototipos deberían estar listo e enviados o titor para revisalo na primeira semana desta fase.**
 
+Compartido o prototipo por medio de Figma.
+
 ## 3- Innovación
 
 No caso de utilizar tecnoloxías diferentes ás estudadas no ciclo formativo, fai unha descrición dos retos asumidos e como se resolveron.
