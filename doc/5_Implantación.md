@@ -55,7 +55,21 @@ Os pasos e requisitos necesarios para a descarga e continuación do desenvolveme
 
     Terase que crear manualmente usuarios de proba para o desarrollo.
 
-6. Diagrama de despregamento final
+6. Configuración de Railway para desplegar servidor
+
+     - Servidor:
+         1. Para poder desplegar o noso proxecto con Railway, crearemos un repositorio no que insertaremos o contido da carpeta src que previamente descargamos.
+         2. Enlazaremos con Railway a nosa conta de Github e daremoslle permiso para acceder o repositorio que acabamos de crear co noso código.
+           <p align="center" style="margin: 30px;">
+             <img width="480" height="329" alt="image" src="https://github.com/user-attachments/assets/a1195d8e-d788-4d35-ac92-1fcb4b4b4124" />
+           </p>
+         3. Unha vez seguido os pasos que nos piden, Railway prepara automáticamente o necesario para o despregue da nosa páxina.
+         4. Para acabar teremos que elixir o nome do dominio que usaremos no seguinte menú e estaría listo para seu uso.
+           <p>
+             <img width="1116" height="469" alt="image" src="https://github.com/user-attachments/assets/b6b1989d-bd3f-42ad-9c30-cac6473fd307" />
+           </p>
+
+7. Diagrama de despregamento final
 
    Logo de decidir o sistema de despregramento que se vai utilizar, actualizamos o diagrama coa versión final.
 
@@ -166,20 +180,11 @@ Railway xestiona automaticamente problemas de servidor notificando automáticame
 
 ## 2- Manual de usuario
 
-> *EXPLICACIÓN:* Neste apartado fara
->
-> - Indicar se será necesario formar ós usuarios. En caso afirmativo planificar.
-> - Manual de usuario, FAQ ou outro xeito que sexa o máis adecuado para que os usuarios saiban usar a nosa aplicación informática.
->
-> Todo esto se a aplicación require de manual de usuario.
-
 Mariscamar diseñouse coa sinxeleza como principio fundamental. A plataforma funciona de forma intuitiva. Non se precisa formación nin instrucións demasiado complexas. Cada pantalla guía visualmente os usuarios para que cos botóns e opcións que ofrecemos poidas navegar comoda e rápidamente. 
 
 Se sabes usar un navegador web e facer clics, xa sabes usar Mariscamar. A interface é limpa, directa e libre de complicacións innecesarias.
 
 ## 3- Melloras futuras
-
-> *EXPLICACIÓN:* Neste apartado incluiranse as posibilidades de mellora da aplicación no futuro.
 
 Durante o desenvolvemento de Mariscamar atopamos mais melloras a futuro que se poderían implementar para mellorar o servizo da web, mantemos as xa vistas e añadimos varios puntos a maiores na seguinte lista:
 
