@@ -3,167 +3,257 @@
 =============================================*/
 @import url('./variables.css');
 
-.sobre-nosotros-page {
+/*=============================================
+=            Layout Principal                 =
+=============================================*/
+
+main {
+    max-width: none;
+}
+
+/*=====  End of Layout Principal  ======*/
+
+
+/*=============================================
+=            Banner Superior                  =
+=============================================*/
+
+.banner-sobre-nosotros {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--color-fondo-rgba);
+    color: var(--color-texto-boton-1);
+}
+
+/* Brillo sutil en el fondo */
+.banner-sobre-nosotros::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    animation: shine 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.banner-sobre-nosotros h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    position: relative;
+    z-index: 10;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación de brillo */
+@keyframes shine {
+    0%, 100% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+}
+
+/*=====  End of Banner Superior  ======*/
+
+
+/*=============================================
+=            Info central            =
+=============================================*/
+
+.contenido-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 3rem;
+    color: var(--color-texto);
+    line-height: 1.6;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-principal figure {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.contenido-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform var(--transition), filter var(--transition);
+}
+
+.contenido-principal img:hover {
+    transform: scale(1.05);
+    filter: grayscale(50%);
+}
+
+.contenido-principal p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/*=====  End of Info central  ======*/
+
+
+/*=============================================
+=            Características                  =
+=============================================*/
+
+.caracteristicas-grid {
+    background-color: #E8EEF6;
+    padding: 4rem;
+}
+
+.tarjetas-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* --- 1. Estilos del Banner Superior --- */
-.banner-sobre-nosotros {
-    background-color: var(--color-principal);
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    padding: 80px 20px;
+.tarjeta-caracteristica {
+    background: white;
+    border-top: 8px solid var(--color-boton);
+    border-bottom: 8px solid var(--color-boton);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.5rem;
     text-align: center;
-    color: white;
-}
-
-.banner-sobre-nosotros h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-/* Efecto de marco blanco que rodea el título */
-.marco-efecto {
-    border: 3px solid white;
-    display: inline-block;
-    padding: 10px 40px;
-    position: relative;
-}
-
-.marco-efecto::before, 
-.marco-efecto::after,
-.marco-efecto h1::before, 
-.marco-efecto h1::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 3px solid white;
-}
-
-.marco-efecto::before { /* Esquina superior izquierda (visible) */
-    top: -3px; left: -3px;
-    border-right: none;
-    border-bottom: none;
-}
-
-.marco-efecto h1::before { /* Esquina superior derecha */
-    top: -3px; right: -3px;
-    border-left: none;
-    border-bottom: none;
-}
-
-.marco-efecto::after { /* Esquina inferior izquierda */
-    bottom: -3px; left: -3px;
-    border-right: none;
-    border-top: none;
-}
-
-.marco-efecto h1::after { /* Esquina inferior derecha */
-    bottom: -3px; right: -3px;
-    border-left: none;
-    border-top: none;
-}
-
-
-/* --- 2. Estilos del Contenido Principal (Imagen + Texto) --- */
-.contenido-principal {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.info-central {
+    flex: 1;
+    min-width: 350px;
+    max-width: 350px;
+    height: 350px;
     display: flex;
-    max-width: 800px;
-    margin: 0 auto;
-    align-items: center;
-    gap: 40px;
-}
-
-.imagen-redonda {
-    flex-shrink: 0; /* Evita que la imagen se encoja */
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #5a5a5a; /* Color de fondo para simular la imagen */
-    overflow: hidden;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 4px solid white;
-    box-shadow: 0 0 0 5px var(--color-borde-tarjeta);
-}
-
-.imagen-redonda p {
-    color: white;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-.texto-central {
-    text-align: left;
-}
-
-.texto-central p {
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-/* --- 3. Estilos de las Tarjetas (Artículos) --- */
-.caracteristicas-grid {
-    background-color: var(--color-fondo-claro);
-    padding: 60px 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.tarjeta-caracteristica {
-    background-color: white;
-    padding: 30px;
-    text-align: center;
-    border: 1px solid var(--color-borde-tarjeta);
-    border-top: 5px solid var(--color-principal); /* Borde superior azul */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .tarjeta-caracteristica:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-caracteristica i {
+    font-size: 3rem;
+    color: var(--color-boton);
+    margin-bottom: 0.5rem;
 }
 
 .tarjeta-caracteristica h3 {
-    color: var(--color-principal);
-    margin-top: 10px;
-    font-size: 1.4em;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin: 0;
 }
 
 .tarjeta-caracteristica p {
-    color: #666;
+    font-size: 1rem;
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
 }
 
-/* Estilo para los iconos simulados */
-.icono-fondo {
-    font-size: 2em;
-    color: var(--color-principal);
-    margin-bottom: 10px;
-    /* Efecto de fondo sutil si es necesario */
-    /* background-color: rgba(58, 117, 184, 0.1); */
-    /* padding: 10px; */
-    /* border-radius: 50%; */
-}
+/*=====  End of Características  ======*/
 
 
-/* --- Media Queries (Adaptación para móviles) --- */
+/*=============================================
+=            Media Queries                    =
+=============================================*/
+
+/* Tablets y pantallas medianas */
 @media (max-width: 768px) {
-    .info-central {
-        flex-direction: column; /* Apila imagen y texto */
-        text-align: center;
+    .caracteristicas-grid {
+        padding: 3rem 1rem;
     }
 
-    .texto-central {
+    .tarjetas-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .tarjeta-caracteristica {
+        max-width: 100%;
+    }
+
+    .contenido-principal {
+        flex-direction: column;
         text-align: center;
+        gap: 2rem;
+    }
+
+    .contenido-principal figure {
+        width: 250px;
+        height: 250px;
+    }
+
+    .banner-sobre-nosotros h1 {
+        font-size: 2.5rem;
     }
 }
+
+/* Móviles */
+@media (max-width: 480px) {
+    .banner-sobre-nosotros {
+        height: 200px;
+    }
+
+    .banner-sobre-nosotros h1 {
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .contenido-principal figure {
+        width: 200px;
+        height: 200px;
+    }
+
+    .contenido-principal p {
+        font-size: 0.95rem;
+    }
+
+    .tarjeta-caracteristica {
+        padding: 1.5rem 1rem;
+    }
+
+    .tarjeta-caracteristica h3 {
+        font-size: 1.3rem;
+    }
+
+    .tarjeta-caracteristica i {
+        font-size: 2.5rem;
+    }
+}
+
+/*=====  End of Media Queries  ======*/
+

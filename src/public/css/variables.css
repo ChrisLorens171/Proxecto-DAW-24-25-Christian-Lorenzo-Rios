@@ -14,8 +14,9 @@
     =============================================*/
     --color-fondo: #467FB1;
     --color-fondo-main: rgba(250, 250, 250, 0.85);
-    --color-fondo-rgba: rgba(70, 127, 177, 0.85);
+    --color-fondo-rgba: rgba(70, 127, 177, 0.75);
     --color-texto-index: #fafafa;
+    --color-texto: black;
     --color-hover: #192738;
     
     /*=============================================

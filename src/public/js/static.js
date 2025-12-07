@@ -1,4 +1,5 @@
 const $d = document;
+      
 
 /**
  * Función para mostrar el popup de login
@@ -45,7 +46,7 @@ function mostrarLoginPopup() {
         // Este then solo se ejecuta si preConfirm retorna algo truthy
         if (result.isConfirmed && result.value && result.value.email) {
             // Login exitoso, aquí se maneja el resultado
-            console.log('Login completado');
+            console.log('Login correcto');
         }
     });
 
@@ -68,18 +69,44 @@ function mostrarLoginPopup() {
  * Procesa el login internamente sin cerrar el popup
  */
 function procesarLoginInterno(credenciales) {
-    console.log('Usuario intentando iniciar sesión:', credenciales.email);
+    // Mostrar loading
+    Swal.showLoading();
 
-    if (credenciales.email === 'test@example.com' && credenciales.password === '123456') {
-        // Login exitoso - cerrar popup y mostrar mensaje
+    fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            correo: credenciales.email,
+            contrasinal: credenciales.password
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
         Swal.hideLoading();
-        Swal.close();
-        mostrarMensajeExito('¡Bienvenido!', `Iniciaste sesión como ${credenciales.email}`);
-        console.log('Login exitoso');
-    } else {
-        // Error de credenciales - mostrar mensaje en el popup actual
-        mostrarErrorEnLogin('Correo o contraseña incorrectos');
-    }
+        
+        if (data.success) {
+            // Login exitoso
+            Swal.close();
+            
+            // Guardar datos del usuario en sessionStorage
+            sessionStorage.setItem('usuario', JSON.stringify(data.data));
+            
+            mostrarMensajeExito('Bienvenido!', `Iniciaste sesión como ${data.data.nome}`);
+            
+            // Recargar la página para actualizar el header
+            setTimeout(() => {
+                window.location.reload();
+            }, 1500);
+        } else {
+            // Error de credenciales
+            mostrarErrorEnLogin(data.message || 'Correo o contraseña incorrectos');
+        }
+    })
+    .catch(error => {
+        Swal.hideLoading();
+        console.error('Error:', error);
+        mostrarErrorEnLogin('Error al conectar con el servidor');
+    });
 }
 
 /**
@@ -105,12 +132,6 @@ function validarLogin() {
     // Validar contraseña
     if (!password) {
         Swal.showValidationMessage('Por favor, ingresa tu contraseña');
-        return false;
-    }
-
-    // Validar longitud mínima de contraseña
-    if (password.length < 6) {
-        Swal.showValidationMessage('La contraseña debe tener al menos 6 caracteres');
         return false;
     }
 
@@ -234,7 +255,7 @@ function mostrarRegistroPopup(event, tipoPreseleccionado = 'vendedor') {
             <input type="hidden" id="tipo-usuario" value="${tipoPreseleccionado}">
             
             <p class="swal2-registro-text">
-                ¿Ya tienes cuenta? <a href="#" class="swal2-link-registro" onclick="mostrarLoginPopup(); return false;">Inicia sesión</a>
+                ¿Ya tienes cuenta? <a href="#" class="swal2-link-login">Inicia sesión</a>
             </p>
         `,
         showCancelButton: false,
@@ -257,6 +278,7 @@ function mostrarRegistroPopup(event, tipoPreseleccionado = 'vendedor') {
         
         const btnComprador = $d.getElementById('btn-comprador');
         const btnVendedor = $d.getElementById('btn-vendedor');
+        const linkLogin = $d.querySelector('.swal2-link-login');
         
         if (btnComprador) {
             btnComprador.addEventListener('click', () => seleccionarTipo('comprador'));
@@ -264,6 +286,14 @@ function mostrarRegistroPopup(event, tipoPreseleccionado = 'vendedor') {
         
         if (btnVendedor) {
             btnVendedor.addEventListener('click', () => seleccionarTipo('vendedor'));
+        }
+        
+        if (linkLogin) {
+            linkLogin.addEventListener('click', (e) => {
+                e.preventDefault();
+                Swal.close();
+                mostrarLoginPopup();
+            });
         }
     }, 100);
 }
@@ -366,20 +396,25 @@ function procesarRegistro(datos) {
     console.log('Registrando empresa:', datos.nombreEmpresa);
     console.log('Tipo de cuenta:', datos.tipoUsuario);
 
-    // Cuando tengas el backend, descomenta esto y elimina la simulación
-    /*
-    fetch('/api/registro', {
+    // Mapear datos del formulario a campos de la BD
+    const usuarioData = {
+        nome: datos.nombreEmpresa,
+        correo: datos.email,
+        contrasinal: datos.password,
+        tipo: datos.tipoUsuario === 'vendedor' ? 'lonxa' : 'comprador',
+        estado: 'activo',
+        cif_nif: datos.cif
+    };
+
+    fetch('/api/usuarios', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(datos)
+        body: JSON.stringify(usuarioData)
     })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
             mostrarMensajeExito('¡Registro Exitoso!', `Bienvenido ${datos.nombreEmpresa}`);
-            setTimeout(() => {
-                window.location.href = '/dashboard';
-            }, 2000);
         } else {
             mostrarMensajeError('Error', data.message || 'No se pudo crear la cuenta');
         }
@@ -388,52 +423,77 @@ function procesarRegistro(datos) {
         console.error('Error:', error);
         mostrarMensajeError('Error', 'Problema al conectar con el servidor');
     });
-    */
-
-    // Simulación de registro exitoso
-    // Console para comprobar los datos que se envian al servidor
-    console.log(datos);
-    const tipoTexto = datos.tipoUsuario === 'comprador' ? 'comprador' : 'vendedor';
-    mostrarMensajeExito('¡Registro Exitoso!', `${datos.nombreEmpresa} registrado como ${tipoTexto}`);
 }
 
-$d.addEventListener('DOMContentLoaded', () => {
+/**
+ * Función para cerrar sesión
+ */
+function cerrarSesion() {
+    // Limpiar sessionStorage
+    sessionStorage.removeItem('usuario');
     
-    const loginPopup = $d.querySelector(".boton-header.sesion");
-    const registerPopup = $d.querySelector(".boton-header.empieza");
-    const vendedorPopup = $d.querySelector(".boton-main.vendedor");
-    const compradorPopup = $d.querySelector(".boton-main.comprador");
+    mostrarMensajeExito('Sesión cerrada', 'Has cerrado sesión correctamente');
+    setTimeout(() => {
+        window.location.href = '/';
+    }, 1500);
+}
 
-    // Verifica si el elemento existe antes de agregar el event listener
-    if (loginPopup) {
+/**
+ * Verifica si hay una sesión activa y actualiza la UI
+ */
+function verificarSesion() {
+    const usuario = sessionStorage.getItem('usuario');
+    
+    if (usuario) {
+        const userData = JSON.parse(usuario);
+        console.log('Usuario autenticado:', userData);
+        // Aquí podrías actualizar el header para mostrar el nombre del usuario
+    }
+}
 
-        // Agrega el event listener para el clic en inicio de sesión
-        loginPopup.addEventListener("click", ev => {
-            mostrarLoginPopup();
-        });
+/**
+ * Inicializa los event listeners cuando el DOM está listo
+ */
+function inicializarEventListeners() {
+    // Seleccionar elementos del DOM
+    const $botonEmpezar = $d.querySelector(".boton-header.empieza");
+    const $botonIniciar = $d.querySelector(".boton-header.sesion");
+    const $botonVendedor = $d.querySelector(".boton-main.vendedor");
+    const $botonComprador = $d.querySelector(".boton-main.comprador");
+    const $botonCerrarSesion = $d.querySelector(".boton-header.cerrar-sesion");
+
+    // Event listener para botón de inicio de sesión
+    if ($botonIniciar) {
+        $botonIniciar.addEventListener("click", mostrarLoginPopup);
     }
 
-    if (registerPopup) {
-
-        // Agrega el event listener para el clic en registro
-        registerPopup.addEventListener("click", ev => {
-            if (ev.target.classList.contains("empieza")) {
-                mostrarRegistroPopup();
-            }
-        });
+    // Event listener para botón de registro
+    if ($botonEmpezar) {
+        $botonEmpezar.addEventListener("click", mostrarRegistroPopup);
     }
 
-    if (vendedorPopup) {
-        // Abre el formulario de registro con tipo vendedor preseleccionado
-        vendedorPopup.addEventListener("click", ev => {
+    // Event listener para botón de cerrar sesión
+    if ($botonCerrarSesion) {
+        $botonCerrarSesion.addEventListener("click", cerrarSesion);
+    }
+
+    // Event listener para botón vendedor
+    if ($botonVendedor) {
+        $botonVendedor.addEventListener("click", (ev) => {
             mostrarRegistroPopup(ev, 'vendedor');
         });
     }
 
-    if (compradorPopup) {
-        // Abre el formulario de registro con tipo comprador preseleccionado
-        compradorPopup.addEventListener("click", ev => {
+    // Event listener para botón comprador
+    if ($botonComprador) {
+        $botonComprador.addEventListener("click", (ev) => {
             mostrarRegistroPopup(ev, 'comprador');
         });
     }
+}
+
+// Inicializar cuando el DOM esté listo
+$d.addEventListener('DOMContentLoaded', () => {
+    verificarSesion();
+    inicializarEventListeners();
 });

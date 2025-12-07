@@ -1,0 +1,54 @@
+<%- include('partials/head') %>
+<link rel="stylesheet" href="/css/footer_header_component.css">
+<link rel="stylesheet" href="/css/about.css">
+
+<%- include('partials/header') %>
+
+<main>
+    <section class="banner-sobre-nosotros" role="banner">
+        <h1 id="titulo-pagina">Sobre nosotros</h1> 
+    </section>
+
+    <section class="contenido-principal" role="region" aria-labelledby="contenido-principal-plataforma">        
+        <figure class="imagen-redonda">
+            <img src="/img/empresariosVistas.jpg" alt="Imagen representativa de Mariscamar">
+        </figure>
+
+        <p>
+            Somos <strong>Mariscamar</strong>, una plataforma de subastas diseñada para ofrecer una 
+            experiencia segura, sencilla y transparente. Nuestro objetivo es que 
+            compradores y vendedores operan en un entorno profesional donde cada proceso 
+            resulte claro y confiable.
+        </p>         
+    </section>
+
+    <section class="caracteristicas-grid" role="region" aria-labelledby="titulo-caracteristicas">
+        <div class="tarjetas-container">
+            <article class="tarjeta-caracteristica" aria-labelledby="titulo-fiabilidad">
+                <i class="fa-solid fa-rocket"></i> 
+                <h3 id="titulo-fiabilidad">Fiabilidad</h3>
+                <p>
+                    Trabajamos para que cada operación se lleve a cabo con estabilidad y seguridad.
+                </p>
+            </article>
+    
+            <article class="tarjeta-caracteristica" aria-labelledby="titulo-innovacion">
+                <i class="fa-regular fa-lightbulb"></i>
+                <h3 id="titulo-innovacion">Innovación</h3>
+                <p>
+                    Buscamos mejorar de forma constante y adaptar la plataforma a nuevas necesidades.
+                </p>
+            </article>
+    
+            <article class="tarjeta-caracteristica" aria-labelledby="titulo-compromiso">
+                <i class="fa-solid fa-arrows-spin"></i> 
+                <h3 id="titulo-compromiso">Compromiso</h3>
+                <p>
+                    Diseñamos la plataforma para que todo resulte ágil y fácil de gestionar. Simplificamos pasos y optimizamos tiempos.
+                </p>
+            </article>
+        </div>        
+    </section>
+</main>
+
+<%- include('partials/footer') %>

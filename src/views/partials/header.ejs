@@ -1,0 +1,27 @@
+<body>
+<header>
+    <div class="header-content">
+        <a href="/">
+            <img src="/img/logoFafafa.png" alt="Logo de Mariscamar" class="logo-header">
+        </a>
+        <nav class="navegacion-principal" aria-roledescription="navegación principal">
+            <ul class="menu-header">
+                <li><a href="/" class="<%= locals.page === 'home' ? 'active' : '' %>">Inicio</a></li>
+                <li><a href="/contact" class="<%= locals.page === 'contact' ? 'active' : '' %>">Contacto</a></li>
+                <li><a href="/about" class="<%= locals.page === 'about' ? 'active' : '' %>">Nosotros</a></li>
+            </ul>
+        </nav>
+
+        <div class="container-botones-header">
+            <% if (locals.usuario) { %>
+                <!-- Usuario autenticado -->
+                <span class="usuario-nombre">Hola, <%= usuario.nome %></span>
+                <button class="boton-header cerrar-sesion">Cerrar sesión</button>
+            <% } else { %>
+                <!-- Usuario no autenticado -->
+                <button class="boton-header empieza">Empieza</button>
+                <button class="boton-header sesion">Iniciar sesión</button>
+            <% } %>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,46 @@
+<%- include('partials/head') %>
+<link rel="stylesheet" href="/css/footer_header_component.css">
+<link rel="stylesheet" href="/css/contact.css">
+
+<%- include('partials/header') %>
+
+<main>
+    <section class="contacto-seccion" role="main" aria-label="Sección de contacto y formulario">
+        <article class="formulario-panel" role="region" aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Introduce tus datos <i class="fa-solid fa-user"></i></h2>
+            
+            <form id="formulario-contacto" role="form">
+                <div class="campos-fila">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" 
+                        required aria-label="Nombre" aria-required="true">
+                        
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" 
+                        required aria-label="Apellidos" aria-required="true">
+                </div>
+                
+                <div class="campos-fila">
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" 
+                        required aria-label="Correo electrónico" aria-required="true">
+                        
+                    <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono" 
+                        aria-label="Número de teléfono">
+                </div>
+                
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="4" 
+                        required aria-label="Escribe tu mensaje" aria-required="true"></textarea>
+
+                <button type="submit" class="btn-contacto" aria-label="Enviar formulario de contacto">CONTACTA</button>
+            </form>
+        </article>
+
+        <article class="info-panel" role="complementary" aria-labelledby="titulo-contacto-info">
+            <h2 id="titulo-contacto-info">Contacto <i class="fa-solid fa-envelope"></i></h2>
+            <p>Rúa das Lonxas, 14 - 15940 Rianxo (A Coruña)</p>
+            <p>info@mariscamar.es</p>
+            <p>+34 677 12 45 69</p>
+            <span class="fondo-logo" aria-hidden="true"></span>
+        </article>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,38 +1,56 @@
 import Usuario from '../models/Usuario.js';
 
 class UsuarioController {
-    // Obtener todos los usuarios
-    static async index(req, res) {
+    // Login de usuario
+    static async login(req, res) {
         try {
-            const usuarios = await Usuario.obtenerTodos();
-            res.json({
-                success: true,
-                data: usuarios
-            });
-        } catch (error) {
-            res.status(500).json({
-                success: false,
-                message: error.message
-            });
-        }
-    }
+            const { correo, contrasinal } = req.body;
 
-    // Obtener un usuario por ID
-    static async show(req, res) {
-        try {
-            const { id } = req.params;
-            const usuario = await Usuario.obtenerPorId(id);
-            
-            if (!usuario) {
-                return res.status(404).json({
+            if (!correo || !contrasinal) {
+                return res.status(400).json({
                     success: false,
-                    message: 'Usuario no encontrado'
+                    message: 'Correo y contraseña son requeridos'
                 });
             }
 
+            // Buscar usuario por correo
+            const usuario = await Usuario.obtenerPorCorreo(correo);
+            
+            if (!usuario) {
+                return res.status(401).json({
+                    success: false,
+                    message: 'Correo o contraseña incorrectos'
+                });
+            }
+
+            // Verificar contraseña (por ahora comparación directa, TODO: bcrypt)
+            if (usuario.contrasinal !== contrasinal) {
+                return res.status(401).json({
+                    success: false,
+                    message: 'Correo o contraseña incorrectos'
+                });
+            }
+
+            // Verificar que el usuario esté activo
+            if (usuario.estado !== 'activo') {
+                return res.status(403).json({
+                    success: false,
+                    message: 'Usuario inactivo. Contacta al administrador.'
+                });
+            }
+
+            // Login exitoso - retornar datos del usuario (sin la contraseña)
             res.json({
                 success: true,
-                data: usuario
+                message: 'Login exitoso',
+                data: {
+                    id_usuario: usuario.id_usuario,
+                    nome: usuario.nome,
+                    correo: usuario.correo,
+                    tipo: usuario.tipo,
+                    estado: usuario.estado,
+                    cif_nif: usuario.cif_nif
+                }
             });
         } catch (error) {
             res.status(500).json({
@@ -44,117 +62,39 @@ class UsuarioController {
 
     // Crear un nuevo usuario
     static async create(req, res) {
-        try {
-            const { correo, contrasinal_hash, nome_completo, tipo, estado } = req.body;
+        try {            
+            const { correo, contrasinal, nome, tipo, estado, cif_nif } = req.body;
 
             // Validaciones básicas
-            if (!correo || !contrasinal_hash || !nome_completo || !tipo) {
+            if (!correo || !contrasinal || !nome || !tipo) {
                 return res.status(400).json({
                     success: false,
-                    message: 'Faltan campos requeridos'
+                    message: 'Faltan campos requeridos: correo, contrasinal, nome y tipo son obligatorios'
+                });
+            }
+
+            // Verificar si el correo ya existe
+            const usuarioExistente = await Usuario.obtenerPorCorreo(correo);
+            if (usuarioExistente) {
+                return res.status(409).json({
+                    success: false,
+                    message: 'El correo ya está registrado'
                 });
             }
 
             const id = await Usuario.crear({
                 correo,
-                contrasinal_hash,
-                nome_completo,
+                contrasinal,  // Por ahora sin hash
+                nome,
                 tipo,
-                estado
+                estado: estado || 'activo',
+                cif_nif
             });
 
             res.status(201).json({
                 success: true,
                 message: 'Usuario creado correctamente',
                 data: { id_usuario: id }
-            });
-        } catch (error) {
-            res.status(500).json({
-                success: false,
-                message: error.message
-            });
-        }
-    }
-
-    // Actualizar un usuario
-    static async update(req, res) {
-        try {
-            const { id } = req.params;
-            const data = req.body;
-
-            const actualizado = await Usuario.actualizar(id, data);
-
-            if (!actualizado) {
-                return res.status(404).json({
-                    success: false,
-                    message: 'Usuario no encontrado'
-                });
-            }
-
-            res.json({
-                success: true,
-                message: 'Usuario actualizado correctamente'
-            });
-        } catch (error) {
-            res.status(500).json({
-                success: false,
-                message: error.message
-            });
-        }
-    }
-
-    // Eliminar un usuario
-    static async delete(req, res) {
-        try {
-            const { id } = req.params;
-            const eliminado = await Usuario.eliminar(id);
-
-            if (!eliminado) {
-                return res.status(404).json({
-                    success: false,
-                    message: 'Usuario no encontrado'
-                });
-            }
-
-            res.json({
-                success: true,
-                message: 'Usuario eliminado correctamente'
-            });
-        } catch (error) {
-            res.status(500).json({
-                success: false,
-                message: error.message
-            });
-        }
-    }
-
-    // Obtener usuarios por tipo
-    static async getByTipo(req, res) {
-        try {
-            const { tipo } = req.params;
-            const usuarios = await Usuario.obtenerPorTipo(tipo);
-
-            res.json({
-                success: true,
-                data: usuarios
-            });
-        } catch (error) {
-            res.status(500).json({
-                success: false,
-                message: error.message
-            });
-        }
-    }
-
-    // Obtener usuarios por estado
-    static async getByEstado(req, res) {
-        try {
-            const { estado } = req.params;
-            const usuarios = await Usuario.obtenerPorEstado(estado);
-
-            res.json({
-                success: true,
-                data: usuarios
             });
         } catch (error) {
             res.status(500).json({
