@@ -43,7 +43,7 @@ Para a posta en marcha do proxecto nun ambiente local faremos o seguinte:
   
   4 - Executar "insertarDatosPrueba.js" para insertar datos de prueba na base de datos.
 
-Con estos pasos estaríamos listos para continuar o desarrollo de forma local
+Con estos pasos estaríamos listos para continuar o desarrollo de forma local.
   
 ## Uso
 
