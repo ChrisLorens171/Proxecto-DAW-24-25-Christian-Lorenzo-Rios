@@ -202,7 +202,7 @@ As subvención que poderíamos usar con Mariscamar serían as seguintes:
 
   | Elemento | Descrición |
   |-----------|-------------|
-  | **Dominio web** | `mariscamar.com` (ou `mariscamar.es` se o dominio non está dispoñible). Contratado en [DonDominio](https://www.dondominio.com) ou [OVH](https://www.ovh.es) cun custo aproximado de **8–12        €/ano**. |
+  | **Dominio web** | `mariscamar.com` (ou `mariscamar.es` se o dominio non está dispoñible). Custo aproximado de **8–12        €/ano**. |
   | **Servidor web** | VPS básico con soporte para Node.js e WebSockets en plataformas como **Render**, **Railway** ou **Hetzner Cloud**. <br>**Especificacións:** 1 vCore, 1 GB RAM, 10 GB SSD, Ubuntu 24.04 LTS. |
   | **Almacenamento** | 10 GB para arquivos web, imaxes e base de datos. Inclúe **copias de seguridade semanais automáticas**. |
   | **Seguridade** | Conexión cifrada mediante **SSL (Let’s Encrypt)** e protección básica contra inxección SQL e accesos non autorizados. |
@@ -217,7 +217,7 @@ As subvención que poderíamos usar con Mariscamar serían as seguintes:
   - HTML5 & CSS3: deseño da interface de usuario e cliente responsive.
   - JavaScript: conexión co servidor mediante WebSocket e lóxica da subasta en tempo real.
   - WebSocket API: para recibir actualizacións instantáneas de prezos e estados das subastas.
-  - Librerías opcionais: Bootstrap ou Tailwind CSS para mellorar a presentación.
+  - Librerías opcionais: Swal.io para popups.
   
 ## 4- Planificación
 
