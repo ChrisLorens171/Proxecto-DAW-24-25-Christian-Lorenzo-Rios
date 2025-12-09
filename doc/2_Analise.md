@@ -24,12 +24,10 @@ A plataforma operará seguindo un esquema B2B (Business to Business), no que as 
 | **Inicio de sesión** | Serve para acceder á conta xa creada. O usuario entra co seu correo e contrasinal, e segundo o tipo de perfil vé diferente información, no caso de que algo non coincide, o sistema impídelle o acceso. |
 | **Creación de subasta** | As lonxas poden publicar as súas poxas xunto coa cantidade e prezo que consideren axeitado. Pódense subir imaxes que se consideren relevantes, despois disto a subasta estaría lista para comenzar. |
 | **Participación en subasta** | Os compradores poden facer ofertas sobre os lotes en tempo real. Cando alguén oferta máis, o sistema cambia o prezo automaticamente e mándalle unha mensaxe aos demáis. Así todos os compradores poden saber a poxa actual. |
-| **Peche de subasta** | Cando se acaba o tempo, o sistema elixe ao gañador da poxa, que será quen fixo a mellor oferta. Tanto o comprador coma a lonxa reciben unha mensaxe co resultado final e queda gardado no historial. |
+| **Peche de subasta** | Cando se acaba o tempo ou a cantidad do produto a poxar, a poxa pechase e non se pode seguir poxando. |
 | **Xestión de usuarios** | O administrador pode controlar as contas: activalas, bloquealas ou borralas se fan algo raro. Tamén pode ver un rexistro coas accións que se fixeron. Deste xeito o sistema mantense “limpo”. |
-| **Consulta de histórico** | Tanto lonxas como compradores poden mirar as súas poxas anteriores, as compras feitas e outros datos. Pódese buscar por datas ou por tipo de marisco, o que facilita atopar os datos necesarios. |
-| **Xestión de facturas e pagos** | A plataforma fai as facturas de forma automática cando se vende algo. Os pagos fanse por medios seguros e queda todo gardado. Despois cada usuario pode descargar a súa factura en PDF. |
-| **Panel de administración** | É a parte onde o administrador controla todo o que pasa na plataforma. |
-
+| **Consulta de histórico** | Tanto lonxas como compradores poden mirar as súas poxas anteriores, as compras feitas e outros datos. Pódese buscar por nombre de poxa ou por tipo de marisco, o que facilita atopar os datos necesarios. |
+| **Xestión de facturas e pagos** | A plataforma fai as facturas de forma automática cando se vende algo. Os pagos fanse por medios seguros e queda todo gardado. |
 ## 3- Tipos de usuarios
 
 Dentro de Mariscamar, haberá varios tipos de usuarios, cada un con accesos e funcións distintos según o seu rol. A idea é asegurar que todo funcione correctamente, de forma segura e a medida do que cada usuario precise. 
