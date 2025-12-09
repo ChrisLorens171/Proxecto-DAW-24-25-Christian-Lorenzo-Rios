@@ -30,7 +30,7 @@ Durante o desenvolvemento da aplicación atopáronse varios desafíos á hora de
 
 Durante as probas coa interface xurdiron varios problemas á hora da autenticación do usuario e do uso das funcións dispoñibles segundo o tipo de usuario. Tras investigar estes erros, adaptáronse os middlewares (paso intermedio entre servidor e cliente que pode modificar ou decidir que pasa a continuación), conseguíndose finalmente un funcionamento correcto.
 
-Ademais, apareceron outros erros durante as probas, como fallos na conexión coa base de datos, problemas co envío e recepción de datos desde os formularios ou pequenos erros de configuración no servidor, como rutas mal definidas ou variables de entorno mal establecidas. Estes problemas foron solucionados mediante a revisión do código, tutoriales de Express e correccións sinxelas.
+Ademais, apareceron outros erros durante as probas, como fallos na conexión coa base de datos, problemas co envío e recepción de datos desde os formularios ou pequenos erros de configuración no servidor, como rutas mal definidas ou variables de entorno mal establecidas. Estes problemas foron solucionados mediante a revisión do código, tutoriais de Express e correccións sinxelas.
 
 Para a parte do despregue da aplicación en Railway, ao comezo resultou problemático non coñecer os pasos iniciais para o seu uso. Non obstante, tras revisar a documentación oficial e varios tutoriais, o proceso de configuración resultou relativamente doado e permitiu realizar o despregue de forma rápida e correcta.
 
