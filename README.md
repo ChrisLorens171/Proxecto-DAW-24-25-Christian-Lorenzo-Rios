@@ -14,7 +14,7 @@
 
 O proxecto **Mariscamar** atópase actualmente en fase funcional, coas principais funcionalidades operativas, aínda que segue sendo susceptible de melloras na interface, optimización do código e incorporación de pequenas funcionalidades adicionais.
 
-[Página web de Mariscamar](mariscamar.up.railway.app)
+[Página web de Mariscamar](https://mariscamar.up.railway.app)
 
 ## Descrición
 
