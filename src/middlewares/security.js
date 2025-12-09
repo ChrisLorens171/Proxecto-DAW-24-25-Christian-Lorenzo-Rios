@@ -99,3 +99,47 @@ export const logSuspiciousActivity = (req, res, next) => {
     
     next();
 };
+
+/**
+ * Middleware para verificar autenticación
+ * Redirige a la página de inicio si el usuario no está autenticado
+ */
+export const requireAuth = (req, res, next) => {
+    // Verificar si hay una sesión activa
+    if (req.session && req.session.usuario) {
+        next();
+    } else {
+        console.log('Usuario NO autenticado. Redirigiendo a /');
+        // Redirigir a la página de inicio
+        res.redirect('/');
+    }
+};
+
+/**
+ * Middleware para verificar que el usuario es vendedor o admin
+ * Redirige a /subastas si no tiene permisos
+ */
+export const requireVendedor = (req, res, next) => {
+    if (req.session && req.session.usuario) {
+        const tipo = req.session.usuario.tipo;
+        if (tipo === 'lonxa' || tipo === 'admin') {
+            next();
+        } else {
+            console.log('Usuario sin permisos de vendedor. Redirigiendo a /subastas');
+            res.redirect('/subastas');
+        }
+    } else {
+        console.log('Usuario NO autenticado. Redirigiendo a /');
+        res.redirect('/');
+    }
+};
+
+/**
+ * Middleware para verificar si el usuario ya está autenticado
+ */
+export const isAuthenticated = (req, res, next) => {
+    if (req.session && req.session.usuario) {
+        return true;
+    }
+    return false;
+};

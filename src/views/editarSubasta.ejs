@@ -4,11 +4,11 @@
 
 <%- include('partials/header') %>
 
-<main>
-    <section class="crear-subasta-container" aria-labelledby="titulo-crear-subasta">
-        <h1 id="titulo-crear-subasta">Crear Subasta</h1>
+<main data-id-subasta="<%= idSubasta %>">
+    <section class="crear-subasta-container" aria-labelledby="titulo-editar-subasta">
+        <h1 id="titulo-editar-subasta">Editar Subasta</h1>
 
-        <form id="form-crear-subasta" class="formulario-subasta" aria-label="Formulario de creación de subasta">
+        <form id="form-editar-subasta" class="formulario-subasta" aria-label="Formulario de edición de subasta">
             <!-- Datos del Producto -->
             <section class="seccion-formulario" aria-labelledby="titulo-producto">
                 <h2 id="titulo-producto"><i class="fas fa-fish" aria-hidden="true"></i>Datos del Producto</h2>
@@ -71,8 +71,8 @@
 
             <!-- Botones -->
             <section class="botones-formulario" aria-label="Acciones del formulario">
-                <button type="submit" class="btn-crear" aria-label="Confirmar y crear subasta">
-                    <i class="fas fa-check" aria-hidden="true"></i> Crear Subasta
+                <button type="submit" class="btn-crear" aria-label="Confirmar y actualizar subasta">
+                    <i class="fas fa-save" aria-hidden="true"></i> Actualizar Subasta
                 </button>
                 <button type="button" class="btn-cancelar" onclick="window.location.href='/subastas'" aria-label="Cancelar y volver a subastas">
                     <i class="fas fa-times" aria-hidden="true"></i> Cancelar
@@ -82,5 +82,5 @@
     </section>
 </main>
 
-<script src="/js/crearSubasta.js"></script>
+<script src="/js/editarSubasta.js"></script>
 <%- include('partials/footer') %>

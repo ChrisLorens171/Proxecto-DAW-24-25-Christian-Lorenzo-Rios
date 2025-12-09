@@ -1,14 +1,19 @@
 /*=============================================
-=        Importación de Variables             =
+=            IMPORTACIONES                    =
 =============================================*/
+
 @import url('./variables.css');
 
+/*=====  End of IMPORTACIONES  ======*/
+
+
 /*=============================================
-=            Layout General                   =
+=            LAYOUT GENERAL                   =
 =============================================*/
 
-/* Header y Footer ocupan 100% del ancho con background */
-header, footer {
+/* Header y Footer - Ancho completo con background */
+header,
+footer {
     width: 100%;
     background-color: var(--color-fondo-rgba);
     display: flex;
@@ -23,14 +28,15 @@ header {
 
 footer {
     box-shadow: var(--shadow-footer);
+    color: var(--color-texto-index);
 }
 
-/* Contenedor interno limitado a 1500px */
+/* Contenedores internos limitados a 1500px */
 .header-content,
 .footer-content {
     width: 100%;
     max-width: var(--max-content-width);
-    padding: 1rem 0rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
 }
@@ -44,18 +50,21 @@ footer {
     justify-content: space-between;
 }
 
-/*=====  End of Estilos generales  ======*/
+/*=====  End of LAYOUT GENERAL  ======*/
+
 
 /*=============================================
-=            Estilos header            =
+=            HEADER                           =
 =============================================*/
 
+/* Logo */
 .logo-header {
     width: 86px;
     height: 80px;
     margin-right: 1rem;
 }
 
+/* Navegación */
 header nav ul {
     list-style: none;
     display: flex;
@@ -65,11 +74,11 @@ header nav ul {
 }
 
 header nav ul li {
-    cursor: pointer;
-    transition: var(--transition);
     position: relative;
     display: inline-block;
     font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
 header nav ul li a {
@@ -79,16 +88,15 @@ header nav ul li a {
     display: inline-block;
 }
 
-/*----------  Estilos hover navegacion principal  ----------*/
-
+/* Efectos hover navegación */
 header nav ul li::after {
     content: '';
     position: absolute;
+    bottom: -5px;
+    left: 0;
     width: 100%;
     height: 2px;
     background: var(--color-texto-index);
-    bottom: -5px;
-    left: 0;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform var(--transition);
@@ -104,8 +112,7 @@ header nav ul li:hover::before {
     transform: scaleX(1);
 }
 
-/* Fin estilos hover navegacion principal */
-
+/* Botones header */
 .container-botones-header {
     margin-left: auto;
 }
@@ -138,16 +145,12 @@ header nav ul li:hover::before {
     border: 2px solid var(--color-hover);
 }
 
-/*=====  End of Estilos header  ======*/
+/*=====  End of HEADER  ======*/
 
 
 /*=============================================
-=            Estilos Footer            =
+=            FOOTER                           =
 =============================================*/
-
-footer {
-    color: var(--color-texto-index);
-}
 
 .footer-content {
     display: flex;
@@ -163,6 +166,7 @@ footer {
     min-width: 200px;
 }
 
+/* Navegación footer */
 .navegacion-footer ul {
     list-style: none;
     display: flex;
@@ -189,10 +193,12 @@ footer {
     background-color: var(--color-texto-index);
 }
 
+/* Copyright */
 .copyright {
     text-align: center;
 }
 
+/* Redes sociales */
 .redes-sociales-footer {
     font-size: 24px;
     list-style: none;
@@ -219,10 +225,11 @@ footer {
     background-color: var(--color-texto-index);
 }
 
-/*=====  End of Estilos Footer  ======*/
+/*=====  End of FOOTER  ======*/
+
 
 /*=============================================
-=            Media Queries - Responsive       =
+=            MEDIA QUERIES - RESPONSIVE       =
 =============================================*/
 
 /* Tablets pequeñas y móviles (max-width: 768px) */
@@ -338,3 +345,5 @@ footer {
         font-size: 20px;
     }
 }
+
+/*=====  End of MEDIA QUERIES - RESPONSIVE  ======*/

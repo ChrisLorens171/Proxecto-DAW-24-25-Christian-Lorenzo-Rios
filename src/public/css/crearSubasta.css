@@ -1,0 +1,204 @@
+/*=============================================
+=        Importación de Variables             =
+=============================================*/
+@import url('./variables.css');
+
+/*=============================================
+=            Layout Principal                 =
+=============================================*/
+main {
+    padding: 2rem;
+}
+/*=====  End of Layout Principal  ======*/
+
+/*=============================================
+=         Contenedor del Formulario           =
+=============================================*/
+.crear-subasta-container {
+    margin: 0 auto;
+}
+
+.crear-subasta-container h1 {
+    font-size: 2.5rem;
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+
+.formulario-subasta {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+/*=====  End of Contenedor del Formulario  ======*/
+
+/*=============================================
+=         Secciones del Formulario            =
+=============================================*/
+.seccion-formulario {
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.seccion-formulario h2 {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    grid-column: 1 / -1;
+}
+
+.seccion-formulario h2 i {
+    color: var(--color-boton);
+}
+/*=====  End of Secciones del Formulario  ======*/
+
+/*=============================================
+=            Campos del Formulario            =
+=============================================*/
+.campo-formulario {
+    margin-bottom: 0;
+}
+
+.campo-formulario.full-width {
+    grid-column: 1 / -1;
+}
+
+.campo-formulario.col-2 {
+    grid-column: span 2;
+}
+
+.campo-formulario label {
+    display: block;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.campo-formulario input,
+.campo-formulario select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 1px solid #d1d5db;
+    border-radius: var(--border-radius);
+    font-size: 1.05rem;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+    outline: none;
+    border-color: var(--color-boton);
+    box-shadow: 0 0 0 3px rgba(var(--color-boton-rgb), 0.1);
+}
+
+.campo-formulario small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+/*=====  End of Campos del Formulario  ======*/
+
+/*=============================================
+=            Botones del Formulario           =
+=============================================*/
+.botones-formulario {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-cancelar,
+.btn-crear {
+    padding: 0.875rem 2rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-cancelar {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.btn-cancelar:hover {
+    background-color: var(--color-hover);
+    color: var(--color-boton2);
+}
+
+.btn-crear {
+    background-color: var(--color-boton);
+    color: white;
+}
+
+.btn-crear:hover {
+    background-color: var(--color-hover);
+}
+
+.btn-crear:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+}
+/*=====  End of Botones del Formulario  ======*/
+
+/*=============================================
+=            Responsive Design                =
+=============================================*/
+@media (max-width: 1024px) {
+    .seccion-formulario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .campo-formulario.col-2 {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .crear-subasta-container {
+        padding: 0 1rem;
+    }
+
+    .crear-subasta-container h1 {
+        font-size: 2rem;
+    }
+
+    .formulario-subasta {
+        padding: 1.5rem;
+    }
+
+    .seccion-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-formulario.col-2 {
+        grid-column: span 1;
+    }
+
+    .botones-formulario {
+        flex-direction: column;
+    }
+
+    .btn-cancelar,
+    .btn-crear {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/*=====  End of Responsive Design  ======*/

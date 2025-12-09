@@ -3,6 +3,7 @@ const router = express.Router();
 
 // Importar controladores
 import UsuarioController from '../controllers/UsuarioController.js';
+import SubastaController from '../controllers/SubastaController.js';
 
 // Importar middlewares de validación
 import { validateUsuario } from '../middlewares/validation.js';
@@ -12,15 +13,32 @@ import { validateUsuario } from '../middlewares/validation.js';
 // Login de usuario
 router.post('/login', UsuarioController.login);
 
+// Logout de usuario
+router.post('/logout', UsuarioController.logout);
+
 // ==================== RUTAS DE USUARIOS ====================
 
 // Crear usuario (con validación)
-router.post('/usuarios', 
-    validateUsuario,
-    UsuarioController.create
-);
+router.post('/usuarios', validateUsuario, UsuarioController.create);
 
 // Obtener usuario por correo
 router.get('/usuarios/correo/:correo', UsuarioController.getByCorreo);
+
+// ==================== RUTAS DE SUBASTAS ====================
+
+// Obtener todas las subastas
+router.get('/subastas', SubastaController.getAll);
+
+// Crear nueva subasta
+router.post('/subastas/crear', SubastaController.create);
+
+// Obtener subasta por ID
+router.get('/subastas/:id', SubastaController.getById);
+
+// Actualizar subasta
+router.put('/subastas/:id', SubastaController.update);
+
+// Eliminar subasta
+router.delete('/subastas/:id', SubastaController.delete);
 
 export default router;

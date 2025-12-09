@@ -34,6 +34,7 @@
     --shadow-header: 0 4px 12px rgba(0, 0, 0, 0.2);
     --shadow-footer: 0 -4px 12px rgba(0, 0, 0, 0.2);
     --shadow-main: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-input: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     /*=============================================
     =            Transiciones                  =

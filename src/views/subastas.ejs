@@ -1,11 +1,61 @@
 <%- include('partials/head') %>
 <link rel="stylesheet" href="/css/footer_header_component.css">
-<link rel="stylesheet" href="/css/contact.css">
+<link rel="stylesheet" href="/css/subastas.css">
 
+
+<script src="/js/subastas.js" defer></script>
 <%- include('partials/header') %>
 
-<main>
+<main <% if (typeof usuario !== 'undefined' && usuario) { %>data-usuario-id="<%= usuario.id_usuario %>"<% } %>>
+    <section class="anhadir-subastas">
+        <h2>Subastas</h2>
+        <% if (typeof usuario !== 'undefined' && usuario && (usuario.tipo == 'lonxa' || usuario.tipo == 'admin')) { %>
+            <a href="/subastas/crear" aria-label="Crear nueva subasta"><i class="fas fa-circle-plus" aria-hidden="true"></i></a>
+        <% } %>
+    </section>
     
-</main>
+    <!-- Input para filtrar subastas -->
+    <div class="busqueda-container">
+        <i class="fas fa-search"></i>
+        <input type="search" id="buscar-subasta" name="buscar-subasta" placeholder="Búsqueda por producto..." aria-label="Buscar subasta">
+    </div>
 
+    <% if (typeof usuario !== 'undefined' && usuario && (usuario.tipo == 'lonxa' || usuario.tipo == 'admin')) { %>
+    <!-- Carrusel de Mis Subastas -->
+    <section class="seccion-carrusel">
+        <h3>Mis Subastas</h3>
+        <div class="carrusel-container" data-carrusel="mis-subastas">
+            <button class="carrusel-btn prev" data-carrusel="mis-subastas" aria-label="Anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <div class="carrusel-track" id="carrusel-mis-subastas">
+                <!-- Mis subastas carganse aquí -->
+            </div>
+            <button class="carrusel-btn next" data-carrusel="mis-subastas" aria-label="Siguiente"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+    </section>
+    <% } %>
+
+    <!-- Carrusel de Subastas Activas -->
+    <section class="seccion-carrusel">
+        <h3>Activas</h3>
+        <div class="carrusel-container" data-carrusel="activas">
+            <button class="carrusel-btn prev" data-carrusel="activas" aria-label="Anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <div class="carrusel-track" id="carrusel-activas">
+                <!-- Subastas activas carganse aquí -->
+            </div>
+            <button class="carrusel-btn next" data-carrusel="activas" aria-label="Siguiente"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+    </section>
+
+    <!-- Carrusel de Subastas Pendientes -->
+    <section class="seccion-carrusel">
+        <h3>Pendientes</h3>
+        <div class="carrusel-container" data-carrusel="pendientes">
+            <button class="carrusel-btn prev" data-carrusel="pendientes" aria-label="Anterior"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+            <div class="carrusel-track" id="carrusel-pendientes">
+                <!-- Subastas pendientes carganse aquí -->
+            </div>
+            <button class="carrusel-btn next" data-carrusel="pendientes" aria-label="Siguiente"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+    </section>
+</main>
 <%- include('partials/footer') %>

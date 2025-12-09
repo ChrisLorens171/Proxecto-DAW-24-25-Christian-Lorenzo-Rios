@@ -50,7 +50,122 @@ main {
 /*=====  End of Estilos main  ======*/
 
 
+/*=============================================
+=            Estilos DropDown Usuario            =
+=============================================*/
 
+.usuario-dropdown {
+    position: relative;
+    display: inline-block;
+}
 
+.usuario-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--color-boton2);
+    color: var(--color-texto-index);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.usuario-toggle:hover {
+    background-color: var(--color-boton2);
+    color: var(--color-boton);
+}
+
+.usuario-toggle i:first-child {
+    font-size: 1.5rem;
+}
+
+.usuario-toggle i:last-child {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.usuario-dropdown .usuario-menu.activo ~ .usuario-toggle i:last-child,
+.usuario-toggle:hover i:last-child {
+    transform: rotate(180deg);
+}
+
+.usuario-nombre {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.usuario-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background-color: #ffffff;
+    border: 2px solid var(--color-boton2);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.usuario-menu.activo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.bienvenida-usuario {
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+}
+
+.usuario-tipo {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.85rem;
+    color: #666;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.usuario-menu hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.cerrar-sesion {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    transition: all 0.2s;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cerrar-sesion:hover {
+    background-color: #fee;
+    color: #c82333;
+}
+
+/*=====  End of Estilos DropDown Usuario  ======*/
 
 

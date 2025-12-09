@@ -30,6 +30,7 @@ CREATE TABLE Produtos (
     cantidade INT CHECK (cantidade >= 0),
     prezo_inicial NUMERIC(10,2),
     id_usuario_propietario INT NOT NULL,
+    imagen VARCHAR(255),
     FOREIGN KEY (id_usuario_propietario) REFERENCES Usuarios(id_usuario)
 );
 
@@ -40,8 +41,8 @@ CREATE TABLE Subastas (
     id_subasta SERIAL PRIMARY KEY,
     id_produto INT UNIQUE NOT NULL,
     id_usuario_lonxa INT NOT NULL,
-    data_inicio TIMESTAMP NOT NULL,
-    data_fin TIMESTAMP NOT NULL,
+    hora_inicio TIMESTAMP NOT NULL,
+    hora_fin TIMESTAMP NOT NULL,
     estado VARCHAR(20) CHECK (estado IN ('pendiente', 'activa', 'cerrada')),
     FOREIGN KEY (id_produto) REFERENCES Produtos(id_produto),
     FOREIGN KEY (id_usuario_lonxa) REFERENCES Usuarios(id_usuario)

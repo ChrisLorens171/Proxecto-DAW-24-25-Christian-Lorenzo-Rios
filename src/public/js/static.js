@@ -1,5 +1,4 @@
 const $d = document;
-      
 
 /**
  * Función para mostrar el popup de login
@@ -45,7 +44,7 @@ function mostrarLoginPopup() {
     }).then(result => {
         // Este then solo se ejecuta si preConfirm retorna algo truthy
         if (result.isConfirmed && result.value && result.value.email) {
-            // Login exitoso, aquí se maneja el resultado
+            // Login correcto, aquí se maneja el resultado
             console.log('Login correcto');
         }
     });
@@ -75,6 +74,7 @@ function procesarLoginInterno(credenciales) {
     fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({
             correo: credenciales.email,
             contrasinal: credenciales.password
@@ -91,12 +91,12 @@ function procesarLoginInterno(credenciales) {
             // Guardar datos del usuario en sessionStorage
             sessionStorage.setItem('usuario', JSON.stringify(data.data));
             
-            mostrarMensajeExito('Bienvenido!', `Iniciaste sesión como ${data.data.nome}`);
-            
-            // Recargar la página para actualizar el header
-            setTimeout(() => {
+            // Redirigir a la página especificada o recargar
+            if (data.redirect) {
+                window.location.href = data.redirect;
+            } else {
                 window.location.reload();
-            }, 1500);
+            }
         } else {
             // Error de credenciales
             mostrarErrorEnLogin(data.message || 'Correo o contraseña incorrectos');
@@ -409,6 +409,7 @@ function procesarRegistro(datos) {
     fetch('/api/usuarios', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify(usuarioData)
     })
     .then(response => response.json())
@@ -428,14 +429,32 @@ function procesarRegistro(datos) {
 /**
  * Función para cerrar sesión
  */
-function cerrarSesion() {
-    // Limpiar sessionStorage
-    sessionStorage.removeItem('usuario');
-    
-    mostrarMensajeExito('Sesión cerrada', 'Has cerrado sesión correctamente');
-    setTimeout(() => {
+async function cerrarSesion() {
+    try {
+        // Llamar al endpoint de logout del servidor
+        const response = await fetch('/api/logout', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include'
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Limpiar sessionStorage
+            sessionStorage.removeItem('usuario');
+            window.location.href = '/';
+        } else {
+            mostrarMensajeError('Error', 'No se pudo cerrar la sesión');
+        }
+    } catch (error) {
+        console.error('Error al cerrar sesión:', error);
+        // Limpiar de todas formas
+        sessionStorage.removeItem('usuario');
         window.location.href = '/';
-    }, 1500);
+    }
 }
 
 /**
@@ -447,20 +466,85 @@ function verificarSesion() {
     if (usuario) {
         const userData = JSON.parse(usuario);
         console.log('Usuario autenticado:', userData);
-        // Aquí podrías actualizar el header para mostrar el nombre del usuario
+        // Actualizar aquí header con el nombre del usuario
+        const $botonesHeader = $d.querySelector('.container-botones-header');
+
+        if ($botonesHeader) {
+            $botonesHeader.innerHTML = `
+                <div class="usuario-dropdown">
+                    <button class="usuario-toggle">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="usuario-nombre">${userData.nome}</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="usuario-menu">
+                        <div class="bienvenida-usuario">Hola, ${userData.nome}</div>
+                        <div class="usuario-tipo">${userData.tipo}</div>
+                        <hr>
+                        <button class="cerrar-sesion">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Cerrar Sesión
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            // Usar setTimeout para asegurar que los elementos están en el DOM
+            setTimeout(() => {
+                const $usuarioToggle = $d.querySelector('.usuario-toggle');
+                const $usuarioMenu = $d.querySelector('.usuario-menu');
+                const $botonCerrarSesion = $d.querySelector('.cerrar-sesion');
+                
+                if ($usuarioToggle && $usuarioMenu) {
+                    // Toggle del dropdown
+                    $usuarioToggle.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        $usuarioMenu.classList.toggle('activo');
+                    });
+                }
+                
+                // Event listener para cerrar sesión
+                if ($botonCerrarSesion) {
+                    $botonCerrarSesion.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log('Botón cerrar sesión clickeado');
+                        cerrarSesion();
+                    });
+                }
+            }, 0);
+        }
+
+        // Añadir al nav la opcion Subasta si esta logeado
+        const $navPrincipal = $d.querySelector('.navegacion-principal ul');
+
+        // Comprobamos que no exista ya el elemento para evitar duplicados
+        if ($navPrincipal && !$d.getElementById('nav-subasta')) {
+            const liSubasta = $d.createElement('li');
+            
+            liSubasta.innerHTML = `<a href="/subastas">Subastas</a>`;
+
+            $navPrincipal.appendChild(liSubasta);
+        }
     }
 }
+
+// Event listener global para cerrar dropdown al hacer click fuera
+$d.addEventListener('click', (e) => {
+    const $usuarioMenu = $d.querySelector('.usuario-menu');
+    if ($usuarioMenu && !e.target.closest('.usuario-dropdown')) {
+        $usuarioMenu.classList.remove('activo');
+    }
+});
 
 /**
  * Inicializa los event listeners cuando el DOM está listo
  */
 function inicializarEventListeners() {
-    // Seleccionar elementos del DOM
-    const $botonEmpezar = $d.querySelector(".boton-header.empieza");
-    const $botonIniciar = $d.querySelector(".boton-header.sesion");
-    const $botonVendedor = $d.querySelector(".boton-main.vendedor");
-    const $botonComprador = $d.querySelector(".boton-main.comprador");
-    const $botonCerrarSesion = $d.querySelector(".boton-header.cerrar-sesion");
+    const $botonEmpezar = $d.querySelector(".empieza");
+    const $botonIniciar = $d.querySelector(".sesion");
+    const $botonVendedor = $d.querySelector(".vendedor");
+    const $botonComprador = $d.querySelector(".comprador");
 
     // Event listener para botón de inicio de sesión
     if ($botonIniciar) {
@@ -470,11 +554,6 @@ function inicializarEventListeners() {
     // Event listener para botón de registro
     if ($botonEmpezar) {
         $botonEmpezar.addEventListener("click", mostrarRegistroPopup);
-    }
-
-    // Event listener para botón de cerrar sesión
-    if ($botonCerrarSesion) {
-        $botonCerrarSesion.addEventListener("click", cerrarSesion);
     }
 
     // Event listener para botón vendedor
@@ -492,7 +571,6 @@ function inicializarEventListeners() {
     }
 }
 
-// Inicializar cuando el DOM esté listo
 $d.addEventListener('DOMContentLoaded', () => {
     verificarSesion();
     inicializarEventListeners();

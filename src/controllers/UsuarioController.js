@@ -39,18 +39,53 @@ class UsuarioController {
                 });
             }
 
-            // Login exitoso - retornar datos del usuario (sin la contraseña)
+            // Datos del usuario sin la contraseña
+            const datosUsuario = {
+                id_usuario: usuario.id_usuario,
+                nome: usuario.nome,
+                correo: usuario.correo,
+                tipo: usuario.tipo,
+                estado: usuario.estado,
+                cif_nif: usuario.cif_nif
+            };
+
+            // Guardar en sesión del servidor
+            req.session.usuario = datosUsuario;
+
+            // Login exitoso - retornar datos del usuario con redirección
             res.json({
                 success: true,
                 message: 'Login exitoso',
-                data: {
-                    id_usuario: usuario.id_usuario,
-                    nome: usuario.nome,
-                    correo: usuario.correo,
-                    tipo: usuario.tipo,
-                    estado: usuario.estado,
-                    cif_nif: usuario.cif_nif
+                data: datosUsuario,
+                redirect: '/subastas'
+            });
+        } catch (error) {
+            res.status(500).json({
+                success: false,
+                message: error.message
+            });
+        }
+    }
+
+    // Logout de usuario
+    static async logout(req, res) {
+        try {
+            // Destruir la sesión
+            req.session.destroy((err) => {
+                if (err) {
+                    return res.status(500).json({
+                        success: false,
+                        message: 'Error al cerrar sesión'
+                    });
                 }
+
+                // Limpiar cookie
+                res.clearCookie('connect.sid');
+                
+                res.json({
+                    success: true,
+                    message: 'Sesión cerrada correctamente'
+                });
             });
         } catch (error) {
             res.status(500).json({

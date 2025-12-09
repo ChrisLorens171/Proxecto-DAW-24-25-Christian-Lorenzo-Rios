@@ -1,20 +1,15 @@
 /*=============================================
-=            Importación de fuentes       =
+=            IMPORTACIONES                    =
 =============================================*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&display=swap');
-
-/*=====  End of Importación de fuentes  ======*/
-
-
-/*=============================================
-=        Importación de Variables             =
-=============================================*/
 @import url('./variables.css');
 
-/*=====  End of Importación de Variables  ======*/
+/*=====  End of IMPORTACIONES  ======*/
+
 
 /*=============================================
-=            Estilos generales            =
+=            ESTILOS GENERALES                =
 =============================================*/
 
 *, *::before, *::after {
@@ -28,15 +23,16 @@ body {
     min-width: 100vw;
 }
 
+/* Wrapper con fondo */
 .wrapper-fondo {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
     background-image: url("../img/barcoindex.jpg");
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: 100vh;
 }
 
 .wrapper-fondo::before {
@@ -56,28 +52,48 @@ body {
     z-index: 1;
 }
 
-header, footer {
+/* Contenedores header y footer */
+header,
+footer {
     width: 100%;
-    max-width: 1500px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Z-index específico para header (sobrescribe .wrapper-fondo > *) */
+.wrapper-fondo > header {
+    z-index: 10;
+}
+
+.header-content,
+.footer-content {
+    width: 100%;
+    max-width: var(--max-content-width);
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    padding: 1rem;
 }
-/*=====  End of Estilos generales  ======*/
+
+/*=====  End of ESTILOS GENERALES  ======*/
 
 
 /*=============================================
-=            Estilos header            =
+=            HEADER                           =
 =============================================*/
 
+/* Logo */
 .logo-header {
     width: 86px;
     height: 80px;
     margin-right: 1rem;
 }
 
+/* Navegación */
 header nav ul {
     list-style: none;
     display: flex;
@@ -87,11 +103,11 @@ header nav ul {
 }
 
 header nav ul li {
-    cursor: pointer;
-    transition: var(--transition);
     position: relative;
     display: inline-block;
     font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
 }
 
 header nav ul li a {
@@ -101,16 +117,15 @@ header nav ul li a {
     display: inline-block;
 }
 
-/*----------  Estilos hover navegacion principal  ----------*/
-
+/* Efectos hover navegación */
 header nav ul li::after {
     content: '';
     position: absolute;
+    bottom: -5px;
+    left: 0;
     width: 100%;
     height: 2px;
     background: var(--color-texto-index);
-    bottom: -5px;
-    left: 0;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform var(--transition);
@@ -126,8 +141,7 @@ header nav ul li:hover::before {
     transform: scaleX(1);
 }
 
-/* Fin estilos hover navegacion principal */
-
+/* Botones header */
 .container-botones-header {
     margin-left: auto;
 }
@@ -160,11 +174,133 @@ header nav ul li:hover::before {
     border: 2px solid var(--color-hover);
 }
 
-/*=====  End of Estilos header  ======*/
+/*=====  End of HEADER  ======*/
 
 
 /*=============================================
-=            Estilos Main            =
+=            DROPDOWN USUARIO                 =
+=============================================*/
+
+.usuario-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón toggle */
+.usuario-toggle {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid var(--color-boton2);
+    color: var(--color-texto-index);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.usuario-toggle:hover {
+    background-color: var(--color-boton2);
+    color: var(--color-boton);
+}
+
+.usuario-toggle i:first-child {
+    font-size: 1.5rem;
+}
+
+.usuario-toggle i:last-child {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.usuario-dropdown .usuario-menu.activo ~ .usuario-toggle i:last-child,
+.usuario-toggle:hover i:last-child {
+    transform: rotate(180deg);
+}
+
+.usuario-nombre {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Menú desplegable */
+.usuario-menu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 220px;
+    background-color: #ffffff;
+    border: 2px solid var(--color-boton2);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.usuario-menu.activo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.bienvenida-usuario {
+    padding: 1rem 1rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+}
+
+.usuario-tipo {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #666;
+    text-transform: capitalize;
+}
+
+.usuario-menu hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Botón cerrar sesión */
+.cerrar-sesion {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #dc3545;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.cerrar-sesion:hover {
+    background-color: #fee;
+    color: #c82333;
+}
+
+/*=====  End of DROPDOWN USUARIO  ======*/
+
+
+/*=============================================
+=            MAIN - CONTENIDO PRINCIPAL       =
 =============================================*/
 
 main {
@@ -194,9 +330,7 @@ main p {
     text-align: center;
 }
 
-
-/*----------  Estilos botones main  ----------*/
-
+/* Botones main */
 .container-botones-main {
     display: flex;
     justify-content: center;
@@ -231,11 +365,11 @@ main .comprador {
     color: var(--color-boton2);
 }
 
+/*=====  End of MAIN - CONTENIDO PRINCIPAL  ======*/
 
-/*=====  End of Estilos Main  ======*/
 
 /*=============================================
-=            Estilos Footer            =
+=            FOOTER                           =
 =============================================*/
 
 footer {
@@ -244,9 +378,13 @@ footer {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 1rem;
     color: var(--color-texto-index);
 }
 
+/* Navegación footer */
 .navegacion-footer ul {
     list-style: none;
     display: flex;
@@ -273,6 +411,7 @@ footer {
     background-color: var(--color-texto-index);
 }
 
+/* Redes sociales */
 .redes-sociales-footer {
     font-size: 24px;
     list-style: none;
@@ -298,11 +437,11 @@ footer {
     background-color: var(--color-texto-index);
 }
 
-/*=====  End of Estilos Footer  ======*/
+/*=====  End of FOOTER  ======*/
 
 
 /*=============================================
-=            Media Queries - Responsive       =
+=            MEDIA QUERIES - RESPONSIVE       =
 =============================================*/
 
 /* Tablets pequeñas y móviles (max-width: 768px) */
@@ -461,6 +600,8 @@ footer {
         font-size: 20px;
     }
 }
+
+/*=====  End of MEDIA QUERIES - RESPONSIVE  ======*/
 
 
 

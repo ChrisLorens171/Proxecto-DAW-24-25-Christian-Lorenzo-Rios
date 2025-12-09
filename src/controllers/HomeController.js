@@ -24,14 +24,25 @@ class HomeController {
     static subastas(req, res) {
         res.render('subastas', { 
             title: 'Subastas - Mariscamar',
-            page: 'subastas'
+            page: 'subastas',
+            usuario: req.session.usuario || null
         });
     }
 
     static crearSubasta(req, res) {
         res.render('crearSubasta', { 
             title: 'Crear Subasta - Mariscamar',
-            page: 'crearSubasta'
+            page: 'crearSubasta',
+            usuario: req.session.usuario || null
+        });
+    }
+
+    static editarSubasta(req, res) {
+        res.render('editarSubasta', { 
+            title: 'Editar Subasta - Mariscamar',
+            page: 'editarSubasta',
+            usuario: req.session.usuario || null,
+            idSubasta: req.params.id
         });
     }
 }
