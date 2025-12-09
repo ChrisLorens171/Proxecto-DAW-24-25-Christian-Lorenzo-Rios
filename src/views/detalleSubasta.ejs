@@ -1,0 +1,66 @@
+<%- include('partials/head') %>
+<link rel="stylesheet" href="/css/footer_header_component.css">
+<link rel="stylesheet" href="/css/detalleSubasta.css">
+
+<%- include('partials/header') %>
+
+<main data-id-subasta="<%= idSubasta %>">
+
+    <section class="detalle-subasta-container" aria-labelledby="titulo-subasta">
+        <!-- Contenedor de imagen -->
+        <article class="imagen-producto">
+            <span class="badge-estado" id="badge-estado">Cargando...</span>
+            <figure>
+                <img id="imagen-producto" src="" alt="Imagen del producto">
+            </figure>
+        </article>
+
+        <!-- Contenedor de información -->
+        <article class="info-subasta">
+            <h1 id="nombre-producto">Cargando...</h1>
+
+            <section class="datos-producto" aria-labelledby="titulo-datos-producto">
+                <h2 id="titulo-datos-producto"><i class="fas fa-fish" aria-hidden="true"></i> Información del Producto</h2>
+                
+                <div class="dato-item">
+                    <span class="dato-label">Origen:</span>
+                    <span class="dato-valor" id="origen-producto">-</span>
+                </div>
+
+                <div class="dato-item">
+                    <span class="dato-label">Tamaño:</span>
+                    <span class="dato-valor" id="tipo-producto">-</span>
+                </div>
+
+                <div class="dato-item">
+                    <span class="dato-label">Cantidad:</span>
+                    <span class="dato-valor" id="cantidad-producto">-</span>
+                </div>
+
+                <div class="dato-item">
+                    <span class="dato-label">Especie:</span>
+                    <span class="dato-valor" id="especie-producto">-</span>
+                </div>
+            </section>
+
+            <div class="precio-pujar-container">
+                <section class="precio-seccion">
+                    <p class="etiqueta-precio">Precio:</p>
+                    <p class="precio-actual" id="precio-actual">0€</p>
+                </section>
+                <button class="btn-pujar" id="btn-pujar" aria-label="Realizar puja">
+                    <i class="fas fa-gavel" aria-hidden="true"></i> Pujar
+                </button>
+            </div>
+
+
+            <p class="tiempo-restante">
+                <i class="fas fa-clock" aria-hidden="true"></i> 
+                Finaliza en: <span id="tiempo-fin">Calculando...</span>
+            </p>
+        </article>
+    </section>
+</main>
+
+<script src="/js/detalleSubasta.js"></script>
+<%- include('partials/footer') %>

@@ -24,4 +24,7 @@ router.get('/subastas/crear', requireVendedor, HomeController.crearSubasta);
 // Ruta de página editar subasta (protegida - solo vendedor o admin)
 router.get('/subastas/editar/:id', requireVendedor, HomeController.editarSubasta);
 
+// Ruta de página detalle de subasta (protegida)
+router.get('/subastas/:id', requireAuth, HomeController.detalleSubasta);
+
 export default router;

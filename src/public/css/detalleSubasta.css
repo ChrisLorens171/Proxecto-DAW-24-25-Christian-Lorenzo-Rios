@@ -1,0 +1,364 @@
+/*=============================================
+=            Layout Principal                 =
+=============================================*/
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.btn-volver {
+    background-color: #6b7280;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.btn-volver:hover {
+    background-color: #4b5563;
+    transform: translateX(-3px);
+}
+
+.btn-volver i {
+    font-size: 1rem;
+}
+
+/*=====  End of Layout Principal  ======*/
+
+/*=============================================
+=            Contenedor Principal             =
+=============================================*/
+.detalle-subasta-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*=====  End of Contenedor Principal  ======*/
+
+/*=============================================
+=            Imagen del Producto              =
+=============================================*/
+.imagen-producto {
+    position: relative;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.imagen-producto figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-estado {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.badge-estado.estado-activa {
+    background-color: #10b981;
+    color: white;
+}
+
+.badge-estado.estado-pendiente {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.badge-estado.estado-cerrada {
+    background-color: #6b7280;
+    color: white;
+}
+
+/*=====  End of Imagen del Producto  ======*/
+
+/*=============================================
+=            Información de Subasta           =
+=============================================*/
+.info-subasta {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.info-subasta h1 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/*=====  End of Información de Subasta  ======*/
+
+/*=============================================
+=            Datos del Producto               =
+=============================================*/
+.datos-producto {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #e5e7eb;
+}
+
+.datos-producto h2 {
+    font-size: 1.25rem;
+    color: #374151;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.datos-producto h2 i {
+    color: var(--color-primary);
+}
+
+.dato-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dato-item:last-child {
+    border-bottom: none;
+}
+
+.dato-label {
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.dato-valor {
+    color: #1f2937;
+    font-size: 0.95rem;
+}
+
+/*=====  End of Datos del Producto  ======*/
+
+
+/*=============================================
+=  Contenedor precio y boton pujar            =
+=============================================*/
+
+.precio-pujar-container {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+/*=====  End of Contenedor precio y boton pujar  ======*/
+
+/*=============================================
+=                   Precio                    =
+=============================================*/
+.precio-seccion {
+    background: linear-gradient(135deg, var(--color-fondo) 0%, #2563eb 100%);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.etiqueta-precio {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+}
+
+.precio-actual {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*=====  End of Precio  ======*/
+
+/*=============================================
+=            Botón Pujar                      =
+=============================================*/
+.btn-pujar {
+    background-color: var(--color-boton);
+    color: var(--color-texto-boton-1);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    flex: 1;
+    max-width: 50%;
+}
+
+.btn-pujar:hover:not(:disabled) {
+    background-color: var(--color-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.btn-pujar:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.btn-pujar i {
+    font-size: 1.25rem;
+}
+
+/*=====  End of Botón Pujar  ======*/
+
+/*=============================================
+=            Tiempo Restante                  =
+=============================================*/
+.tiempo-restante {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1rem;
+    margin: 0;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: var(--border-radius);
+    border: 1px dashed #d1d5db;
+}
+
+.tiempo-restante i {
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+}
+
+.tiempo-restante span {
+    font-weight: 600;
+    color: #1f2937;
+}
+
+/*=====  End of Tiempo Restante  ======*/
+
+/*=============================================
+=            Responsive Design                =
+=============================================*/
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .detalle-subasta-container {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-producto {
+        min-height: 300px;
+    }
+
+    .info-subasta {
+        padding: 1.5rem;
+    }
+
+    .info-subasta h1 {
+        font-size: 1.5rem;
+    }
+
+    .precio-pujar-container {
+        flex-direction: column;
+    }
+
+    .btn-pujar {
+        min-width: auto;
+    }
+
+    .precio-actual {
+        font-size: 2rem;
+    }
+
+    .btn-pujar {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .datos-producto {
+        padding: 1rem;
+    }
+
+    .datos-producto h2 {
+        font-size: 1.1rem;
+    }
+
+    .dato-item {
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-volver {
+        padding: 0.625rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .info-subasta h1 {
+        font-size: 1.25rem;
+    }
+
+    .precio-actual {
+        font-size: 1.75rem;
+    }
+
+    .btn-pujar {
+        font-size: 0.95rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .tiempo-restante {
+        font-size: 0.9rem;
+    }
+}
+
+/*=====  End of Responsive Design  ======*/

@@ -33,12 +33,12 @@ export async function actualizarEstadoSubastas() {
         const cerradas = resultCerrar.affectedRows || 0;
         
         if (activadas > 0 || cerradas > 0) {
-            console.log(`✅ Estados actualizados: ${activadas} activadas, ${cerradas} cerradas`);
+            console.log(`Estados actualizados: ${activadas} activadas, ${cerradas} cerradas`);
         }
         
         return { activadas, cerradas };
     } catch (error) {
-        console.error('❌ Error al actualizar estado de subastas:', error);
+        console.error('Error al actualizar estado de subastas:', error);
         throw error;
     }
 }
@@ -56,11 +56,11 @@ export function iniciarCronActualizacionEstados() {
         try {
             await actualizarEstadoSubastas();
         } catch (error) {
-            console.error('❌ Error en cron de actualización de estados:', error);
+            console.error('Error en cron de actualización de estados:', error);
         }
     }, 60000); // 1 minuto
     
-    console.log('🕐 Cron job de actualización de estados iniciado (cada 1 minuto)');
+    console.log('Cron job de actualización de estados iniciado (cada 1 minuto)');
     
     return intervalo;
 }

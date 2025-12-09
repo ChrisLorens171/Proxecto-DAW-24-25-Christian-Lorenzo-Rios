@@ -112,9 +112,13 @@ class Subasta {
                     p.nome AS produto_nome,
                     p.tipo AS produto_tipo,
                     p.cantidade,
-                    p.prezo_inicial
+                    p.prezo_inicial,
+                    p.imagen,
+                    u.nome AS vendedor_nome,
+                    u.correo AS vendedor_correo
                 FROM subastas s
                 INNER JOIN produtos p ON s.id_produto = p.id_produto
+                INNER JOIN usuarios u ON s.id_usuario_lonxa = u.id_usuario
                 WHERE s.id_subasta = $1
             `;
             

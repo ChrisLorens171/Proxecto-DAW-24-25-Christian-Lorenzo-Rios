@@ -45,6 +45,15 @@ class HomeController {
             idSubasta: req.params.id
         });
     }
+
+    static detalleSubasta(req, res) {
+        res.render('detalleSubasta', { 
+            title: 'Detalle de Subasta - Mariscamar',
+            page: 'detalleSubasta',
+            usuario: req.session.usuario || null,
+            idSubasta: req.params.id
+        });
+    }
 }
 
 export default HomeController;
