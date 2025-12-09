@@ -73,7 +73,7 @@ flowchart LR
 ### Modelo Entidade/relación
 
 <p align="center">
-  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/640bc7609cdabd9b2bc74849ceef17afd7fb03e2/doc/img/ModeloEntidadRelacion.png" alt="Modelo Entidade/Relación">
+  <img src="https://github.com/ChrisLorens171/Proxecto-DAW-24-25-Christian-Lorenzo-Rios/blob/f1e53fa701f3328d0a3e4080abdc5a4a1e15cfc0/doc/img/ModeloEntidaRelacion.png">
 </p>
 
 ### Modelo Relacional
