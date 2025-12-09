@@ -53,7 +53,7 @@ Os pasos e requisitos necesarios para a descarga e continuación do desenvolveme
         
         - **Comprador**: Participación en poxas
 
-    Terase que crear manualmente usuarios de proba para o desarrollo.
+    Contamos con un script para crear datos de proba dentro da carpeta src, chamado insertarDatosPrueba.js.
 
 6. Configuración de Railway para desplegar servidor
 
