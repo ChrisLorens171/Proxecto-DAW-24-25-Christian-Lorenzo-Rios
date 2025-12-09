@@ -6,8 +6,6 @@
   - [3- Diagrama de Base de Datos](#3--diagrama-de-base-de-datos)
   - [4- Deseño de interface de usuarios](#4--deseño-de-interface-de-usuarios)
 
-> *EXPLICACIÓN:* Este documento inclúe os diferentes diagramas, esquemas e deseños que axuden a describir mellor o [nome do proxecto] detallando os seus compoñentes, funcionalidades, bases de datos e interface.
-
 ## 1- Diagrama da arquitectura
 
 No seguinte diagrama mostramos o funcionamento de forma gráfica e sinxela entre as diferentes partes e a súa interrelación.
