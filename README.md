@@ -12,8 +12,9 @@
   - [Links](#links)
 ## Taboleiro do proyecto
 
-O proxecto **Mariscamar** atópase actualmente en **fase de desenvolvemento**. 
-As tarefas de estudo preliminar e análise están finalizadas, e a codificación do backend e frontend, así como a integración de WebSockets para as subastas en tempo real, están en curso.  
+O proxecto **Mariscamar** atópase actualmente en fase funcional, coas principais funcionalidades operativas, aínda que segue sendo susceptible de melloras na interface, optimización do código e incorporación de pequenas funcionalidades adicionais.
+
+[Página web de Mariscamar](mariscamar.up.railway.app)
 
 ## Descrición
 
