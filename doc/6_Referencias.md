@@ -24,6 +24,8 @@ Github: https://docs.github.com/es/
 
 Curso introducción a Express: https://www.youtube.com/watch?v=YmZE1HXjpd4&t=3509s
 
+Videoguía de despregue en Railway: https://www.youtube.com/watch?v=ewoIdVjakns&t=604s
+
 Exercicios e apuntes de clase
 
 ## 3- Sitios oficiais do software utilizado
