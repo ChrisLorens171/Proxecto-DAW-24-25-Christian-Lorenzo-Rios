@@ -6,8 +6,6 @@
   - [3- Innovación](#3--innovación)
   - [4- Probas](#4--probas)
 
-> Este documento explica como se debe realizar a fase de codificación e probas.
-
 ## 1- Codificación
 
 Para a codificación da aplicación creouse unha carpeta específica dentro do repositorio, sendo src a que contén o código principal do proxecto.
