@@ -26,7 +26,7 @@ En xeral, o uso destas novas tecnoloxías permitiume coñecementos e adquirir ex
 
 ## 4- Probas
 
-Durante o desenvolvemento da aplicación atopáronse varios desafíos á hora de montar o novo entorno de Node.js e o framework Express, tendo en conta que coñecendo xa o lenguaxe de programación Js a curva de aprendizaxe de este framework e relativamente mais suave polo seu diseño minimalista. Igualmente xurdiron dudas e problemas que mediante investigación e consultas resolvéronse, tanto sobre a organización do proxecto como sobre a configuración do servidor para o seu posterior uso, vendo ademais certas similitudes con frameworks como Laravel, especialmente na separación de rutas, controladores e lóxica da aplicación.
+Durante o desenvolvemento da aplicación atopáronse varios desafíos á hora de montar o novo entorno de Node.js e o framework Express, tendo en conta que coñecendo xa o lenguaxe de programación Js a curva de aprendizaxe de este framework foi relativamente mais suave. Igualmente xurdiron dudas e problemas que mediante investigación e consultas resolvéronse, tanto sobre a organización do proxecto como a configuración do servidor para o seu posterior uso, vendo ademais certas similitudes con frameworks como Laravel, especialmente na separación de rutas, controladores e lóxica da aplicación.
 
 Durante as probas coa interface xurdiron varios problemas á hora da autenticación do usuario e do uso das funcións dispoñibles segundo o tipo de usuario. Tras investigar estes erros, adaptáronse os middlewares (paso intermedio entre servidor e cliente que pode modificar ou decidir que pasa a continuación), conseguíndose finalmente un funcionamento correcto.
 
