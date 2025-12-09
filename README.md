@@ -29,18 +29,21 @@ Para o desenvolvemento empregouse o framework Express e os lenguaxes: HTML, CSS 
 
 Para a posta en marcha do proxecto nun ambiente local faremos o seguinte:
 
-  1- Descarga os arquivos da carpeta src do repositorio
+  1 - Descarga os arquivos da carpeta src do repositorio
   
-  2- Instalación de dependencias e arranque  
-      - Descargar Node.js (no caso de non telo no equipo).
-      - Comprobar con "npm -v" que este instalado correctamente.
-      - Instalar as dependecias desde a raíz do proxecto co comando "npm install".
-      - Integrar as librerías usadas "npm install bcrypt express-session".
-      - Lanzar o servidor con "npm start" ou "npm run dev" para comprobar que funcione correctamente.
+  2 - Instalación de dependencias e arranque
 
-  3- Usar o script para crear a base de datos en PostgreSQL.
+  - Descargar Node.js (no caso de non telo no equipo).
+  - Comprobar con `npm -v` que está instalado correctamente.
+  - Instalar as dependencias desde a raíz do proxecto co comando `npm install`.
+  - Integrar as librerías usadas: `npm install bcrypt express-session`.
+  - Lanzar o servidor con `npm start` ou `npm run dev` para comprobar que funcione correctamente.
+
+  3 - Usar o script "mariscamar.sql" para crear a base de datos en PostgreSQL.
   
-  4- Executar insertarDatosPrueba.js para insertar datos de prueba.
+  4 - Executar "insertarDatosPrueba.js" para insertar datos de prueba na base de datos.
+
+Con estos pasos estaríamos listos para continuar o desarrollo de forma local
   
 ## Uso
 
