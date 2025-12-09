@@ -217,7 +217,7 @@ As subvención que poderíamos usar con Mariscamar serían as seguintes:
   - HTML5 & CSS3: deseño da interface de usuario e cliente responsive.
   - JavaScript: conexión co servidor mediante WebSocket e lóxica da subasta en tempo real.
   - WebSocket API: para recibir actualizacións instantáneas de prezos e estados das subastas.
-  - Librerías opcionais: Swal.io para popups.
+  - Librerías opcionais: Swal.io para popups, Bcrypt para hash de contraseñas.
   
 ## 4- Planificación
 
