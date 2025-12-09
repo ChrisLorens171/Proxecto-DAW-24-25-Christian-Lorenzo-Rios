@@ -20,9 +20,13 @@ Railway: https://docs.railway.app/
 
 Github: https://docs.github.com/es/
 
+Librería Bcrypt: https://www.npmjs.com/package/bcrypt
+
 ## 2- Fontes de interes
 
-Curso introducción a Express: https://www.youtube.com/watch?v=YmZE1HXjpd4&t=3509s
+Curso introducción a Express: https://www.youtube.com/watch?v=YmZE1HXjpd4&t
+
+Videoguía de despregue en Railway: https://www.youtube.com/watch?v=ewoIdVjakns&t
 
 Exercicios e apuntes de clase
 
@@ -39,6 +43,8 @@ PostgreSQL: https://www.postgresql.org/
 Railway: https://railway.app/
 
 GitHub: https://github.com/
+
+Librería Bcrypt: https://www.npmjs.com/package/bcrypt
 
 ## 4- Normas ou documentos legais
 

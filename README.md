@@ -12,8 +12,9 @@
   - [Links](#links)
 ## Taboleiro do proyecto
 
-O proxecto **Mariscamar** atópase actualmente en **fase de desenvolvemento**. 
-As tarefas de estudo preliminar e análise están finalizadas, e a codificación do backend e frontend, así como a integración de WebSockets para as subastas en tempo real, están en curso.  
+O proxecto **Mariscamar** atópase actualmente en fase funcional, coas principais funcionalidades operativas, aínda que segue sendo susceptible de melloras na interface, optimización do código e incorporación de pequenas funcionalidades adicionais.
+
+[Páxina web de Mariscamar](https://mariscamar.up.railway.app)
 
 ## Descrición
 
@@ -27,9 +28,24 @@ Para o desenvolvemento empregouse o framework Express e os lenguaxes: HTML, CSS 
 
 ## Instalación / Posta en marcha
 
-> *EXPLICACIÓN*: Neste apartado describe con toda precisión e a poder ser coa maior simplicidade/facilidade posible, como poñer en marcha a túa aplicación para probala (nun ambiente local). Valorarase moi positivamente que este proceso sexa o máis fácil posible, cunha simple instrución (p. e. un script de instalación, descarga e posta en marcha dun contedor,...).
->
+Para a posta en marcha do proxecto nun ambiente local faremos o seguinte:
 
+  1 - Descarga os arquivos da carpeta src do repositorio
+  
+  2 - Instalación de dependencias e arranque
+
+  - Descargar Node.js (no caso de non telo no equipo).
+  - Comprobar con `npm -v` que está instalado correctamente.
+  - Instalar as dependencias desde a raíz do proxecto co comando `npm install`.
+  - Integrar as librerías usadas: `npm install bcrypt express-session`.
+  - Lanzar o servidor con `npm start` ou `npm run dev` para comprobar que funcione correctamente.
+
+  3 - Usar o script "mariscamar.sql" para crear a base de datos en PostgreSQL.
+  
+  4 - Executar "insertarDatosPrueba.js" para insertar datos de prueba na base de datos.
+
+Con estos pasos estaríamos listos para continuar o desarrollo de forma local.
+  
 ## Uso
 
 A aplicación web destaca pola súa interface sinxela e intuitiva, permitindo ao usuario realizar todas as accións principais en poucos clics. Desde o panel inicial pódese acceder rapidamente ás funcións máis importantes, como a creación ou participación en poxas. Navegación fluída, con menús claros e opcións visibles en todo momento. 
