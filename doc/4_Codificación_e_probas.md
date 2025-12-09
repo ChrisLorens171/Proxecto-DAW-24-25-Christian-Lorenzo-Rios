@@ -34,7 +34,13 @@ Compartido o prototipo por medio de Figma.
 
 ## 3- Innovación
 
-No caso de utilizar tecnoloxías diferentes ás estudadas no ciclo formativo, fai unha descrición dos retos asumidos e como se resolveron.
+No desenvolvemento do proxecto utilizáronse algunhas tecnoloxías diferentes ás vistas durante o ciclo formativo. En concreto, empregouse Node.js xunto co framework Express para crear a parte backend da aplicación, o cal supuxo un reto importante ao tratarse dunha forma moi distinta a traballada en clase.
+
+Ao principio resultou complicado entender como funcionaba a estrutura dun proxecto en Express, especialmente a organización dos archivos e configuración interna. Estes problemas fóronse resolvendo pouco a pouco mediante a consulta de documentación, exemplos sinxelos e probas propias ata comprender mellor o seu funcionamento.
+
+Tamén se incorporou a libraría SweetAlert (swal) para mellorar a interacción coa aplicación, elixiuse esta pola seu uso continuado durante as prácticas en empresa.
+
+En xeral, o uso destas novas tecnoloxías permitiume coñecementos e adquirir experiencia práctica en tecnoloxías novas, mellorando a comprensión do desenvolvemento de aplicacións web máis completas.
 
 ## 4- Probas
 
