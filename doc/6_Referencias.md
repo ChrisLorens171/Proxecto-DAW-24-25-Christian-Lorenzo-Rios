@@ -42,6 +42,8 @@ Railway: https://railway.app/
 
 GitHub: https://github.com/
 
+Librería Bcrypt: https://www.npmjs.com/package/bcrypt
+
 ## 4- Normas ou documentos legais
 
 ### Protección de datos
