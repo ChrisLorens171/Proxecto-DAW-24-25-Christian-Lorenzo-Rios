@@ -9,7 +9,6 @@
   - [Licenza](#licenza)
   - [Índice](#índice)
   - [Guía de contribución](#guía-de-contribución)
-  - [Links](#links)
 ## Taboleiro do proyecto
 
 O proxecto **Mariscamar** atópase actualmente en fase funcional, coas principais funcionalidades operativas, aínda que segue sendo susceptible de melloras na interface, optimización do código e incorporación de pequenas funcionalidades adicionais.
@@ -105,8 +104,3 @@ Agradecemos a participación en ampliar Mariscamar, proxecto de software libre. 
 - Integracións e Extensións:
 
     - Proposta e desenvolvemento de plugins ou módulos para a integración con servizos externos (por exemplo, pasarelas de pago adicionais ou sistemas de loxística).
-
-## Links
-
-> EXPLICACIÓN*: Ligazóns externas e descipciones destas ligazóns que creas conveniente indicar aquí. Xeralmente xa van estar integrados coa túa documentación, pero se requires realizar unha listaxe deles, leste é o lugar.
->
