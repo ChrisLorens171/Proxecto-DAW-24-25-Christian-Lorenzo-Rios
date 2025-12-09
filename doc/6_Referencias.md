@@ -22,9 +22,9 @@ Github: https://docs.github.com/es/
 
 ## 2- Fontes de interes
 
-Curso introducción a Express: https://www.youtube.com/watch?v=YmZE1HXjpd4&t=3509s
+Curso introducción a Express: https://www.youtube.com/watch?v=YmZE1HXjpd4&t
 
-Videoguía de despregue en Railway: https://www.youtube.com/watch?v=ewoIdVjakns&t=604s
+Videoguía de despregue en Railway: https://www.youtube.com/watch?v=ewoIdVjakns&t
 
 Exercicios e apuntes de clase
 
