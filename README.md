@@ -27,9 +27,21 @@ Para o desenvolvemento empregouse o framework Express e os lenguaxes: HTML, CSS 
 
 ## Instalación / Posta en marcha
 
-> *EXPLICACIÓN*: Neste apartado describe con toda precisión e a poder ser coa maior simplicidade/facilidade posible, como poñer en marcha a túa aplicación para probala (nun ambiente local). Valorarase moi positivamente que este proceso sexa o máis fácil posible, cunha simple instrución (p. e. un script de instalación, descarga e posta en marcha dun contedor,...).
->
+Para a posta en marcha do proxecto nun ambiente local faremos o seguinte:
 
+  1- Descarga os arquivos da carpeta src do repositorio
+  
+  2- Instalación de dependencias e arranque  
+      - Descargar Node.js (no caso de non telo no equipo).
+      - Comprobar con "npm -v" que este instalado correctamente.
+      - Instalar as dependecias desde a raíz do proxecto co comando "npm install".
+      - Integrar as librerías usadas "npm install bcrypt express-session".
+      - Lanzar o servidor con "npm start" ou "npm run dev" para comprobar que funcione correctamente.
+
+  3- Usar o script para crear a base de datos en PostgreSQL.
+  
+  4- Executar insertarDatosPrueba.js para insertar datos de prueba.
+  
 ## Uso
 
 A aplicación web destaca pola súa interface sinxela e intuitiva, permitindo ao usuario realizar todas as accións principais en poucos clics. Desde o panel inicial pódese acceder rapidamente ás funcións máis importantes, como a creación ou participación en poxas. Navegación fluída, con menús claros e opcións visibles en todo momento. 
