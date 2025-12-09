@@ -8,9 +8,7 @@ class Factura {
         this.importe_total = data.importe_total;
         this.cantidad = data.cantidad;
         this.data_emision = data.data_emision;
-    }
-
-    
+    } 
 }
 
 export default Factura;

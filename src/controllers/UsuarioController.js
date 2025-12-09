@@ -1,4 +1,5 @@
 import Usuario from '../models/Usuario.js';
+import bcrypt from 'bcrypt';
 
 class UsuarioController {
     // Login de usuario
@@ -23,8 +24,9 @@ class UsuarioController {
                 });
             }
 
-            // Verificar contraseña (por ahora comparación directa, TODO: bcrypt)
-            if (usuario.contrasinal !== contrasinal) {
+            // Verificar contraseña con bcrypt
+            const isMatch = await bcrypt.compare(contrasinal, usuario.contrasinal);
+            if (!isMatch) {
                 return res.status(401).json({
                     success: false,
                     message: 'Correo o contraseña incorrectos'
@@ -117,9 +119,12 @@ class UsuarioController {
                 });
             }
 
+            // Hash de la contraseña
+            const hashedPassword = await bcrypt.hash(contrasinal, 10);
+
             const id = await Usuario.crear({
                 correo,
-                contrasinal,  // Por ahora sin hash
+                contrasinal: hashedPassword,
                 nome,
                 tipo,
                 estado: estado || 'activo',

@@ -14,7 +14,7 @@ class SubastaController {
                 data: subastas
             });
         } catch (error) {
-            console.error('❌ Error en SubastaController.getAll:', error);
+            console.error('Error en SubastaController.getAll:', error);
             res.status(500).json({
                 success: false,
                 message: error.message
@@ -119,7 +119,7 @@ class SubastaController {
             });
 
         } catch (error) {
-            console.error('❌ Error en SubastaController.create:', error);
+            console.error('Error en SubastaController.create:', error);
             res.status(500).json({
                 success: false,
                 message: 'Error al crear la subasta: ' + error.message
@@ -166,7 +166,7 @@ class SubastaController {
             });
 
         } catch (error) {
-            console.error('❌ Error en SubastaController.getById:', error);
+            console.error('Error en SubastaController.getById:', error);
             res.status(500).json({
                 success: false,
                 message: 'Error al obtener la subasta: ' + error.message
@@ -275,7 +275,7 @@ class SubastaController {
             });
 
         } catch (error) {
-            console.error('❌ Error en SubastaController.update:', error);
+            console.error('Error en SubastaController.update:', error);
             res.status(500).json({
                 success: false,
                 message: 'Error al actualizar la subasta: ' + error.message
@@ -328,7 +328,7 @@ class SubastaController {
             });
 
         } catch (error) {
-            console.error('❌ Error en SubastaController.delete:', error);
+            console.error('Error en SubastaController.delete:', error);
             res.status(500).json({
                 success: false,
                 message: 'Error al eliminar la subasta: ' + error.message

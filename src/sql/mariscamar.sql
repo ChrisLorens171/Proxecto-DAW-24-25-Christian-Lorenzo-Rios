@@ -89,7 +89,7 @@ BEGIN
     IF NEW.cantidade <= 0 THEN
         UPDATE Subastas
         SET estado = 'cerrada',
-            data_fin = NOW()
+            hora_fin = NOW()
         WHERE id_produto = producto_id;
     END IF;
 

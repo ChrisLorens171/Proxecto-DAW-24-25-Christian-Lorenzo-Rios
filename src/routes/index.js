@@ -15,6 +15,11 @@ router.get('/contact', HomeController.contact);
 // Ruta de página sobre nosotros (pública)
 router.get('/about', HomeController.about);
 
+// Ruta de términos legales (pública)
+router.get('/terminos', (req, res) => {
+    res.render('terminos');
+});
+
 // Ruta de página de subastas (protegida)
 router.get('/subastas', requireAuth, HomeController.subastas);
 

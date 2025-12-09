@@ -4,6 +4,7 @@ const router = express.Router();
 // Importar controladores
 import UsuarioController from '../controllers/UsuarioController.js';
 import SubastaController from '../controllers/SubastaController.js';
+import OfertaController from '../controllers/OfertaController.js';
 
 // Importar middlewares de validación
 import { validateUsuario } from '../middlewares/validation.js';
@@ -40,5 +41,13 @@ router.put('/subastas/:id', SubastaController.update);
 
 // Eliminar subasta
 router.delete('/subastas/:id', SubastaController.delete);
+
+// ==================== RUTAS DE OFERTAS ====================
+
+// Crear oferta (puja)
+router.post('/ofertas', OfertaController.crear);
+
+// Obtener ofertas de una subasta
+router.get('/ofertas/subasta/:id', OfertaController.obtenerPorSubasta);
 
 export default router;

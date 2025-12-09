@@ -1,6 +1,7 @@
 import db from './config/database.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import bcrypt from 'bcrypt';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,23 +27,26 @@ async function insertarDatosPrueba() {
         console.log('✓ Datos existentes eliminados\n');
         console.log('📊 Insertando datos de prueba...\n');
 
+        // Hash de la contraseña de prueba
+        const hashedPassword = await bcrypt.hash('abc123', 10);
+
         // Insertar Usuarios
         console.log('Insertando Usuarios...');
         await db.query(`
             INSERT INTO Usuarios (nome, correo, contrasinal, tipo, estado, CIF_NIF) VALUES
-            ('Admin MariscaMar', 'admin@mariscamar.com', 'abc123', 'admin', 'activo', 'A12345678'),
-            ('Lonxa O Grove', 'lonxa.grove@mariscamar.com', 'abc123', 'lonxa', 'activo', 'B23456789'),
-            ('Lonxa Cambados', 'lonxa.cambados@mariscamar.com', 'abc123', 'lonxa', 'activo', 'B34567890'),
-            ('Lonxa Ribeira', 'lonxa.ribeira@mariscamar.com', 'abc123', 'lonxa', 'activo', 'B45678901'),
-            ('Lonxa Vigo', 'lonxa.vigo@mariscamar.com', 'abc123', 'lonxa', 'activo', 'B56789012'),
-            ('Restaurante Mar Azul', 'restaurante.azul@email.com', 'abc123', 'comprador', 'activo', 'C12345678'),
-            ('Pescadería El Puerto', 'pescaderia.puerto@email.com', 'abc123', 'comprador', 'activo', 'C23456789'),
-            ('Marisquería Costa Brava', 'marisqueria.brava@email.com', 'abc123', 'comprador', 'activo', 'C34567890'),
-            ('Distribuidora MarFresh', 'distribuidora.marfresh@email.com', 'abc123', 'comprador', 'activo', 'C45678901'),
-            ('Hotel Playa Galicia', 'hotel.playa@email.com', 'abc123', 'comprador', 'activo', 'C56789012'),
-            ('Supermercados del Mar', 'super.mar@email.com', 'abc123', 'comprador', 'activo', 'C67890123')
-        `);
-        console.log('✓ Usuarios insertados\n');
+            ('Admin MariscaMar', 'admin@mariscamar.com', $1, 'admin', 'activo', 'A12345678'),
+            ('Lonxa O Grove', 'lonxa.grove@mariscamar.com', $1, 'lonxa', 'activo', 'B23456789'),
+            ('Lonxa Cambados', 'lonxa.cambados@mariscamar.com', $1, 'lonxa', 'activo', 'B34567890'),
+            ('Lonxa Ribeira', 'lonxa.ribeira@mariscamar.com', $1, 'lonxa', 'activo', 'B45678901'),
+            ('Lonxa Vigo', 'lonxa.vigo@mariscamar.com', $1, 'lonxa', 'activo', 'B56789012'),
+            ('Restaurante Mar Azul', 'restaurante.azul@email.com', $1, 'comprador', 'activo', 'C12345678'),
+            ('Pescadería El Puerto', 'pescaderia.puerto@email.com', $1, 'comprador', 'activo', 'C23456789'),
+            ('Marisquería Costa Brava', 'marisqueria.brava@email.com', $1, 'comprador', 'activo', 'C34567890'),
+            ('Distribuidora MarFresh', 'distribuidora.marfresh@email.com', $1, 'comprador', 'activo', 'C45678901'),
+            ('Hotel Playa Galicia', 'hotel.playa@email.com', $1, 'comprador', 'activo', 'C56789012'),
+            ('Supermercados del Mar', 'super.mar@email.com', $1, 'comprador', 'activo', 'C67890123')
+        `, [hashedPassword]);
+        console.log('✓ Usuarios insertados (contraseña: abc123)\n');
 
         // Insertar Productos
         console.log('Insertando Productos...');
@@ -128,16 +132,6 @@ async function insertarDatosPrueba() {
         `);
         console.log('✓ Ofertas insertadas\n');
 
-        // Insertar Facturas
-        console.log('Insertando Facturas...');
-        await db.query(`
-            INSERT INTO Facturas (id_usuario, id_subasta, importe_total, cantidad, data_emision) VALUES
-            (8, 11, 240.00, 6, NOW() - INTERVAL '2.9 days'),
-            (11, 12, 232.00, 4, NOW() - INTERVAL '3.1 days'),
-            (8, 13, 336.00, 70, NOW() - INTERVAL '4.1 days')
-        `);
-        console.log('✓ Facturas insertadas\n');
-
         console.log('\n📋 Verificando datos insertados:\n');
 
         // Verificar datos en cada tabla
@@ -152,9 +146,6 @@ async function insertarDatosPrueba() {
 
         const [ofertas] = await db.query('SELECT COUNT(*) as total FROM Ofertas');
         console.log(`  • Ofertas: ${ofertas[0].total}`);
-
-        const [facturas] = await db.query('SELECT COUNT(*) as total FROM Facturas');
-        console.log(`  • Facturas: ${facturas[0].total}`);
 
         console.log('\n✓ Datos de prueba insertados correctamente\n');
 
@@ -177,7 +168,7 @@ async function insertarDatosPrueba() {
 
         process.exit(0);
     } catch (error) {
-        console.error('❌ Error al insertar datos:', error);
+        console.error('Error al insertar datos:', error);
         process.exit(1);
     }
 }

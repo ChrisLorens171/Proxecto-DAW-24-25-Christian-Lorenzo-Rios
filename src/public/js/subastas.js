@@ -2,7 +2,6 @@
  * Archivo para gestionar la página de subastas
  */
 (function() {
-    'use strict';
 
     const $carruselActivas = document.getElementById('carrusel-activas');
     const $carruselPendientes = document.getElementById('carrusel-pendientes');
@@ -58,7 +57,7 @@
  * Mostrar las subastas en el DOM separadas por estado
  */
 function mostrarSubastas(subastas) {
-    if (!subastas || subastas.length === 0) {
+    if (!subastas || subastas.length == 0) {
         mostrarMensajeVacio('activas', 'No hay subastas disponibles');
         return;
     }
@@ -71,15 +70,25 @@ function mostrarSubastas(subastas) {
     }
 
     // Separar subastas por estado
-    const activas = subastas.filter(s => s.estado === 'activa');
-    const pendientes = subastas.filter(s => s.estado === 'pendiente');
-    const misSubastas = usuarioId ? subastas.filter(s => s.vendedor_id === usuarioId) : [];
+    const activas = subastas.filter(s => s.estado == 'activa');
+    const pendientes = subastas.filter(s => s.estado == 'pendiente');
+    const misSubastas = usuarioId ? subastas.filter(s => s.vendedor_id == usuarioId) : [];
 
     // Renderizar Mis Subastas (si hay usuario autenticado)
     if ($carruselMisSubastas && usuarioId) {
-        if (misSubastas.length === 0) {
-            mostrarMensajeVacio('mis-subastas', 'No tienes subastas creadas');
+        const seccionMisSubastas = document.getElementById('seccion-mis-subastas');
+        
+        if (misSubastas.length == 0) {
+            // Ocultar toda la sección si no hay subastas
+            if (seccionMisSubastas) {
+                seccionMisSubastas.style.display = 'none';
+            }
         } else {
+            // Mostrar la sección si hay subastas
+            if (seccionMisSubastas) {
+                seccionMisSubastas.style.display = 'block';
+            }
+            
             misSubastas.forEach(subasta => {
                 const card = crearTarjetaSubasta(subasta, true);
                 $carruselMisSubastas.appendChild(card);
@@ -89,7 +98,7 @@ function mostrarSubastas(subastas) {
     }
 
     // Renderizar cada grupo
-    if (activas.length === 0) {
+    if (activas.length == 0) {
         mostrarMensajeVacio('activas', 'No hay subastas activas');
     } else {
         activas.forEach(subasta => {
@@ -99,7 +108,7 @@ function mostrarSubastas(subastas) {
         actualizarBotonesCarrusel('activas');
     }
 
-    if (pendientes.length === 0) {
+    if (pendientes.length == 0) {
         mostrarMensajeVacio('pendientes', 'No hay subastas pendientes');
     } else {
         pendientes.forEach(subasta => {
@@ -171,9 +180,9 @@ function crearTarjetaSubasta(subasta, esMia = false) {
  * Mostrar mensaje cuando no hay subastas en un carrusel
  */
 function mostrarMensajeVacio(carrusel, mensaje) {
-    const contenedor = carrusel === 'activas' ? $carruselActivas :
-                       carrusel === 'pendientes' ? $carruselPendientes :
-                       carrusel === 'mis-subastas' ? $carruselMisSubastas :
+    const contenedor = carrusel == 'activas' ? $carruselActivas :
+                       carrusel == 'pendientes' ? $carruselPendientes :
+                       carrusel == 'mis-subastas' ? $carruselMisSubastas :
                        null;
     
     if (!contenedor) return;
@@ -192,7 +201,7 @@ function mostrarMensajeVacio(carrusel, mensaje) {
 function filtrarSubastas(busqueda) {
     const textoBusqueda = busqueda.toLowerCase().trim();
     
-    if (textoBusqueda === '') {
+    if (textoBusqueda == '') {
         mostrarSubastas(subastas);
         return;
     }
@@ -265,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Event delegation para botones de navegación del carrusel
+    // Delegación de eventos para botones de navegación del carrusel
     document.querySelectorAll('.carrusel-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const direccion = btn.classList.contains('prev') ? -1 : 1;
@@ -283,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Event delegation para botones de ver subasta
+    // Delegación de eventos para botones de ver subasta
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('btn-ver-subasta') || 
             e.target.closest('.btn-ver-subasta')) {
@@ -294,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `/subastas/${idSubasta}`;
         }
 
-        // Event delegation para botón editar subasta
+        // Delegación de eventos para botón editar subasta
         if (e.target.classList.contains('btn-editar-subasta') || 
             e.target.closest('.btn-editar-subasta')) {
             const btn = e.target.classList.contains('btn-editar-subasta') ? 
@@ -303,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = `/subastas/editar/${idSubasta}`;
         }
 
-        // Event delegation para botón eliminar subasta
+        // Delegación de eventos para botón eliminar subasta
         if (e.target.classList.contains('btn-eliminar-subasta') || 
             e.target.closest('.btn-eliminar-subasta')) {
             const btn = e.target.classList.contains('btn-eliminar-subasta') ? 

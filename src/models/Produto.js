@@ -79,6 +79,50 @@ class Produto {
     }
 
     /**
+     * Reducir cantidad del producto
+     */
+    static async reducirCantidad(id_produto, cantidadAReducir) {
+        try {
+            const query = `
+                UPDATE produtos
+                SET cantidade = cantidade - $1
+                WHERE id_produto = $2
+                AND cantidade >= $1
+                RETURNING cantidade
+            `;
+            
+            const [result] = await db.query(query, [cantidadAReducir, id_produto]);
+            
+            if (result.length === 0) {
+                throw new Error('Cantidad insuficiente en el producto');
+            }
+            
+            return result[0].cantidade;
+        } catch (error) {
+            console.error('Error al reducir cantidad:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * Obtener producto por ID
+     */
+    static async obtenerPorId(id_produto) {
+        try {
+            const query = `
+                SELECT * FROM produtos
+                WHERE id_produto = $1
+            `;
+            
+            const [rows] = await db.query(query, [id_produto]);
+            return rows[0] || null;
+        } catch (error) {
+            console.error('Error al obtener producto:', error);
+            throw error;
+        }
+    }
+
+    /**
      * Eliminar producto por ID
      */
     static async eliminar(id_produto) {

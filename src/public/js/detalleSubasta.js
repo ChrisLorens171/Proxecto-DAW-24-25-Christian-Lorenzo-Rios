@@ -1,6 +1,4 @@
 (function() {
-    'use strict';
-
     const mainElement = document.querySelector('main');
     const idSubasta = mainElement.dataset.idSubasta;
     
@@ -111,7 +109,7 @@
         // Imagen y nombre
         document.getElementById('imagen-producto').src = subasta.imagen || '/img/default-product.jpg';
         document.getElementById('imagen-producto').alt = subasta.produto_nome;
-        document.getElementById('nombre-producto').textContent = `Lote de ${subasta.produto_nome} - ${subasta.cantidade}kg`;
+        document.getElementById('nombre-producto').textContent = `${subasta.produto_nome}`;
 
         // Badge de estado
         const badge = document.getElementById('badge-estado');
@@ -122,7 +120,6 @@
         document.getElementById('origen-producto').textContent = subasta.vendedor_nome || 'Galicia';
         document.getElementById('tipo-producto').textContent = subasta.produto_tipo;
         document.getElementById('cantidad-producto').textContent = `${subasta.cantidade} kg`;
-        document.getElementById('especie-producto').textContent = subasta.produto_tipo;
 
         // Precio
         document.getElementById('precio-actual').textContent = `${parseFloat(subasta.prezo_inicial).toFixed(2)}€`;
@@ -199,17 +196,49 @@
                 }
             });
 
-            // TODO: Implementar endpoint de puja en el backend
-            // Por ahora solo mostramos confirmación
-            
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            const response = await fetch('/api/ofertas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include',
+                body: JSON.stringify({
+                    id_subasta: idSubasta,
+                    cantidad: cantidad
+                })
+            });
+
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new Error('La respuesta no es JSON válido');
+            }
+
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.message || 'Error al realizar la puja');
+            }
+
+            // Actualizar cantidad restante en la interfaz
+            if (data.data.cantidad_restante !== undefined) {
+                document.getElementById('cantidad-producto').textContent = `${data.data.cantidad_restante} kg`;
+                subastaData.cantidade = data.data.cantidad_restante;
+                
+                // Si se agotó el stock, deshabilitar el botón
+                if (data.data.cantidad_restante === 0) {
+                    document.getElementById('btn-pujar').disabled = true;
+                    document.getElementById('btn-pujar').textContent = 'Stock Agotado';
+                    document.getElementById('badge-estado').textContent = 'Agotada';
+                    document.getElementById('badge-estado').className = 'badge-estado estado-cerrada';
+                }
+            }
 
             Swal.fire({
                 icon: 'success',
                 title: '¡Puja realizada!',
                 html: `
                     <p>Has pujado por <strong>${cantidad} kg</strong></p>
-                    <p>Total: <strong>${(cantidad * subastaData.prezo_inicial).toFixed(2)}€</strong></p>
+                    <p>Total: <strong>${data.data.importe.toFixed(2)}€</strong></p>
                 `,
                 confirmButtonText: 'Aceptar'
             });

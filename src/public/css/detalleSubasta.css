@@ -128,7 +128,7 @@ main {
 =============================================*/
 .datos-producto {
     background-color: #f9fafb;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: var(--border-radius);
     border: 1px solid #e5e7eb;
 }
