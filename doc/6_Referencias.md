@@ -20,6 +20,8 @@ Railway: https://docs.railway.app/
 
 Github: https://docs.github.com/es/
 
+Librería Bcrypt: https://www.npmjs.com/package/bcrypt
+
 ## 2- Fontes de interes
 
 Curso introducción a Express: https://www.youtube.com/watch?v=YmZE1HXjpd4&t
