@@ -11,9 +11,17 @@
   - [Guía de contribución](#guía-de-contribución)
 ## Taboleiro do proyecto
 
-O proxecto **Mariscamar** atópase actualmente en fase funcional, coas principais funcionalidades operativas, aínda que segue sendo susceptible de melloras na interface, optimización do código e incorporación de pequenas funcionalidades adicionais.
+O proxecto **Mariscamar** atópase actualmente en fase funcional, coas principais funcionalidades operativas, aínda que segue sendo susceptible de melloras na interface, optimización do código e incorporación de pequenas funcions adicionais.
 
 [Páxina web de Mariscamar](https://mariscamar.up.railway.app)
+
+Na seguinte táboa indicamos usuarios de cada tipo para as probas necesarias.
+
+| Usuario              | Correo             | Contrasinal |
+|-------------------------|--------------------------|------------------|
+|  Admin  | admin@mariscamar.com |     abc123        |
+|  Lonxa / Vendedor   | lonxa.grove@mariscamar.com |    abc123     |
+|  Comprador |  restaurante.azul@email.com  |      abc123      |
 
 ## Descrición
 
