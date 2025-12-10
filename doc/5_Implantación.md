@@ -55,7 +55,10 @@ Os pasos e requisitos necesarios para a descarga e continuación do desenvolveme
 
     Contamos con un script para crear datos de proba dentro da carpeta src, chamado insertarDatosPrueba.js.
 
-6. Configuración de Railway para desplegar servidor
+    Os usuarios xa creados para as probas necesarias serían os seguintes:
+        
+
+7. Configuración de Railway para desplegar servidor
 
      - Servidor:
          1. Para poder desplegar o noso proxecto con Railway, crearemos un repositorio no que insertaremos o contido da carpeta src que previamente descargamos.
@@ -69,7 +72,7 @@ Os pasos e requisitos necesarios para a descarga e continuación do desenvolveme
              <img width="1116" height="469" alt="image" src="https://github.com/user-attachments/assets/b6b1989d-bd3f-42ad-9c30-cac6473fd307" />
            </p>
 
-7. Diagrama de despregamento final
+8. Diagrama de despregamento final
 
    Logo de decidir o sistema de despregramento que se vai utilizar, actualizamos o diagrama coa versión final.
 
