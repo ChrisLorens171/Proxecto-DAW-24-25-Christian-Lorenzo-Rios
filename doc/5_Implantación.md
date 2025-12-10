@@ -55,8 +55,13 @@ Os pasos e requisitos necesarios para a descarga e continuación do desenvolveme
 
     Contamos con un script para crear datos de proba dentro da carpeta src, chamado insertarDatosPrueba.js.
 
-    Os usuarios xa creados para as probas necesarias serían os seguintes:
-        
+    Na seguinte táboa indicamos usuarios de cada tipo para as probar necesarias.
+
+    | Usuario              | Correo             | Contrasinal |
+    |-------------------------|--------------------------|------------------|
+    |  Admin  | admin@mariscamar.com |     abc123        |
+    |  Lonxa / Vendedor   | lonxa.grove@mariscamar.com |    abc123         |
+    |  Comprador |  restaurante.azul@email.com  |      abc123       |
 
 7. Configuración de Railway para desplegar servidor
 
