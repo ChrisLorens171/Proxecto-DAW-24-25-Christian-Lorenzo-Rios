@@ -25,7 +25,7 @@ O proxecto, que chamaremos **Mariscamar**, consiste na creación dunha plataform
 
 A aplicación busca facer máis áxil e eficiente a comercialización do marisco fresco, reducindo intermediarios e tempos de xestión. Ademais, abre unha oportunidade de negocio, xa que podería comercializarse mediante comisións por venda ou plans de subscrición para lonxas e usuarios profesionais.
 
-Para o desenvolvemento inicial empregarase HTML, CSS e JavaScript para a parte visual e PHP con MySQL para a xestión de datos. Isto permitirá crear unha versión funcional e facilmente hospedable en servizos web económicos, deixando aberta a posibilidade de ampliar o proxecto no futuro con tecnoloxías máis avanzadas.
+Para o desenvolvemento inicial empregarase HTML, CSS e JavaScript para a parte visual e Node.js e Express para a xestión de datos. Isto permitirá crear unha versión funcional e facilmente hospedable en servizos web económicos, deixando aberta a posibilidade de ampliar o proxecto no futuro con tecnoloxías máis avanzadas.
 
 ## 2- Empresa
 
